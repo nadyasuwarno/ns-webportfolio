@@ -197,6 +197,7 @@ img { max-width: 100%; display: block; }
 .exploration .thumb {
   position: relative;
   margin-bottom: 0;
+  aspect-ratio: 16 / 11;
   transition: border-color 0.25s ease;
 }
 .exploration .thumb:hover { border-color: var(--accent); }
@@ -208,12 +209,12 @@ img { max-width: 100%; display: block; }
 .hover-info {
   position: absolute;
   inset: 0;
-  padding: 18px;
+  padding: 14px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 6px;
-  background: linear-gradient(180deg, rgba(236,230,214,0.4) 0%, rgba(236,230,214,0.95) 60%);
+  gap: 4px;
+  background: linear-gradient(180deg, rgba(236,230,214,0.4) 0%, rgba(236,230,214,0.95) 55%);
   color: var(--ink);
   opacity: 0;
   transition: opacity 0.25s ease;
@@ -221,6 +222,7 @@ img { max-width: 100%; display: block; }
   text-transform: none;
   letter-spacing: 0;
 }
+.hover-info h3 { font-size: 17px; line-height: 1.18; }
 .exploration .thumb:hover .hover-info,
 .exploration .thumb:focus-visible .hover-info {
   opacity: 1;
