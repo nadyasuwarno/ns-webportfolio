@@ -177,6 +177,27 @@ img { max-width: 100%; display: block; }
   margin-top: 32px;
 }
 
+/* ---------- Explorations hover-reveal ---------- */
+.explorations-grid article .project-meta,
+.explorations-grid article h3 {
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.explorations-grid article:hover .project-meta,
+.explorations-grid article:hover h3,
+.explorations-grid article:focus-within .project-meta,
+.explorations-grid article:focus-within h3 {
+  opacity: 1;
+  transform: translateY(0);
+}
+.explorations-grid .thumb {
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+.explorations-grid article:hover .thumb {
+  border-color: var(--accent);
+}
+
 /* ---------- Section labels on inside pages ---------- */
 .section-label {
   font-family: var(--mono);
