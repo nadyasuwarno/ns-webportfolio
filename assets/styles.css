@@ -1,9 +1,9 @@
 :root {
-  --bg: #ece6d6;
-  --panel: #e2dcc9;
-  --ink: #1b1a16;
-  --ink-soft: #4a463c;
-  --rule: #c9c2ad;
+  --bg: #F3EFE6;         /* paper */
+  --panel: #EAE4D7;      /* cards, polaroid frames */
+  --ink: #2A251F;        /* text */
+  --ink-soft: #6B6255;   /* metadata */
+  --rule: #D8D0C0;       /* stone, hairlines only */
   --accent: #b5452b;
   --serif: "EB Garamond", "Garamond", "Times New Roman", serif;
   --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -298,7 +298,7 @@ img { max-width: 100%; display: block; }
   flex-direction: column;
   justify-content: flex-end;
   gap: 4px;
-  background: linear-gradient(180deg, rgba(236,230,214,0.4) 0%, rgba(236,230,214,0.95) 55%);
+  background: linear-gradient(180deg, rgba(243,239,230,0.4) 0%, rgba(243,239,230,0.95) 55%);
   color: var(--ink);
   opacity: 0;
   transition: opacity 0.25s ease;
