@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>World Models — Nadya Suwarno</title>
+  <meta name="description" content="World Models — a learning station at the Museum of the Moving Image where every visitor gets a role in how AI builds a world." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="../index.html">Nadya Suwarno</a>
+    <nav class="nav">
+      <a href="../projects.html" aria-current="page">Projects</a>
+      <a href="../about.html">About</a>
+      <a href="../assets/resume.pdf" class="ext">Resume ↗</a>
+    </nav>
+  </header>
+
+  <main class="rail">
+    <p class="label">— Projects</p>
+    <div class="case-eyebrow">
+      <span>No. 02 · World Models · Museum of the Moving Image · 2026</span>
+      <span style="color:var(--accent);">Shipped</span>
+    </div>
+    <h1 class="case-title">World Models</h1>
+    <p class="case-sub">Every visitor gets a role in how AI builds a world.</p>
+
+    <!-- HERO IMAGE -->
+    <div class="case-hero">
+      <span>[ ACTIVITY STATION A — VISITORS AT THE STATION ]</span>
+      <!-- Replace with: <img src="../assets/images/world-models/hero.jpg" alt="Visitors at the World Models station" /> -->
+    </div>
+
+    <!-- METADATA -->
+    <div class="case-metagrid">
+      <div><p class="label">Role</p><p>Emerging Technology Lab intern — research, experience design, prototyping</p></div>
+      <div><p class="label">Team</p><p>Me + supervisors</p></div>
+      <div><p class="label">Timeline</p><p>Mar–Jul 2026</p></div>
+      <div><p class="label">Tools</p><p>Figma Make, Zotero, Obsidian, Lingbot, VR</p></div>
+      <div><p class="label">Status</p><p>Shipped 2026</p></div>
+    </div>
+
+    <!-- TL;DR -->
+    <section class="case-section">
+      <p class="section-label">TL;DR</p>
+      <p>AI can now build a walkable 3D world from one sentence, and almost no one knows how. I designed a learning station that starts with games everyone already knows, then turns each stage of an AI worldbuilding pipeline into a game where the visitor plays a role.</p>
+    </section>
+
+    <!-- THE PROBLEM -->
+    <section class="case-section">
+      <p class="section-label">The problem</p>
+      <h2>Make AI worldbuilding make sense — without a lecture.</h2>
+      <p>MoMI's philosophy is "back to fundamentals." The challenge: take seeds, noise, LLMs writing JSON, and 3D meshes, and make them make sense to a museum visitor who has never heard any of those words.</p>
+    </section>
+
+    <!-- WHAT I LEARNED -->
+    <section class="case-section">
+      <p class="section-label">What I learned</p>
+      <h2>I built a lens, then ran every system through it.</h2>
+      <p><strong>01.</strong> Nothing here is actually new. Flappy Bird, Minecraft and Pokémon already generate their worlds — visitors have played this before.</p>
+      <p><strong>02.</strong> A few simple ideas carry it all: a seed is the world's DNA, noise makes it natural, if/then rules are its laws of physics.</p>
+      <p><strong>03.</strong> The AI pipeline has four clear jobs — plan, check, separate, refine. Jobs can be played.</p>
+    </section>
+
+    <!-- WHAT I MADE -->
+    <section class="case-section">
+      <p class="section-label">What I made</p>
+      <h2>Activity Station A: every visitor gets a role.</h2>
+      <p>Four games, one per pipeline stage. Discovery → breakdown → four games → the real thing → reflection.</p>
+      <p><strong>Scene planning</strong> — <em>The Prompt Translator.</em> You're the designer. Drag words from a messy diary into JSON until a wireframe world appears.</p>
+      <p><strong>Blockout + navmesh</strong> — <em>Navmesh Navigator.</em> You're the safety inspector. Paint the walkable floor; walls throw a constraint error.</p>
+      <p><strong>Decomposition</strong> — <em>The Monolith Splitter.</em> You're the organizer. Laser a fused village apart into 10 objects.</p>
+      <p><strong>Enhancement</strong> — <em>The Resolution Refiner.</em> You're the artist. Brush blurry objects into detail, then step inside in VR.</p>
+      <div class="callout">
+        Key decisions · Familiar games as the front door · Roles, not lectures · Open source over the famous name (Lingbot over Genie 3, traded against a 160GB model and heavy hardware).
+      </div>
+    </section>
+
+    <!-- TRY IT -->
+    <section class="case-section">
+      <p class="section-label">Try it · The seed slider</p>
+      <h2>Procedural generation, felt in five seconds.</h2>
+      <div class="case-hero" style="aspect-ratio: 16/5;">
+        <span>[ INTERACTIVE SEED SLIDER DEMO ]</span>
+      </div>
+    </section>
+
+    <!-- WHAT CHANGED -->
+    <section class="case-section">
+      <p class="section-label">What changed</p>
+      <div class="callout">"People don't need to understand everything. They need a way in."</div>
+      <p>Curiosity first, then demystification — then they can walk on their own.</p>
+    </section>
+
+    <div class="next-project">
+      <p class="label">Next project</p>
+      <a href="mosaic.html">Mosaic — one identity for a whole graduating class.</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="signoff">
+      <p class="eyebrow-italic">Send me a film.</p>
+      <p class="signature">Nadya</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="mailto:rsuwarno168@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/" class="ext">LinkedIn ↗</a>
+      <a href="../assets/resume.pdf" class="ext">Resume ↗</a>
+    </nav>
+  </footer>
+</body>
+</html>

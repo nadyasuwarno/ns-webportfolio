@@ -8,15 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
+  <!-- ============== HEADER (copy into every page) ============== -->
   <header class="site-header">
-    <a class="wordmark" href="/">Nadya Suwarno</a>
+    <a class="wordmark" href="index.html">Nadya Suwarno</a>
     <nav class="nav">
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="#resume" class="ext">Resume ↗</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="assets/resume.pdf" class="ext">Resume ↗</a>
     </nav>
   </header>
 
@@ -45,49 +46,54 @@
 
     <!-- PROJECTS -->
     <section id="projects" class="projects">
-      <!-- 01 BIBBLE -->
       <article class="project">
-        <a class="thumb" href="#bibble">
+        <a class="thumb" href="projects/bibble.html">
           <span class="badge">Next round</span>
-          <span class="placeholder">[ BIBBLE — HERO IMAGE ]</span>
+          <span>[ BIBBLE — HERO IMAGE ]</span>
+          <!-- Replace the span above with: <img src="assets/images/bibble/hero.jpg" alt="Bibble hero" /> -->
         </a>
         <div class="project-meta">
           <span>No. 01 · Bibble · Concept · Spring 2026</span>
-          <span class="tag">Curiosity</span>
+          <span>Curiosity</span>
         </div>
-        <h2 class="project-title">The problem isn't scarcity. It's stagnation.</h2>
+        <h2 class="project-title">
+          <a href="projects/bibble.html">The problem isn't scarcity. It's stagnation.</a>
+        </h2>
       </article>
 
-      <!-- 02 WORLD MODELS -->
       <article class="project">
-        <a class="thumb" href="#world-models">
+        <a class="thumb" href="projects/world-models.html">
           <span class="badge">Shipped</span>
-          <span class="placeholder">[ WORLD MODELS — STATION PHOTO ]</span>
+          <span>[ WORLD MODELS — STATION PHOTO ]</span>
         </a>
         <div class="project-meta">
           <span>No. 02 · World Models · Museum of the Moving Image · 2026</span>
-          <span class="tag">Demystification</span>
+          <span>Demystification</span>
         </div>
-        <h2 class="project-title">Every visitor gets a role in how AI builds a world.</h2>
+        <h2 class="project-title">
+          <a href="projects/world-models.html">Every visitor gets a role in how AI builds a world.</a>
+        </h2>
       </article>
 
-      <!-- 03 MOSAIC -->
       <article class="project">
-        <a class="thumb" href="#mosaic">
+        <a class="thumb" href="projects/mosaic.html">
           <span class="badge">Shipped</span>
-          <span class="placeholder">[ MOSAIC — IDENTITY SYSTEM ]</span>
+          <span>[ MOSAIC — IDENTITY SYSTEM ]</span>
         </a>
         <div class="project-meta">
           <span>No. 03 · Mosaic · Brand System · Parsons · 2025</span>
-          <span class="tag">Enablement</span>
+          <span>Enablement</span>
         </div>
-        <h2 class="project-title">One identity for a whole graduating class.</h2>
+        <h2 class="project-title">
+          <a href="projects/mosaic.html">One identity for a whole graduating class.</a>
+        </h2>
       </article>
 
-      <a class="explorations-link" href="#explorations">Explorations →</a>
+      <a class="explorations-link" href="projects.html#explorations">Explorations →</a>
     </section>
   </main>
 
+  <!-- ============== FOOTER (copy into every page) ============== -->
   <footer class="site-footer">
     <div class="signoff">
       <p class="eyebrow-italic">Send me a film.</p>
@@ -96,7 +102,7 @@
     <nav class="footer-nav">
       <a href="mailto:rsuwarno168@gmail.com">Email</a>
       <a href="https://www.linkedin.com/" class="ext">LinkedIn ↗</a>
-      <a href="#resume" class="ext">Resume ↗</a>
+      <a href="assets/resume.pdf" class="ext">Resume ↗</a>
     </nav>
   </footer>
 </body>
