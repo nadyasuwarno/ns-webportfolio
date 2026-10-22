@@ -52,7 +52,7 @@ img { max-width: 100%; display: block; }
 .nav-group { position: relative; }
 .nav-group > a { display: inline-block; }
 
-/* Submenu: hidden at every width unless hovered/focused */
+/* Submenu: hidden at every width unless open (toggled via JS on hover/focus) */
 .nav-submenu {
   list-style: none;
   padding: 0;
@@ -63,7 +63,7 @@ img { max-width: 100%; display: block; }
   pointer-events: none;
   transition: max-height 0.35s ease, opacity 0.25s ease;
 }
-.nav-group:hover .nav-submenu,
+.nav-group.is-open .nav-submenu,
 .nav-group:focus-within .nav-submenu {
   max-height: 400px;
   opacity: 1;
@@ -121,8 +121,8 @@ img { max-width: 100%; display: block; }
     display: flex;
     flex-direction: column;
     gap: 8px;
-    margin: 10px 0 0 14px;
-    padding-left: 10px;
+    margin: 0 0 0 14px;
+    padding: 10px 0 0 10px;
     border-left: 1px dashed var(--accent);
   }
   .nav-submenu li { margin: 0; }
