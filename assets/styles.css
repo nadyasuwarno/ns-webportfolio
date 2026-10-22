@@ -35,7 +35,7 @@ a:hover { text-decoration: underline; text-decoration-color: var(--accent); text
 
 img { max-width: 100%; display: block; }
 
-/* ---------- Header ---------- */
+/* ---------- Header (mobile default: horizontal top bar) ---------- */
 .site-header {
   display: flex;
   justify-content: space-between;
@@ -47,8 +47,88 @@ img { max-width: 100%; display: block; }
   text-transform: uppercase;
 }
 .wordmark { font-weight: 500; }
-.nav { display: flex; gap: 36px; }
+.nav { display: flex; gap: 36px; align-items: center; }
 .nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }
+.nav-group { position: relative; }
+.nav-group > a { display: inline-block; }
+.nav-submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav-submenu a { white-space: nowrap; }
+
+/* ---------- Desktop: name + nav in a left column ---------- */
+@media (min-width: 900px) {
+  body {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+  }
+  .site-header {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 36px 28px;
+    gap: 40px;
+    position: sticky;
+    top: 0;
+    align-self: start;
+    max-height: 100vh;
+    overflow: visible;
+  }
+  .nav {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .nav-submenu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 10px 0 0 14px;
+    padding-left: 10px;
+    border-left: 1px dashed var(--accent);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, opacity 0.25s ease, margin-top 0.3s ease, padding 0.3s ease;
+  }
+  .nav-group:hover .nav-submenu,
+  .nav-group:focus-within .nav-submenu {
+    max-height: 400px;
+    opacity: 1;
+  }
+  .nav-submenu li { margin: 0; }
+  .nav-submenu a {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--ink-soft);
+  }
+  .nav-submenu a:hover { color: var(--accent); text-decoration: none; }
+  .nav-sep {
+    display: block;
+    width: 20px;
+    border-top: 1px solid var(--rule);
+    margin: 4px 0;
+  }
+
+  /* Push rail/footer into the right column */
+  .rail {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    margin: 0;
+    max-width: var(--max);
+    padding-top: 60px;
+  }
+  .site-footer {
+    grid-column: 1 / -1;
+    grid-row: 3;
+  }
+}
 
 /* ---------- Rail (dashed left line) ---------- */
 .rail {
