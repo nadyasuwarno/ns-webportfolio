@@ -177,27 +177,21 @@ img { max-width: 100%; display: block; }
   margin-top: 32px;
 }
 
-/* ---------- Explorations header + subtitles ---------- */
-.subheader {
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: clamp(32px, 4vw, 44px);
-  line-height: 1.1;
-  margin: 56px 0 8px;
-}
-.subtitle {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 20px;
+/* ---------- Sub-section label (nested under section-label) ---------- */
+.sub-section-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   color: var(--ink-soft);
-  margin: 32px 0 20px;
+  margin: 28px 0 14px;
 }
 
 /* ---------- Explorations grid + hover overlay ---------- */
 .exploration-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
   margin-bottom: 24px;
 }
 .exploration .thumb {
@@ -493,7 +487,7 @@ img { max-width: 100%; display: block; }
   .rail::before { left: 20px; }
   .status-grid { grid-template-columns: 1fr; gap: 28px; margin-bottom: 48px; }
   .case-metagrid { grid-template-columns: 1fr 1fr; }
-  .exploration-grid { grid-template-columns: 1fr 1fr; }
+  .exploration-grid { grid-template-columns: repeat(2, 1fr); }
   .about-hero { grid-template-columns: 1fr; }
   .hat-rack { grid-template-columns: 1fr 1fr; }
   .timeline-row { grid-template-columns: 1fr; gap: 4px; }
