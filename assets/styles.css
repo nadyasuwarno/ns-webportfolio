@@ -5,8 +5,8 @@
   --ink-soft: #6B6255;   /* metadata */
   --rule: #D8D0C0;       /* stone, hairlines only */
   --accent: #b5452b;
-  --serif: "EB Garamond", "Garamond", "Times New Roman", serif;
-  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --serif: "Space Grotesk", "Inter", "Helvetica Neue", Arial, sans-serif;
+  --mono: "Courier Prime", "Courier New", Courier, ui-monospace, monospace;
   --script: "Caveat", "Snell Roundhand", cursive;
   --rail: 56px;
   --max: 980px;
