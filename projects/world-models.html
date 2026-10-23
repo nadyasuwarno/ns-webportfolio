@@ -42,58 +42,56 @@
     <h1 class="case-title">World Models</h1>
     <p class="case-sub">Every visitor gets a role in how AI builds a world.</p>
 
-    <!-- HERO IMAGE -->
     <div class="case-hero">
       <span>[ ACTIVITY STATION A — VISITORS AT THE STATION ]</span>
       <!-- Replace with: <img src="../assets/images/world-models/hero.jpg" alt="Visitors at the World Models station" /> -->
     </div>
 
-    <!-- METADATA -->
     <div class="case-metagrid">
-      <div><p class="label">Role</p><p>Emerging Technology Lab intern — research, experience design, prototyping</p></div>
-      <div><p class="label">Team</p><p>Me + supervisors</p></div>
-      <div><p class="label">Timeline</p><p>Mar–Jul 2026</p></div>
-      <div><p class="label">Tools</p><p>Figma Make, Zotero, Obsidian, Lingbot, VR</p></div>
-      <div><p class="label">Status</p><p>Shipped 2026</p></div>
+      <div><p class="label">Role</p><p>Systems research, UX design</p></div>
+      <div><p class="label">Team</p><p>1 designer, 2 PMs, 3 developers</p></div>
+      <div><p class="label">Timeline</p><p>Mar–Jul 2026 · 5 months</p></div>
+      <div><p class="label">Tools</p><p>Figma, Figma Make, Obsidian, Research Rabbit, Zotero</p></div>
+      <div><p class="label">Status</p><p>Shipped · live at MoMI's Emerging Tech Lab</p></div>
     </div>
 
-    <!-- TL;DR -->
     <section class="case-section">
       <p class="section-label">TL;DR</p>
-      <p>AI can now build a walkable 3D world from one sentence, and almost no one knows how. I designed a learning station that starts with games everyone already knows, then turns each stage of an AI worldbuilding pipeline into a game where the visitor plays a role.</p>
+      <p>A hands-on learning station at the Museum of the Moving Image's Emerging Technology Lab. It shows anyone, including people who've never touched AI, how a single sentence becomes a walkable 3D world. Shipped in 2026.</p>
     </section>
 
-    <!-- THE PROBLEM -->
+    <section class="case-section">
+      <p class="section-label">Context</p>
+      <p>From March to July 2026, I joined the lab, whose philosophy is "back to fundamentals." My visitors were the public: families, students, curious walk-ins. The technology was anything but fundamental: seeds, noise functions, language models writing code, 3D meshes.</p>
+    </section>
+
     <section class="case-section">
       <p class="section-label">The problem</p>
-      <h2>Make AI worldbuilding make sense — without a lecture.</h2>
-      <p>MoMI's philosophy is "back to fundamentals." The challenge: take seeds, noise, LLMs writing JSON, and 3D meshes, and make them make sense to a museum visitor who has never heard any of those words.</p>
+      <h2>People don't fear AI because it's hard. They fear it because they can't see inside it.</h2>
+      <p>A wall of definitions would only confirm that.</p>
+      <div class="callout">How might we open the black box without turning a museum visit into a lecture?</div>
     </section>
 
-    <!-- WHAT I LEARNED -->
     <section class="case-section">
       <p class="section-label">What I learned</p>
-      <h2>I built a lens, then ran every system through it.</h2>
-      <p><strong>01.</strong> Nothing here is actually new. Flappy Bird, Minecraft and Pokémon already generate their worlds — visitors have played this before.</p>
-      <p><strong>02.</strong> A few simple ideas carry it all: a seed is the world's DNA, noise makes it natural, if/then rules are its laws of physics.</p>
-      <p><strong>03.</strong> The AI pipeline has four clear jobs — plan, check, separate, refine. Jobs can be played.</p>
+      <h2>I built a three-question lens, then ran every system through it.</h2>
+      <p>What does it do? Why was it built? How was it built? I graded each paper's claims as strong, moderate or weak, and mapped Meta's WorldGen pipeline stage by stage. Three things changed my approach:</p>
+      <p><strong>01.</strong> Visitors have already played this. Flappy Bird, Minecraft and Pokémon all generate their worlds with code.</p>
+      <p><strong>02.</strong> A few simple ideas carry the whole system: a seed is the world's DNA, noise makes it feel natural, and if/then rules are its laws of physics.</p>
+      <p><strong>03.</strong> The AI pipeline has four clear jobs: plan, check, separate, refine. And jobs can be played.</p>
     </section>
 
-    <!-- WHAT I MADE -->
     <section class="case-section">
       <p class="section-label">What I made</p>
-      <h2>Activity Station A: every visitor gets a role.</h2>
-      <p>Four games, one per pipeline stage. Discovery → breakdown → four games → the real thing → reflection.</p>
-      <p><strong>Scene planning</strong> — <em>The Prompt Translator.</em> You're the designer. Drag words from a messy diary into JSON until a wireframe world appears.</p>
-      <p><strong>Blockout + navmesh</strong> — <em>Navmesh Navigator.</em> You're the safety inspector. Paint the walkable floor; walls throw a constraint error.</p>
-      <p><strong>Decomposition</strong> — <em>The Monolith Splitter.</em> You're the organizer. Laser a fused village apart into 10 objects.</p>
-      <p><strong>Enhancement</strong> — <em>The Resolution Refiner.</em> You're the artist. Brush blurry objects into detail, then step inside in VR.</p>
-      <div class="callout">
-        Key decisions · Familiar games as the front door · Roles, not lectures · Open source over the famous name (Lingbot over Genie 3, traded against a 160GB model and heavy hardware).
-      </div>
+      <h2>Every visitor gets a role.</h2>
+      <p>The station starts with games they already know, then turns each stage of the pipeline into game stages:</p>
+      <p><strong>Designer</strong> — drag words from a messy diary into the plan, and a wireframe world appears.</p>
+      <p><strong>Safety inspector</strong> — paint the floor you can walk on. Walls push back.</p>
+      <p><strong>Organizer</strong> — split a fused village into 10 separate objects.</p>
+      <p><strong>Artist</strong> — brush blurry shapes into detail, then step inside your world in VR.</p>
+      <div class="callout">We decided to proceed with Lingbot, an open-source world model, over Google's better-known Genie 3 for its openness, even though it meant running a 160GB model.</div>
     </section>
 
-    <!-- TRY IT -->
     <section class="case-section">
       <p class="section-label">Try it · The seed slider</p>
       <h2>Procedural generation, felt in five seconds.</h2>
@@ -102,11 +100,11 @@
       </div>
     </section>
 
-    <!-- WHAT CHANGED -->
     <section class="case-section">
       <p class="section-label">What changed</p>
+      <p>[ One visitor moment you still remember, plus any number: visitors, playtime, sessions. ]</p>
+      <p>This is where I learned the idea behind my whole practice: demystification is the second step of enablement, after curiosity.</p>
       <div class="callout">"People don't need to understand everything. They need a way in."</div>
-      <p>Curiosity first, then demystification — then they can walk on their own.</p>
     </section>
 
     <div class="next-project">
