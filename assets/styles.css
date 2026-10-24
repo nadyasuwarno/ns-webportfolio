@@ -326,10 +326,10 @@ img { max-width: 100%; display: block; }
   margin-bottom: 6px;
 }
 .project-title {
-  font-family: var(--serif);
+  font-family: var(--mono);
   font-weight: 400;
-  font-size: clamp(22px, 2.6vw, 30px);
-  line-height: 1.2;
+  font-size: clamp(16px, 1.6vw, 20px);
+  line-height: 1.4;
   margin: 0;
 }
 .explorations-link {
