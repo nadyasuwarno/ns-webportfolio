@@ -262,7 +262,11 @@ img { max-width: 100%; display: block; }
 .status-grid p { margin: 0; max-width: 36ch; }
 
 /* ---------- Project cards (home + index) ---------- */
-.projects { display: flex; flex-direction: column; gap: 56px; }
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: 48px 32px;
+}
 .project { display: block; }
 .thumb {
   position: relative;
@@ -336,7 +340,7 @@ img { max-width: 100%; display: block; }
 /* ---------- Explorations grid + hover overlay ---------- */
 .exploration-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
   gap: 16px;
   margin-bottom: 24px;
 }
@@ -635,7 +639,6 @@ img { max-width: 100%; display: block; }
   .rail::before { left: 20px; }
   .status-grid { grid-template-columns: 1fr; gap: 28px; margin-bottom: 48px; }
   .case-metagrid { grid-template-columns: 1fr 1fr; }
-  .exploration-grid { grid-template-columns: repeat(2, 1fr); }
   .about-hero { grid-template-columns: 1fr; }
   .hat-rack { grid-template-columns: 1fr 1fr; }
   .timeline-row { grid-template-columns: 1fr; gap: 4px; }
