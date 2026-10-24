@@ -1,11 +1,11 @@
 :root {
-  --bg: #F3EFE6;         /* paper */
-  --panel: #EAE4D7;      /* cards, polaroid frames */
-  --ink: #2A251F;        /* text */
-  --ink-soft: #6B6255;   /* metadata */
-  --rule: #D8D0C0;       /* stone, hairlines only */
-  --accent: #b5452b;
-  --serif: "Space Grotesk", "Inter", "Helvetica Neue", Arial, sans-serif;
+  --bg: #EFEAE0;         /* paper (warm cream) */
+  --panel: #D5DCE4;      /* cards, polaroid frames (cool pale blue) */
+  --ink: #26303F;        /* text (deep navy) */
+  --ink-soft: #6D7885;   /* metadata (muted blue-grey) */
+  --rule: #A8B2BD;       /* hairlines (dusty blue) */
+  --accent: #7A8EA3;     /* dusty blue — replaces the rust accent */
+  --serif: "Lora", "Freight Text", Georgia, "Times New Roman", serif;
   --mono: "Courier Prime", "Courier New", Courier, ui-monospace, monospace;
   --script: "Caveat", "Snell Roundhand", cursive;
   --rail: 56px;
@@ -375,7 +375,7 @@ h2.section-head { margin-top: 72px; }
   flex-direction: column;
   justify-content: flex-end;
   gap: 4px;
-  background: linear-gradient(180deg, rgba(243,239,230,0.4) 0%, rgba(243,239,230,0.95) 55%);
+  background: linear-gradient(180deg, rgba(213,220,228,0.4) 0%, rgba(213,220,228,0.95) 55%);
   color: var(--ink);
   opacity: 0;
   transition: opacity 0.25s ease;
