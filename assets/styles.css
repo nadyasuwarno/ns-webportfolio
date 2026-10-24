@@ -352,7 +352,7 @@ img { max-width: 100%; display: block; }
   color: var(--ink-soft);
   margin: 0 0 24px;
 }
-h2.section-head { margin-top: 32px; }
+h2.section-head { margin-top: 72px; }
 
 /* ---------- Sub-section label (nested under section-label) ---------- */
 .sub-section-label {
