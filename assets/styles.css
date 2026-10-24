@@ -1,10 +1,10 @@
 :root {
-  --bg: #EFEAE0;         /* paper (warm cream) */
+  --bg: #F4F2EB;         /* paper (light gritty white) */
   --panel: #D5DCE4;      /* cards, polaroid frames (cool pale blue) */
   --ink: #26303F;        /* text (deep navy) */
   --ink-soft: #6D7885;   /* metadata (muted blue-grey) */
   --rule: #A8B2BD;       /* hairlines (dusty blue) */
-  --accent: #7A8EA3;     /* dusty blue — replaces the rust accent */
+  --accent: #7A8EA3;     /* dusty blue */
   --serif: "Lora", "Freight Text", Georgia, "Times New Roman", serif;
   --mono: "Courier Prime", "Courier New", Courier, ui-monospace, monospace;
   --script: "Caveat", "Snell Roundhand", cursive;
@@ -26,16 +26,16 @@ html, body {
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='7' viewBox='0 0 7 7'%3E%3Crect x='1' y='1' width='4' height='4' fill='%236b4423'/%3E%3C/svg%3E") 3 3, auto;
 }
 
-/* Subtle paper grain — barely-there noise so the page feels like watercolor paper */
+/* Gritty paper grain — denser noise so the page reads as pressed paper */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 1;
-  opacity: 0.5;
+  opacity: 0.85;
   mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.17  0 0 0 0 0.14  0 0 0 0 0.12  0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.4' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.14  0 0 0 0 0.17  0 0 0 0 0.22  0 0 0 0.09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 body > * { position: relative; z-index: 2; }
 
@@ -208,9 +208,20 @@ img { max-width: 100%; display: block; }
 .hello {
   font-family: var(--serif);
   font-weight: 500;
-  font-size: clamp(28px, 3vw, 36px);
+  font-size: clamp(22px, 2.4vw, 28px);
   letter-spacing: -0.01em;
-  margin: 0 0 10px;
+  margin: 0 0 20px;
+  color: var(--ink-soft);
+}
+.thesis-quote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.3;
+  color: var(--ink-soft);
+  max-width: 58ch;
+  margin: 24px 0 8px;
 }
 .eyebrow-italic {
   font-style: italic;
