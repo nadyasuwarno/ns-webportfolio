@@ -427,14 +427,7 @@ h2.section-head { margin-top: 72px; }
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink-soft);
-  display: flex;
-  align-items: center;
-  gap: 10px;
   margin: 56px 0 20px;
-}
-.section-label::before {
-  content: "—";
-  color: var(--accent);
 }
 
 /* ---------- Case study ---------- */
