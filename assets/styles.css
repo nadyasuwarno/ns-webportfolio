@@ -5,7 +5,7 @@
   --ink-soft: #6D7885;   /* metadata (muted blue-grey) */
   --rule: #A8B2BD;       /* hairlines (dusty blue) */
   --accent: #7A8EA3;     /* dusty blue */
-  --serif: "Lora", "Freight Text", Georgia, "Times New Roman", serif;
+  --serif: "Space Grotesk", "Inter", "Helvetica Neue", Arial, sans-serif;
   --mono: "Courier Prime", "Courier New", Courier, ui-monospace, monospace;
   --script: "Caveat", "Snell Roundhand", cursive;
   --rail: 56px;
@@ -19,9 +19,9 @@ html, body {
   padding: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: var(--serif);
-  font-size: 18px;
-  line-height: 1.55;
+  font-family: var(--mono);
+  font-size: 15px;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='7' viewBox='0 0 7 7'%3E%3Crect x='1' y='1' width='4' height='4' fill='%236b4423'/%3E%3C/svg%3E") 3 3, auto;
 }
@@ -257,10 +257,14 @@ img { max-width: 100%; display: block; }
 }
 .label {
   font-family: var(--mono);
+  font-weight: 700;
   font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ink-soft);
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--ink);
+  text-underline-offset: 4px;
   margin-bottom: 10px !important;
 }
 
