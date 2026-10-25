@@ -351,6 +351,8 @@ img { max-width: 100%; display: block; }
 .case-hero:hover .hero-vid {
   opacity: 1;
 }
+/* Autoplay videos (case-study hero) stay visible always */
+.hero-vid[autoplay] { opacity: 1; }
 
 /* When the thumb/hero has real media, drop the panel + dashed border */
 .thumb.has-media,

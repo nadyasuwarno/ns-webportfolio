@@ -13,8 +13,9 @@ document.querySelectorAll('.nav-group').forEach(group => {
   group.addEventListener('focusout', close);
 });
 
-/* Hover-to-play videos (home card + case hero) */
+/* Hover-to-play videos (home card + case hero) — skip autoplay ones */
 document.querySelectorAll('.thumb-vid, .hero-vid').forEach(video => {
+  if (video.hasAttribute('autoplay')) return;
   const host = video.parentElement;
   host.addEventListener('mouseenter', () => {
     video.currentTime = 0;
