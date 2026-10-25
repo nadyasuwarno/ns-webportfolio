@@ -326,6 +326,15 @@ img { max-width: 100%; display: block; }
 .thumb, .case-hero { isolation: isolate; }
 .case-hero { position: relative; }
 
+.thumb-img, .hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: 4;
+}
 .thumb-vid, .hero-vid {
   position: absolute;
   inset: 0;
@@ -335,6 +344,12 @@ img { max-width: 100%; display: block; }
   pointer-events: none;
   z-index: 5;
   background: #000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.thumb:hover .thumb-vid,
+.case-hero:hover .hero-vid {
+  opacity: 1;
 }
 
 /* When the thumb/hero has real media, drop the panel + dashed border */
