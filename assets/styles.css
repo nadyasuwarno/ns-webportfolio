@@ -26,30 +26,6 @@ html, body {
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='7' viewBox='0 0 7 7'%3E%3Crect x='1' y='1' width='4' height='4' fill='%236b4423'/%3E%3C/svg%3E") 3 3, auto;
 }
 
-/* ---------- Page transition — calm flip from bottom-right ---------- */
-@view-transition { navigation: auto; }
-
-::view-transition-old(root) {
-  animation: page-leave 0.45s cubic-bezier(0.22, 0.68, 0.4, 1) both;
-  transform-origin: 100% 100%;
-}
-::view-transition-new(root) {
-  animation: page-arrive 0.55s cubic-bezier(0.22, 0.68, 0.4, 1) both;
-  transform-origin: 100% 100%;
-}
-@keyframes page-leave {
-  from { opacity: 1; transform: translateY(0) rotate(0); }
-  to   { opacity: 0; transform: translateY(-18px) rotate(-0.8deg); }
-}
-@keyframes page-arrive {
-  from { opacity: 0; transform: translateY(24px) rotate(0.6deg); }
-  to   { opacity: 1; transform: translateY(0) rotate(0); }
-}
-@media (prefers-reduced-motion: reduce) {
-  ::view-transition-old(root),
-  ::view-transition-new(root) { animation: none !important; }
-}
-
 /* Gritty paper grain — denser noise so the page reads as pressed paper */
 body::before {
   content: "";
