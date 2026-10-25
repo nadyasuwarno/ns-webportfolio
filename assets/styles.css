@@ -101,7 +101,12 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-.wordmark { font-weight: 500; }
+.wordmark {
+  font-weight: 500;
+  font-size: clamp(22px, 2.4vw, 28px);
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
 .nav { display: flex; gap: 28px; align-items: center; }
 .nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }
 .nav-group { position: relative; }
@@ -163,7 +168,7 @@ img { max-width: 100%; display: block; }
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 36px 28px;
+    padding: 40px 28px;
     gap: 40px;
     z-index: 10;
   }
@@ -222,12 +227,13 @@ img { max-width: 100%; display: block; }
   gap: 32px;
   font-family: var(--serif);
   font-weight: 500;
-  font-size: 13px;
-  letter-spacing: 0.1em;
+  font-size: 14px;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--ink);
   margin: 0;
   z-index: 5;
+  line-height: clamp(22px, 2.4vw, 28px);
 }
 .thesis-quote {
   font-family: var(--serif);
