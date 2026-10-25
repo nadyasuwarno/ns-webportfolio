@@ -95,13 +95,14 @@ img { max-width: 100%; display: block; }
   justify-content: space-between;
   align-items: center;
   padding: 28px 48px;
-  font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: 0.08em;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-.wordmark { font-weight: 500; }
-.nav { display: flex; gap: 36px; align-items: center; }
+.wordmark { font-weight: 700; }
+.nav { display: flex; gap: 28px; align-items: center; }
 .nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }
 .nav-group { position: relative; }
 .nav-group > a { display: inline-block; }
