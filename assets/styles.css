@@ -5,8 +5,8 @@
   --ink-soft: #6D7885;   /* metadata (muted blue-grey) */
   --rule: #A8B2BD;       /* hairlines (dusty blue) */
   --accent: #7A8EA3;     /* dusty blue */
-  --serif: "Space Grotesk", "Inter", "Helvetica Neue", Arial, sans-serif;
-  --mono: "Courier Prime", "Courier New", Courier, ui-monospace, monospace;
+  --serif: "Work Sans", "Inter", "Helvetica Neue", Arial, sans-serif;
+  --mono: "Courier New", "Courier Prime", Courier, ui-monospace, monospace;
   --script: "Caveat", "Snell Roundhand", cursive;
   --rail: 56px;
   --max: 980px;
@@ -211,7 +211,22 @@ img { max-width: 100%; display: block; }
   font-size: clamp(22px, 2.4vw, 28px);
   letter-spacing: -0.01em;
   margin: 0 0 20px;
-  color: var(--ink-soft);
+  color: var(--ink);
+}
+.cities {
+  position: absolute;
+  top: 40px;
+  right: 48px;
+  display: flex;
+  gap: 32px;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0;
+  z-index: 5;
 }
 .thesis-quote {
   font-family: var(--serif);
@@ -256,16 +271,12 @@ img { max-width: 100%; display: block; }
   margin: 20px 0 56px;
 }
 .label {
-  font-family: var(--mono);
+  font-family: var(--serif);
   font-weight: 700;
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 0;
   color: var(--ink);
-  text-decoration: underline;
-  text-decoration-color: var(--ink);
-  text-underline-offset: 4px;
-  margin-bottom: 10px !important;
+  margin-bottom: 8px !important;
 }
 
 .status-grid {
