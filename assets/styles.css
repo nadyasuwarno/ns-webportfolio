@@ -479,6 +479,49 @@ h2.section-head { margin-top: 72px; }
   margin: 28px 0 14px;
 }
 
+/* ---------- Explorations filter tabs ---------- */
+.filter-tabs {
+  display: flex;
+  gap: 28px;
+  margin: 8px 0 28px;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 10px;
+}
+.filter-tab {
+  background: none;
+  border: none;
+  padding: 0 0 6px;
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
+  cursor: pointer;
+  position: relative;
+}
+.filter-tab:hover { color: var(--ink); }
+.filter-tab.is-active {
+  color: var(--ink);
+}
+.filter-tab.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -11px;
+  height: 1px;
+  background: var(--ink);
+}
+.exploration.is-hidden { display: none; }
+.exploration-empty {
+  grid-column: 1 / -1;
+  color: var(--ink-soft);
+  font-style: italic;
+  padding: 32px 0;
+  text-align: center;
+}
+
 /* ---------- Explorations grid + hover overlay ---------- */
 .exploration-grid {
   display: grid;

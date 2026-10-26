@@ -33,126 +33,163 @@
   <main class="rail">
     <!-- ===== CASE STUDIES ===== -->
     <h1 class="display section-head" id="case-studies">Case studies.</h1>
-    <section class="projects">
+    <section class="projects projects-split">
       <article class="project">
         <a class="thumb has-media" href="projects/bibble.html">
-          <span class="badge">Next round</span>
           <img class="thumb-img" src="assets/images/bibble/bibble-static.jpg" alt="Bibble" />
           <video class="thumb-vid" src="assets/images/bibble/bibble-motion2.mp4" muted loop playsinline preload="metadata"></video>
         </a>
-        <div class="project-meta">
-          <span>Concept · Spring 2026</span>
+        <div class="project-info">
+          <h2 class="project-title"><a href="projects/bibble.html">Bibble &nbsp;|&nbsp; Creative Conscience</a></h2>
+          <p class="project-sub">Transforming Book Donation into a System of Circulation.</p>
+          <div class="project-tags">
+            <span class="tag">Product Design</span>
+            <span class="tag">Education</span>
+            <span class="tag">Social Research</span>
+          </div>
         </div>
-        <h2 class="project-title"><a href="projects/bibble.html">Bibble — The problem isn't scarcity. It's stagnation.</a></h2>
       </article>
 
       <article class="project">
         <a class="thumb has-media" href="projects/world-models.html">
-          <span class="badge">Shipped</span>
           <img class="thumb-img" src="assets/images/world-models/world-models-static.jpg" alt="World Models" />
           <img class="thumb-reveal" src="assets/images/world-models/momi.jpg" alt="World Models — station photo" />
         </a>
-        <div class="project-meta">
-          <span>Museum of the Moving Image · 2026</span>
+        <div class="project-info">
+          <h2 class="project-title"><a href="projects/world-models.html">World Models &nbsp;|&nbsp; MoMI</a></h2>
+          <p class="project-sub">Gamified experience on how a single sentence becomes a walkable 3D world.</p>
+          <div class="project-tags">
+            <span class="tag">Interaction Design</span>
+            <span class="tag">Research</span>
+            <span class="tag">Education</span>
+            <span class="tag">World Models</span>
+          </div>
         </div>
-        <h2 class="project-title"><a href="projects/world-models.html">World Models — Every visitor gets a role in how AI builds a world.</a></h2>
       </article>
 
       <article class="project">
         <a class="thumb has-media" href="projects/mosaic.html">
-          <span class="badge">Shipped</span>
           <img class="thumb-img" src="assets/images/mosaic/mosaic-static3.jpg" alt="Mosaic identity system" />
           <video class="thumb-vid" src="assets/images/mosaic/mosaic-motion3.mp4" muted loop playsinline preload="metadata"></video>
         </a>
-        <div class="project-meta">
-          <span>Brand System · Parsons · 2025</span>
+        <div class="project-info">
+          <h2 class="project-title"><a href="projects/mosaic.html">Mosaic &nbsp;|&nbsp; Parsons School of Design</a></h2>
+          <p class="project-sub">Visual identity for the graduating class of DT BFA &amp; MFA 2025 Thesis Show.</p>
+          <div class="project-tags">
+            <span class="tag">Branding</span>
+            <span class="tag">Design Systems</span>
+            <span class="tag">Exhibition</span>
+          </div>
         </div>
-        <h2 class="project-title"><a href="projects/mosaic.html">Mosaic — One identity for a whole graduating class.</a></h2>
       </article>
     </section>
 
     <!-- ===== EXPLORATIONS ===== -->
     <h2 class="display section-head" id="explorations">Explorations.</h2>
 
-    <p class="sub-section-label">Creative studies &amp; solutions</p>
-    <section class="exploration-grid">
-      <article class="exploration">
+    <div class="filter-tabs" role="tablist">
+      <button class="filter-tab is-active" data-filter="all" type="button">All</button>
+      <button class="filter-tab" data-filter="writing" type="button">Writing</button>
+      <button class="filter-tab" data-filter="experiments" type="button">Experiments</button>
+      <button class="filter-tab" data-filter="community" type="button">Community</button>
+    </div>
+
+    <section class="exploration-grid" id="exploration-items">
+      <article class="exploration" data-category="writing">
         <a class="thumb" href="#anthive">
           <span class="placeholder">[ ANTHIVE ]</span>
           <div class="hover-info">
-            <p class="info-meta">Systems study · Writing</p>
+            <p class="info-meta">Writing · Systems study</p>
             <h3>The subway, read as an ant colony.</h3>
           </div>
         </a>
       </article>
-      <article class="exploration">
+      <article class="exploration" data-category="writing">
         <a class="thumb" href="#park">
           <span class="placeholder">[ PARK ]</span>
           <div class="hover-info">
-            <p class="info-meta">Intervention · Columbia University</p>
+            <p class="info-meta">Writing · Columbia University</p>
             <h3>A proposal for the park in front of the school.</h3>
           </div>
         </a>
       </article>
-      <article class="exploration">
+      <article class="exploration" data-category="writing">
         <a class="thumb" href="#soft-protest">
           <span class="placeholder">[ SOFT PROTEST ]</span>
           <div class="hover-info">
-            <p class="info-meta">Intervention · First year</p>
+            <p class="info-meta">Writing · First year</p>
             <h3>A quiet protest against learning to see others as less.</h3>
+          </div>
+        </a>
+      </article>
+
+      <article class="exploration" data-category="experiments">
+        <a class="thumb" href="#performance">
+          <span class="placeholder">[ PERFORMANCE ]</span>
+          <div class="hover-info">
+            <p class="info-meta">Experiment · London · Spring 2026</p>
+            <h3>Interactive performances, made with dancers.</h3>
+          </div>
+        </a>
+      </article>
+      <article class="exploration" data-category="experiments">
+        <a class="thumb" href="#symphony">
+          <span class="placeholder">[ SYMPHONY ]</span>
+          <div class="hover-info">
+            <p class="info-meta">Experiment · Installation</p>
+            <h3>Symphony of Elements</h3>
+          </div>
+        </a>
+      </article>
+      <article class="exploration" data-category="experiments">
+        <a class="thumb" href="#touchdesigner">
+          <span class="placeholder">[ TOUCHDESIGNER ]</span>
+          <div class="hover-info">
+            <p class="info-meta">Experiment · Installation</p>
+            <h3>TouchDesigner final project.</h3>
+          </div>
+        </a>
+      </article>
+      <article class="exploration" data-category="experiments">
+        <a class="thumb" href="#film-memory">
+          <span class="placeholder">[ FILM STILL ]</span>
+          <div class="hover-info">
+            <p class="info-meta">Experiment · Film</p>
+            <h3>A short film on memory systems.</h3>
+          </div>
+        </a>
+      </article>
+      <article class="exploration" data-category="experiments">
+        <a class="thumb" href="#film-mental-health">
+          <span class="placeholder">[ FILM STILL ]</span>
+          <div class="hover-info">
+            <p class="info-meta">Experiment · Film · With Tiffany</p>
+            <h3>A film on mental health.</h3>
+          </div>
+        </a>
+      </article>
+
+      <article class="exploration" data-category="community">
+        <a class="thumb" href="#ipac-podcast">
+          <span class="placeholder">[ IPAC PODCAST ]</span>
+          <div class="hover-info">
+            <p class="info-meta">Community · Guest · 2025</p>
+            <h3>Indonesian Professionals Association of Canada podcast.</h3>
+          </div>
+        </a>
+      </article>
+      <article class="exploration" data-category="community">
+        <a class="thumb" href="#kda-events">
+          <span class="placeholder">[ KDA EVENTS ]</span>
+          <div class="hover-info">
+            <p class="info-meta">Community · Organizer · 2024–present</p>
+            <h3>Design community events for students and early-career designers.</h3>
           </div>
         </a>
       </article>
     </section>
 
-    <p class="sub-section-label">Interactive installations</p>
-    <section class="exploration-grid">
-      <article class="exploration">
-        <a class="thumb" href="#performance">
-          <span class="placeholder">[ PERFORMANCE ]</span>
-          <div class="hover-info">
-            <p class="info-meta">Performance · London · Spring 2026</p>
-            <h3>Interactive performances, made with dancers.</h3>
-          </div>
-        </a>
-      </article>
-      <article class="exploration">
-        <a class="thumb" href="#symphony">
-          <span class="placeholder">[ SYMPHONY ]</span>
-          <div class="hover-info">
-            <p class="info-meta">Installation</p>
-            <h3>Symphony of Elements</h3>
-          </div>
-        </a>
-      </article>
-      <article class="exploration">
-        <a class="thumb" href="#touchdesigner">
-          <span class="placeholder">[ TOUCHDESIGNER ]</span>
-          <div class="hover-info">
-            <p class="info-meta">Installation</p>
-            <h3>[ Installation title ]</h3>
-          </div>
-        </a>
-      </article>
-      <article class="exploration">
-        <a class="thumb" href="#film-memory">
-          <span class="placeholder">[ FILM STILL ]</span>
-          <div class="hover-info">
-            <p class="info-meta">Film · Memory systems</p>
-            <h3>[ Film title ]</h3>
-          </div>
-        </a>
-      </article>
-      <article class="exploration">
-        <a class="thumb" href="#film-mental-health">
-          <span class="placeholder">[ FILM STILL ]</span>
-          <div class="hover-info">
-            <p class="info-meta">Film · With Tiffany</p>
-            <h3>[ Film on mental health ]</h3>
-          </div>
-        </a>
-      </article>
-    </section>
+    <p class="exploration-empty" hidden>Nothing in this category yet.</p>
   </main>
 
   <footer class="site-footer">
