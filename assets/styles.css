@@ -303,6 +303,47 @@ img { max-width: 100%; display: block; }
   gap: 48px 32px;
 }
 .project { display: block; }
+
+/* ---- Horizontal split layout (home) ---- */
+.projects-split { display: flex; flex-direction: column; gap: 64px; }
+.projects-split .project {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.projects-split .thumb { margin-bottom: 0; }
+.project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.project-sub {
+  font-family: var(--body);
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--accent);
+  margin: 0;
+  max-width: 36ch;
+}
+.project-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag {
+  font-family: var(--body);
+  font-weight: 400;
+  font-size: 11px;
+  padding: 5px 10px;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  line-height: 1;
+}
+
+@media (max-width: 760px) {
+  .projects-split .project {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
 .thumb {
   position: relative;
   display: flex;
