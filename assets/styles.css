@@ -6,6 +6,7 @@
   --rule: #A8B2BD;       /* hairlines (dusty blue) */
   --accent: #7A8EA3;     /* dusty blue */
   --serif: "Work Sans", "Inter", "Helvetica Neue", Arial, sans-serif;
+  --body: "DM Sans", "Inter", "Helvetica Neue", Arial, sans-serif;
   --mono: "Courier New", "Courier Prime", Courier, ui-monospace, monospace;
   --script: "Caveat", "Snell Roundhand", cursive;
   --rail: 56px;
@@ -19,9 +20,9 @@ html, body {
   padding: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: var(--mono);
+  font-family: var(--body);
   font-size: 15px;
-  line-height: 1.65;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='21' viewBox='0 0 21 21'%3E%3Cdefs%3E%3CradialGradient id='g'%3E%3Cstop offset='0%25' stop-color='%238B939E' stop-opacity='1'/%3E%3Cstop offset='100%25' stop-color='%238B939E' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='10.5' cy='10.5' r='10.5' fill='url(%23g)'/%3E%3C/svg%3E") 10 10, auto;
 }
@@ -399,10 +400,10 @@ img { max-width: 100%; display: block; }
   margin-bottom: 6px;
 }
 .project-title {
-  font-family: var(--mono);
-  font-weight: 400;
+  font-family: var(--body);
+  font-weight: 500;
   font-size: clamp(16px, 1.6vw, 20px);
-  line-height: 1.4;
+  line-height: 1.35;
   margin: 0;
 }
 .explorations-link {
