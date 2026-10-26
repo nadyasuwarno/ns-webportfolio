@@ -24,24 +24,17 @@ document.querySelectorAll('.thumb-vid, .hero-vid').forEach(video => {
   host.addEventListener('mouseleave', () => { video.pause(); });
 });
 
-/* Explorations: category filter tabs */
+/* Explorations: category panels */
 (() => {
   const tabs = document.querySelectorAll('.filter-tab');
-  const items = document.querySelectorAll('.exploration');
-  const empty = document.querySelector('.exploration-empty');
-  if (!tabs.length || !items.length) return;
+  const panels = document.querySelectorAll('.exp-panel');
+  if (!tabs.length || !panels.length) return;
 
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-      const filter = tab.dataset.filter;
+      const target = tab.dataset.panel;
       tabs.forEach(t => t.classList.toggle('is-active', t === tab));
-      let visibleCount = 0;
-      items.forEach(item => {
-        const match = filter === 'all' || item.dataset.category === filter;
-        item.classList.toggle('is-hidden', !match);
-        if (match) visibleCount++;
-      });
-      if (empty) empty.hidden = visibleCount > 0;
+      panels.forEach(p => p.classList.toggle('is-active', p.dataset.panel === target));
     });
   });
 })();

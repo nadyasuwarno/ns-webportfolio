@@ -85,111 +85,147 @@
     </section>
 
     <!-- ===== EXPLORATIONS ===== -->
-    <h2 class="display section-head" id="explorations">Explorations.</h2>
+    <p class="explorations-head" id="explorations">Explorations</p>
 
     <div class="filter-tabs" role="tablist">
-      <button class="filter-tab is-active" data-filter="all" type="button">All</button>
-      <button class="filter-tab" data-filter="writing" type="button">Writing</button>
-      <button class="filter-tab" data-filter="experiments" type="button">Experiments</button>
-      <button class="filter-tab" data-filter="community" type="button">Community</button>
+      <button class="filter-tab is-active" data-panel="experiments" type="button">Experiments</button>
+      <button class="filter-tab" data-panel="writing" type="button">Writing</button>
+      <button class="filter-tab" data-panel="sidequests" type="button">Sidequests</button>
     </div>
 
-    <section class="exploration-grid" id="exploration-items">
-      <article class="exploration" data-category="writing">
-        <a class="thumb" href="#anthive">
-          <span class="placeholder">[ ANTHIVE ]</span>
-          <div class="hover-info">
-            <p class="info-meta">Writing · Systems study</p>
-            <h3>The subway, read as an ant colony.</h3>
+    <!-- EXPERIMENTS -->
+    <section class="exp-panel is-active" data-panel="experiments">
+      <article class="exp-card">
+        <a class="exp-media" href="#cycle-of-a-flower">
+          <span class="placeholder">[ CYCLE OF A FLOWER ]</span>
+          <div class="exp-tags">
+            <span class="tag">Interactive Installation</span>
+            <span class="tag">TouchDesigner</span>
           </div>
         </a>
-      </article>
-      <article class="exploration" data-category="writing">
-        <a class="thumb" href="#park">
-          <span class="placeholder">[ PARK ]</span>
-          <div class="hover-info">
-            <p class="info-meta">Writing · Columbia University</p>
-            <h3>A proposal for the park in front of the school.</h3>
-          </div>
-        </a>
-      </article>
-      <article class="exploration" data-category="writing">
-        <a class="thumb" href="#soft-protest">
-          <span class="placeholder">[ SOFT PROTEST ]</span>
-          <div class="hover-info">
-            <p class="info-meta">Writing · First year</p>
-            <h3>A quiet protest against learning to see others as less.</h3>
-          </div>
-        </a>
+        <div class="exp-head">
+          <h3 class="exp-title">Cycle of a Flower</h3>
+          <span class="exp-year">2026</span>
+        </div>
+        <p class="exp-desc">A generative visual system that unfolds a flower's lifecycle through touch — bloom, wilt, and seed, driven by real-time inputs.</p>
       </article>
 
-      <article class="exploration" data-category="experiments">
-        <a class="thumb" href="#performance">
+      <article class="exp-card">
+        <a class="exp-media" href="#symphony-of-elements">
+          <span class="placeholder">[ SYMPHONY OF ELEMENTS ]</span>
+          <div class="exp-tags">
+            <span class="tag">Unity</span>
+            <span class="tag">Motion Capture</span>
+          </div>
+        </a>
+        <div class="exp-head">
+          <h3 class="exp-title">Symphony of Elements</h3>
+          <span class="exp-year">2024</span>
+        </div>
+        <p class="exp-desc">An interactive installation that turns the periodic table into sound — visitors trigger tones and light by touching elements grouped by their physical properties.</p>
+      </article>
+
+      <article class="exp-card">
+        <a class="exp-media" href="#performance-dancers">
           <span class="placeholder">[ PERFORMANCE ]</span>
-          <div class="hover-info">
-            <p class="info-meta">Experiment · London · Spring 2026</p>
-            <h3>Interactive performances, made with dancers.</h3>
+          <div class="exp-tags">
+            <span class="tag">Dance</span>
+            <span class="tag">Spring 2026</span>
           </div>
         </a>
-      </article>
-      <article class="exploration" data-category="experiments">
-        <a class="thumb" href="#symphony">
-          <span class="placeholder">[ SYMPHONY ]</span>
-          <div class="hover-info">
-            <p class="info-meta">Experiment · Installation</p>
-            <h3>Symphony of Elements</h3>
-          </div>
-        </a>
-      </article>
-      <article class="exploration" data-category="experiments">
-        <a class="thumb" href="#touchdesigner">
-          <span class="placeholder">[ TOUCHDESIGNER ]</span>
-          <div class="hover-info">
-            <p class="info-meta">Experiment · Installation</p>
-            <h3>TouchDesigner final project.</h3>
-          </div>
-        </a>
-      </article>
-      <article class="exploration" data-category="experiments">
-        <a class="thumb" href="#film-memory">
-          <span class="placeholder">[ FILM STILL ]</span>
-          <div class="hover-info">
-            <p class="info-meta">Experiment · Film</p>
-            <h3>A short film on memory systems.</h3>
-          </div>
-        </a>
-      </article>
-      <article class="exploration" data-category="experiments">
-        <a class="thumb" href="#film-mental-health">
-          <span class="placeholder">[ FILM STILL ]</span>
-          <div class="hover-info">
-            <p class="info-meta">Experiment · Film · With Tiffany</p>
-            <h3>A film on mental health.</h3>
-          </div>
-        </a>
+        <div class="exp-head">
+          <h3 class="exp-title">Performance with Dancers</h3>
+          <span class="exp-year">2026</span>
+        </div>
+        <p class="exp-desc">Interactive performances made with dancers in London, where live movement drove real-time generative visuals.</p>
       </article>
 
-      <article class="exploration" data-category="community">
-        <a class="thumb" href="#ipac-podcast">
-          <span class="placeholder">[ IPAC PODCAST ]</span>
-          <div class="hover-info">
-            <p class="info-meta">Community · Guest · 2025</p>
-            <h3>Indonesian Professionals Association of Canada podcast.</h3>
+      <article class="exp-card">
+        <a class="exp-media" href="#film-memory">
+          <span class="placeholder">[ FILM STILL ]</span>
+          <div class="exp-tags">
+            <span class="tag">Film</span>
+            <span class="tag">Memory</span>
           </div>
         </a>
-      </article>
-      <article class="exploration" data-category="community">
-        <a class="thumb" href="#kda-events">
-          <span class="placeholder">[ KDA EVENTS ]</span>
-          <div class="hover-info">
-            <p class="info-meta">Community · Organizer · 2024–present</p>
-            <h3>Design community events for students and early-career designers.</h3>
-          </div>
-        </a>
+        <div class="exp-head">
+          <h3 class="exp-title">A film on memory systems.</h3>
+          <span class="exp-year">2024</span>
+        </div>
+        <p class="exp-desc">A short, meditative film exploring how memories get stored, retrieved and quietly rewritten.</p>
       </article>
     </section>
 
-    <p class="exploration-empty" hidden>Nothing in this category yet.</p>
+    <!-- WRITING -->
+    <section class="exp-panel" data-panel="writing">
+      <article class="exp-card wri-card">
+        <a class="exp-media wri-media" href="#anthive">
+          <span class="placeholder">[ ANTHIVE ]</span>
+        </a>
+        <div class="wri-info">
+          <h3 class="exp-title">AntHive</h3>
+          <p class="wri-date">16 October 2025 &nbsp;|&nbsp; 5 min read</p>
+          <p class="exp-desc">Reflections on human systems of efficiency in comparison to ant colonies.</p>
+        </div>
+      </article>
+
+      <article class="exp-card wri-card">
+        <a class="exp-media wri-media" href="#park-proposal">
+          <span class="placeholder">[ PARK ]</span>
+        </a>
+        <div class="wri-info">
+          <h3 class="exp-title">A proposal for the park in front of the school.</h3>
+          <p class="wri-date">Columbia University &nbsp;|&nbsp; 2024</p>
+          <p class="exp-desc">A field intervention: what one small plaza could become if the people who used it every day had a say.</p>
+        </div>
+      </article>
+
+      <article class="exp-card wri-card">
+        <a class="exp-media wri-media" href="#soft-protest">
+          <span class="placeholder">[ SOFT PROTEST ]</span>
+        </a>
+        <div class="wri-info">
+          <h3 class="exp-title">Soft Protest.</h3>
+          <p class="wri-date">First year &nbsp;|&nbsp; 2023</p>
+          <p class="exp-desc">A quiet protest against learning to see others as less.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- SIDEQUESTS -->
+    <section class="exp-panel" data-panel="sidequests">
+      <article class="polaroid-stack">
+        <div class="polaroid">
+          <div class="polaroid-img placeholder-plain">[ PERMIAS 1 ]</div>
+        </div>
+        <div class="polaroid">
+          <div class="polaroid-img placeholder-plain">[ PERMIAS 2 ]</div>
+        </div>
+        <div class="polaroid">
+          <div class="polaroid-img placeholder-plain">[ PERMIAS NYC ]</div>
+          <div class="polaroid-info">
+            <div class="polaroid-head">
+              <h3 class="exp-title">Permias NYC</h3>
+              <span class="exp-year">2025</span>
+            </div>
+            <span class="tag">Event Coordinator</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="polaroid-stack single">
+        <div class="polaroid">
+          <div class="polaroid-img placeholder-plain">[ INDONESIAN FILM FEST ]</div>
+          <div class="polaroid-info">
+            <div class="polaroid-head">
+              <h3 class="exp-title">Indonesian Film Fest</h3>
+              <span class="exp-year">2025</span>
+            </div>
+            <span class="tag">Volunteer</span>
+          </div>
+        </div>
+      </article>
+    </section>
   </main>
 
   <footer class="site-footer">
