@@ -16,7 +16,7 @@
 * { box-sizing: border-box; }
 
 /* Keep the column in the same place whether or not a page scrolls */
-html { scrollbar-gutter: stable; }
+html { scrollbar-gutter: stable; scroll-padding-top: 84px; }
 
 html, body {
   margin: 0;
@@ -784,18 +784,25 @@ body:not(.landing) { font-family: var(--body); }
 body::before { display: none; }
 
 .site-header {
-  position: static; width: auto; height: auto;
-  flex-direction: column; align-items: center; justify-content: center; gap: 14px;
-  padding: 44px 24px 0; text-transform: none; letter-spacing: 0;
+  position: sticky; top: 0; z-index: 30; width: auto; height: auto;
+  flex-direction: row; flex-wrap: nowrap; align-items: center; justify-content: space-between; gap: 24px;
+  padding: 18px 32px; text-transform: none; letter-spacing: 0;
+  background: rgba(241, 244, 247, .52);
+  -webkit-backdrop-filter: blur(20px) saturate(1.5);
+  backdrop-filter: blur(20px) saturate(1.5);
+  border-bottom: 1px solid rgba(255, 255, 255, .62);
+  box-shadow: 0 1px 0 rgba(32, 38, 60, .05);
+  view-transition-name: site-bar;
 }
 .wordmark {
   view-transition-name: site-name;
-  font-family: var(--serif); font-size: 15px; font-weight: 500;
-  letter-spacing: .34em; margin-right: -.34em; text-transform: uppercase;
+  font-family: var(--serif); font-size: 14px; font-weight: 500;
+  letter-spacing: .3em; text-transform: uppercase;
 }
-.nav { flex-direction: row; justify-content: center; align-items: center; gap: 30px; }
+.nav { flex-direction: row; justify-content: flex-end; align-items: center; gap: 30px; }
 .nav > a, .nav-group > a { font-family: var(--serif); font-size: 11px; font-weight: 400; letter-spacing: .24em; text-transform: uppercase; color: var(--ink-soft); }
 .nav a[aria-current="page"] { color: var(--ink); text-decoration: none; }
+.nav-group { display: flex; align-items: center; }
 .nav-submenu { display: none !important; }
 a:hover { text-decoration-color: currentColor; }
 
@@ -901,8 +908,10 @@ main.rail > p { max-width: var(--read); margin: 0 auto 18px; font-family: var(--
   .cover img, .c-sign, .c-num, .c-status { transition: none; }
 }
 @media (max-width: 720px) {
-  .site-header { padding-top: 28px; flex-wrap: nowrap; }
-  .nav { gap: 20px; }
+  .site-header { padding: 14px 20px; gap: 12px; }
+  .wordmark { font-size: 11px; letter-spacing: .18em; }
+  .nav { gap: 14px; }
+  .nav > a, .nav-group > a { font-size: 10px; letter-spacing: .12em; }
   .rail { padding: 44px 0 64px; }
   .status-grid { grid-template-columns: 1fr; gap: 26px; }
   .cover { aspect-ratio: 4 / 3.4; }
