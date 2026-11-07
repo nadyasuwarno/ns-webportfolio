@@ -728,13 +728,59 @@ h2.section-head { margin-top: 72px; }
   .site-footer { padding: 32px 20px 40px 40px; flex-direction: column; gap: 24px; align-items: flex-start; }
 }
 
+/* ---------- Landing: one soft piece of water, centred ---------- */
+html:has(.landing) { scrollbar-gutter: auto; }
+.landing { overflow: hidden; }
+.stage {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 24px;
+}
+.piece { position: relative; width: min(72vw, 1040px); height: 66vh; height: 66svh; }
+.water {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  background: linear-gradient(10deg, #B3C9E0, #EDF2F9);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 90px, #000 calc(100% - 90px), transparent), linear-gradient(to bottom, transparent, #000 90px, #000 calc(100% - 90px), transparent);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to right, transparent, #000 90px, #000 calc(100% - 90px), transparent), linear-gradient(to bottom, transparent, #000 90px, #000 calc(100% - 90px), transparent);
+  mask-composite: intersect;
+}
+.water:hover { text-decoration: none; }
+.water:focus-visible { outline: none; }
+.water:focus-visible ~ .sign h1 { text-decoration: underline; text-underline-offset: 6px; }
+.water canvas { display: block; width: 100%; height: 100%; }
+.sign { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; pointer-events: none; }
+.sign h1 { margin: 0 0 14px; font-family: var(--serif); font-size: 19px; line-height: 1.3; font-weight: 500; letter-spacing: .34em; margin-right: -.34em; text-transform: uppercase; color: var(--ink); }
+.sign p { margin: 0; font-family: var(--serif); font-size: 12px; letter-spacing: .24em; margin-right: -.24em; text-transform: uppercase; color: var(--ink-soft); }
+.links { display: flex; gap: 34px; font-family: var(--serif); font-size: 12px; letter-spacing: .24em; text-transform: uppercase; color: var(--ink); }
+.links a { padding: 6px 0; }
+.links a:hover, .links a:focus-visible { text-decoration: underline; text-decoration-color: var(--ink); text-underline-offset: 5px; }
+@media (max-width: 720px) {
+  .piece { width: 100%; height: 62vh; height: 62svh; }
+  .water {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 44px, #000 calc(100% - 44px), transparent), linear-gradient(to bottom, transparent, #000 60px, #000 calc(100% - 60px), transparent);
+    mask-image: linear-gradient(to right, transparent, #000 44px, #000 calc(100% - 44px), transparent), linear-gradient(to bottom, transparent, #000 60px, #000 calc(100% - 60px), transparent);
+  }
+  .sign h1 { font-size: 15px; letter-spacing: .26em; margin-right: -.26em; }
+  .links { gap: 22px; font-size: 11px; letter-spacing: .18em; }
+}
+
 /* ==========================================================================
    Site system, taken from the landing: one centred column, spaced type,
    soft pieces on a cool white. Later rules here override the older ones above.
    ========================================================================== */
 :root { --column: min(860px, calc(100vw - 48px)); --read: min(620px, calc(100vw - 48px)); --ease: cubic-bezier(.22, .61, .36, 1); }
 
-body { font-family: var(--body); }
+body:not(.landing) { font-family: var(--body); }
 body::before { display: none; }
 
 .site-header {
@@ -774,21 +820,13 @@ a:hover { text-decoration-color: currentColor; }
 
 .section-tag { margin: 0 0 56px; text-align: center; font-family: var(--serif); font-size: 12px; font-weight: 500; letter-spacing: .34em; text-transform: uppercase; color: var(--ink); }
 
-/* Home: intro left, water top right, three cards across, edges matching the bar */
+/* Home: intro on the left, three cards across, edges matching the bar */
 .home-page { width: min(1500px, calc(100vw - 64px)); margin: 0 auto; padding: 0 0 96px; }
-.intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: stretch; min-height: calc(100vh - 150px); min-height: calc(100svh - 150px); padding: 28px 0 56px; }
-.intro-text { display: flex; flex-direction: column; justify-content: center; padding-bottom: 12px; }
+.intro { padding: 72px 0 72px; }
+.intro-text { display: flex; flex-direction: column; justify-content: center; }
 .intro .hello { margin: 0 0 18px; font-family: var(--serif); font-size: 16px; font-weight: 500; letter-spacing: .02em; text-align: left; }
-.intro .display { max-width: 620px; margin: 0; font-size: clamp(32px, 3.5vw, 50px); line-height: 1.16; font-weight: 300; text-align: left; }
-.intro .status-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 640px; margin: 48px 0 0; gap: 36px; text-align: left; }
-.water {
-  position: relative; display: block; min-height: 420px; overflow: hidden; background: linear-gradient(10deg, #B3C9E0, #EDF2F9);
-  -webkit-mask-image: linear-gradient(to right, transparent, #000 56px, #000 calc(100% - 56px), transparent), linear-gradient(to bottom, transparent, #000 56px, #000 calc(100% - 56px), transparent);
-  -webkit-mask-composite: source-in;
-  mask-image: linear-gradient(to right, transparent, #000 56px, #000 calc(100% - 56px), transparent), linear-gradient(to bottom, transparent, #000 56px, #000 calc(100% - 56px), transparent);
-  mask-composite: intersect;
-}
-.water canvas { display: block; width: 100%; height: 100%; }
+.intro .display { max-width: 760px; margin: 0; font-size: clamp(32px, 3.5vw, 50px); line-height: 1.16; font-weight: 300; text-align: left; }
+.intro .status-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 760px; margin: 48px 0 0; gap: 36px; text-align: left; }
 .home-page .works { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: start; }
 .home-page .cover { aspect-ratio: 1 / .92;
   -webkit-mask-image: linear-gradient(to right, transparent, #000 20px, #000 calc(100% - 20px), transparent), linear-gradient(to bottom, transparent, #000 20px, #000 calc(100% - 20px), transparent);
@@ -866,6 +904,7 @@ main.rail > p { max-width: var(--read); margin: 0 auto 18px; font-family: var(--
 
 /* Page transitions: a soft dissolve through blur */
 @view-transition { navigation: auto; }
+.sign h1 { view-transition-name: site-name; }
 .vt-bibble { view-transition-name: work-bibble; }
 .vt-wm { view-transition-name: work-wm; }
 .vt-mosaic { view-transition-name: work-mosaic; }
@@ -877,19 +916,17 @@ main.rail > p { max-width: var(--read); margin: 0 auto 18px; font-family: var(--
 ::view-transition-old(site-name), ::view-transition-new(site-name) { animation-duration: 900ms; }
 
 @supports not (view-transition-name: none) {
-  body > * { animation: page-in .8s var(--ease) both; }
+  body:not(.landing) > * { animation: page-in .8s var(--ease) both; }
 }
 @media (prefers-reduced-motion: reduce) {
   @view-transition { navigation: none; }
   ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
-  body > * { animation: none; }
+  body:not(.landing) > * { animation: none; }
   .will-reveal { opacity: 1; transform: none; transition: none; }
   .cover img, .c-sign, .c-num, .c-status { transition: none; }
 }
 @media (min-width: 721px) and (max-width: 1040px) {
   .home-page .works { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .intro { grid-template-columns: 1fr; min-height: 0; }
-  .water { height: 360px; }
 }
 @media (max-width: 720px) {
   .site-header { padding: 14px 20px; gap: 12px; }
@@ -897,10 +934,10 @@ main.rail > p { max-width: var(--read); margin: 0 auto 18px; font-family: var(--
   .nav { gap: 14px; }
   .nav > a, .nav-group > a { font-size: 10px; letter-spacing: .12em; }
   .rail { padding: 44px 0 64px; }
+  .status-grid { grid-template-columns: 1fr; gap: 26px; }
   .home-page { width: calc(100vw - 40px); padding-bottom: 64px; }
-  .intro { display: flex; flex-direction: column; min-height: 0; gap: 32px; padding: 32px 0 44px; }
+  .intro { padding: 36px 0 44px; }
   .intro .status-grid { grid-template-columns: 1fr; gap: 24px; margin-top: 32px; }
-  .water { min-height: 300px; height: 300px; flex: none; }
   .home-page .works { grid-template-columns: 1fr; gap: 36px; }
   .cover { aspect-ratio: 4 / 3.4; }
   .c-num, .c-status { top: 40px; } .c-num { left: 40px; } .c-status { right: 40px; }

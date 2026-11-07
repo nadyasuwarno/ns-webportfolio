@@ -6,7 +6,8 @@ Nadya Suwarno — portfolio site. Static HTML/CSS, zero build.
 
 ```
 ns-webportfolio/
-├── index.html              → Home, with the water piece
+├── index.html              → Landing (the water). Your name links here
+├── home.html               → Home
 ├── about.html              → About page
 ├── projects.html           → All projects index
 ├── projects/               → One file per case study
@@ -31,8 +32,8 @@ Each page is one HTML file. Open it, change the text between the tags, save.
 
 | To edit…           | Open                         |
 | ------------------ | ---------------------------- |
-| Home page          | `index.html`                 |
-| The water          | `assets/water.js`            |
+| Landing            | `index.html`, `assets/water.js` |
+| Home page          | `home.html`                  |
 | About page         | `about.html`                 |
 | Projects index     | `projects.html`              |
 | A case study       | `projects/<slug>.html`       |
@@ -51,7 +52,7 @@ Each page is one HTML file. Open it, change the text between the tags, save.
 1. Copy an existing file, e.g. `projects/bibble.html`, to `projects/<new-slug>.html`.
 2. Change the title, metadata, and section copy.
 3. Create its image folder: `assets/images/<new-slug>/`.
-4. Add a card for it in both `index.html` and `projects.html`.
+4. Add a card for it in both `home.html` and `projects.html`.
 
 ## Preview locally
 
