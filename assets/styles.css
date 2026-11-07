@@ -773,3 +773,142 @@ html:has(.landing) { scrollbar-gutter: auto; }
   .sign h1 { font-size: 15px; letter-spacing: .26em; margin-right: -.26em; }
   .links { gap: 22px; font-size: 11px; letter-spacing: .18em; }
 }
+
+/* ==========================================================================
+   Site system, taken from the landing: one centred column, spaced type,
+   soft pieces on a cool white. Later rules here override the older ones above.
+   ========================================================================== */
+:root { --column: min(860px, calc(100vw - 48px)); --read: min(620px, calc(100vw - 48px)); --ease: cubic-bezier(.22, .61, .36, 1); }
+
+body:not(.landing) { font-family: var(--body); }
+body::before { display: none; }
+
+.site-header {
+  position: static; width: auto; height: auto;
+  flex-direction: column; align-items: center; justify-content: center; gap: 14px;
+  padding: 44px 24px 0; text-transform: none; letter-spacing: 0;
+}
+.wordmark {
+  view-transition-name: site-name;
+  font-family: var(--serif); font-size: 15px; font-weight: 500;
+  letter-spacing: .34em; margin-right: -.34em; text-transform: uppercase;
+}
+.nav { flex-direction: row; justify-content: center; align-items: center; gap: 30px; }
+.nav > a, .nav-group > a { font-family: var(--serif); font-size: 11px; font-weight: 400; letter-spacing: .24em; text-transform: uppercase; color: var(--ink-soft); }
+.nav a[aria-current="page"] { color: var(--ink); text-decoration: none; }
+.nav-submenu { display: none !important; }
+a:hover { text-decoration-color: currentColor; }
+
+.rail { max-width: none; width: var(--column); margin: 0 auto; padding: 72px 0 96px; }
+.rail::before { display: none; }
+
+.hero { text-align: center; margin: 0 auto 84px; }
+.hello { font-family: var(--serif); font-size: 14px; font-weight: 400; letter-spacing: .06em; margin: 0 0 18px; }
+.display { max-width: 640px; margin: 0 auto; font-family: var(--serif); font-size: clamp(26px, 3.2vw, 36px); line-height: 1.3; font-weight: 300; }
+.display strong { font-weight: 500; }
+.underline-dash { display: block; width: 72px; margin: 26px auto 0; }
+.status-grid { max-width: 680px; margin: 34px auto 0; gap: 44px; text-align: center; }
+.status-grid p { font-family: var(--body); font-size: 14px; line-height: 1.55; color: var(--ink-soft); }
+.status-grid .label { font-family: var(--serif); font-size: 10px; font-weight: 500; letter-spacing: .24em; text-transform: uppercase; color: var(--ink); }
+
+.section-tag { margin: 0 0 56px; text-align: center; font-family: var(--serif); font-size: 12px; font-weight: 500; letter-spacing: .34em; text-transform: uppercase; color: var(--ink); }
+
+/* A project: the landing's soft piece, holding the work out of focus */
+.works { display: flex; flex-direction: column; gap: 58px; }
+.cover {
+  position: relative; display: block; aspect-ratio: 860 / 430; overflow: hidden; color: var(--ink); text-decoration: none;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 48px, #000 calc(100% - 48px), transparent), linear-gradient(to bottom, transparent, #000 48px, #000 calc(100% - 48px), transparent);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to right, transparent, #000 48px, #000 calc(100% - 48px), transparent), linear-gradient(to bottom, transparent, #000 48px, #000 calc(100% - 48px), transparent);
+  mask-composite: intersect;
+  cursor: pointer;
+}
+.cover:hover { text-decoration: none; }
+.cover img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity .9s var(--ease), transform 1.6s var(--ease); }
+.cover .real { opacity: 0; transform: scale(1.03); }
+.cover:hover .real, .cover:focus-visible .real, .cover.in .real { opacity: 1; transform: none; }
+.cover:focus-visible { outline: none; -webkit-mask-image: none; mask-image: none; box-shadow: inset 0 0 0 2px var(--ink); }
+.c-sign { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 0 56px; text-align: center; transition: opacity .5s var(--ease); }
+.c-sign strong { font-family: var(--serif); font-size: 18px; font-weight: 500; letter-spacing: .34em; margin-right: -.34em; text-transform: uppercase; }
+.c-sign span { font-family: var(--body); font-size: 14px; line-height: 1.45; color: var(--ink); }
+.c-num, .c-status { position: absolute; top: 58px; font-family: var(--serif); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--ink); transition: opacity .5s var(--ease); }
+.c-num { left: 66px; } .c-status { right: 66px; }
+.cover:hover .c-sign, .cover:hover .c-num, .cover:hover .c-status,
+.cover:focus-visible .c-sign, .cover:focus-visible .c-num, .cover:focus-visible .c-status,
+.cover.in .c-sign, .cover.in .c-num, .cover.in .c-status { opacity: 0; }
+.c-tags { margin: 6px 0 0; text-align: center; font-family: var(--serif); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-soft); }
+
+/* Reading pages */
+.case-eyebrow { display: block; text-align: center; margin: 0 0 18px; font-family: var(--serif); font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: var(--ink-soft); }
+.case-eyebrow span { display: block; color: inherit !important; }
+.case-eyebrow span + span { margin-top: 6px; }
+.btn-row { display: flex; justify-content: center; margin: 0 0 30px !important; }
+.btn, .btn:hover { border: 0; background: none; padding: 6px 0; font-family: var(--serif); font-size: 10px; letter-spacing: .24em; text-transform: uppercase; color: var(--ink-soft); }
+.case-title, body .bibble .case-title { text-align: center; font-family: var(--serif); font-size: clamp(22px, 3vw, 30px); font-weight: 500; letter-spacing: .3em; margin: 0 -.3em 14px 0; text-transform: uppercase; color: var(--ink); }
+.case-sub, body .bibble .bib-sub { text-align: center; margin: 0 auto 48px; max-width: var(--read); font-family: var(--body); font-size: 17px; line-height: 1.45; font-style: normal; color: var(--ink-soft); }
+.case-hero, body .bibble .bib-hero { margin: 0 0 40px; }
+.case-metagrid, body .bibble .case-metagrid { display: flex; flex-wrap: wrap; justify-content: center; gap: 22px 44px; margin: 0 auto 72px; padding: 0; border: 0; text-align: center; }
+.case-metagrid > div { flex: 0 1 148px; }
+.case-metagrid .label, body .bibble .case-metagrid .label { font-family: var(--serif); font-size: 10px; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: var(--ink); margin: 0 0 6px; }
+.case-metagrid p:not(.label), body .bibble .case-metagrid div p:not(.label) { margin: 0; font-family: var(--body); font-size: 13px; line-height: 1.45; color: var(--ink-soft); }
+.case-section, body .bibble .bib-section { margin: 0 0 72px; padding: 0; border: 0; }
+.case-section > *, body .bibble .bib-section > p, body .bibble .bib-section > h2, body .bibble .bib-section > h3, body .bibble .bib-section > ul, body .bibble .bib-section > ol { max-width: var(--read); margin-left: auto; margin-right: auto; }
+.case-section p, body .bibble .bib-section p { font-family: var(--body); font-size: 16px; line-height: 1.7; color: var(--ink); }
+.case-section h2, body .bibble .bib-section h2 { font-family: var(--serif); font-size: clamp(21px, 2.4vw, 26px); line-height: 1.32; font-weight: 300; text-align: center; color: var(--ink); }
+.section-label, body .bibble .bib-label { display: block; margin: 0 auto 20px !important; text-align: center; font-family: var(--serif) !important; font-size: 11px !important; font-weight: 500; letter-spacing: .3em; text-transform: uppercase; color: var(--ink-soft) !important; }
+.callout, body .bibble .bib-callout { max-width: var(--read); margin: 30px auto; padding: 26px 30px; border: 0; background: var(--panel); background: color-mix(in srgb, var(--panel) 45%, transparent); text-align: center; font-size: 15px; line-height: 1.6; color: var(--ink); }
+.case-index { display: none !important; }
+.rail figure { margin-left: 0; margin-right: 0; }
+.rail img, .rail video { max-width: 100%; }
+
+/* About */
+.statement { max-width: 700px; margin: 0 auto 44px !important; font-size: clamp(25px, 3.2vw, 34px) !important; font-weight: 300 !important; line-height: 1.32; letter-spacing: 0 !important; text-transform: none !important; }
+main.rail > p { max-width: var(--read); margin: 0 auto 18px; font-family: var(--body); font-size: 16px; line-height: 1.7; color: var(--ink); text-align: center; }
+.timeline { max-width: var(--read); margin: 72px auto 0; border: 0; }
+.timeline-row { display: block; padding: 26px 0; border: 0; border-top: 1px dotted var(--rule); text-align: center; }
+.timeline-row .when { margin: 0 0 8px; font-family: var(--serif); font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: var(--ink-soft); }
+.timeline-row h4 { margin: 0 0 6px; font-family: var(--serif); font-size: 17px; font-weight: 400; color: var(--ink); }
+.timeline-row p { margin: 0 auto; max-width: 480px; font-family: var(--body); font-size: 14px; line-height: 1.6; color: var(--ink-soft); }
+
+.site-footer { justify-content: center; padding: 0 24px 56px; border: 0; }
+.footer-nav { display: flex; justify-content: center; gap: 30px; font-family: var(--serif); font-size: 11px; letter-spacing: .24em; text-transform: uppercase; color: var(--ink-soft); }
+
+/* Gentle arrival as you scroll. Only set by script, so content never hides without it. */
+.will-reveal { opacity: 0; transform: translateY(12px); transition: opacity .7s var(--ease), transform .9s var(--ease); }
+.will-reveal.is-in { opacity: 1; transform: none; }
+
+/* Page transitions: a soft dissolve through blur */
+@view-transition { navigation: auto; }
+.sign h1 { view-transition-name: site-name; }
+.vt-bibble { view-transition-name: work-bibble; }
+.vt-wm { view-transition-name: work-wm; }
+.vt-mosaic { view-transition-name: work-mosaic; }
+@keyframes page-out { to { opacity: 0; filter: blur(14px); transform: scale(1.012); } }
+@keyframes page-in { from { opacity: 0; filter: blur(14px); transform: scale(.992); } }
+::view-transition-old(root) { animation: page-out 620ms var(--ease) both; }
+::view-transition-new(root) { animation: page-in 820ms var(--ease) 140ms both; }
+::view-transition-group(*) { animation-duration: 900ms; animation-timing-function: var(--ease); }
+::view-transition-old(site-name), ::view-transition-new(site-name) { animation-duration: 900ms; }
+
+@supports not (view-transition-name: none) {
+  body:not(.landing) > * { animation: page-in .8s var(--ease) both; }
+}
+@media (prefers-reduced-motion: reduce) {
+  @view-transition { navigation: none; }
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+  body:not(.landing) > * { animation: none; }
+  .will-reveal { opacity: 1; transform: none; transition: none; }
+  .cover img, .c-sign, .c-num, .c-status { transition: none; }
+}
+@media (max-width: 720px) {
+  .site-header { padding-top: 28px; flex-wrap: nowrap; }
+  .nav { gap: 20px; }
+  .rail { padding: 44px 0 64px; }
+  .status-grid { grid-template-columns: 1fr; gap: 26px; }
+  .cover { aspect-ratio: 4 / 3.4; }
+  .c-num, .c-status { top: 40px; } .c-num { left: 40px; } .c-status { right: 40px; }
+  .c-sign { padding: 0 44px; }
+  .c-tags { line-height: 1.8; }
+  .site-footer { padding: 0 24px 40px; align-items: center; }
+}
+
