@@ -16,29 +16,21 @@ const FIRSTS_CONFIG = {
   const cards = [...deck.querySelectorAll('.washi')];
   const btn = document.querySelector('.deck-next');
   const iEl = document.querySelector('.deck-i'), nEl = document.querySelector('.deck-n');
-  const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let order = cards.map((_, i) => i), busy = false, shown = 0;
+  let order = cards.map((_, i) => i), shown = 0;
   if (nEl) nEl.textContent = cards.length;
   const place = () => order.forEach((c, pos) => {
     cards[c].dataset.pos = pos;
     cards[c].setAttribute('aria-hidden', pos === 0 ? 'false' : 'true');
   });
+  // No fly-away: the top card simply goes to the back of the pile
   const next = () => {
-    if (busy) return;
-    busy = true;
-    const top = cards[order[0]];
-    top.classList.add('is-leaving');
-    setTimeout(() => {
-      order.push(order.shift());
-      top.classList.remove('is-leaving');
-      top.style.transition = 'none';
-      place();
-      void top.offsetWidth;
-      top.style.transition = '';
-      shown = (shown + 1) % cards.length;
-      if (iEl) iEl.textContent = shown + 1;
-      busy = false;
-    }, calm ? 0 : 520);
+    order.push(order.shift());
+    deck.classList.add('is-shuffling');
+    place();
+    void deck.offsetWidth;
+    deck.classList.remove('is-shuffling');
+    shown = (shown + 1) % cards.length;
+    if (iEl) iEl.textContent = shown + 1;
   };
   place();
   deck.addEventListener('click', next);

@@ -1183,7 +1183,7 @@ main.rail > p { max-width: var(--read); margin: 0 auto 18px; font-family: var(--
 .washi[data-pos="2"] { z-index: 7; transform: translate(-56px, -14px) rotate(-8deg) scale(.93); }
 .washi[data-pos="3"], .washi[data-pos="4"], .washi[data-pos="5"], .washi[data-pos="6"], .washi[data-pos="7"] { z-index: 6; transform: translate(0, -26px) rotate(1deg) scale(.9); opacity: 0; }
 .washi[data-pos="1"] .washi-cap, .washi[data-pos="2"] .washi-cap, .washi[data-pos="1"] .washi-meta, .washi[data-pos="2"] .washi-meta { opacity: 0; }
-.washi.is-leaving { z-index: 10; transform: translate(118%, 24px) rotate(14deg); opacity: 0; transition: transform .55s cubic-bezier(.5, 0, .75, .4), opacity .45s ease-in .1s; }
+.washi-row.is-shuffling .washi { transition: none; }
 .washi-row:hover .washi[data-pos="0"] { transform: rotate(0deg) translateY(-6px); filter: drop-shadow(0 18px 24px rgba(40, 50, 80, .16)); }
 .deck-bar { display: flex; align-items: center; gap: 22px; margin-top: 40px; }
 .deck-next { padding: 12px 18px; border: 1px solid rgba(255, 255, 255, .95); cursor: pointer;
