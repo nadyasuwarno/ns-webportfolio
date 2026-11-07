@@ -160,11 +160,13 @@ document.querySelectorAll('.thumb-vid, .hero-vid').forEach(video => {
   if (film && state) {
     const sync = () => {
       const off = film.paused;
-      state.textContent = off ? 'Paused · Play' : 'Playing · Muted';
+      state.textContent = off ? 'Play video' : 'Pause video';
       state.setAttribute('aria-pressed', String(off));
     };
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) { film.removeAttribute('autoplay'); film.pause(); }
-    state.addEventListener('click', () => { film.paused ? film.play().catch(() => {}) : film.pause(); });
+    const toggle = () => { film.paused ? film.play().catch(() => {}) : film.pause(); };
+    state.addEventListener('click', toggle);
+    film.addEventListener('click', toggle);
     film.addEventListener('play', sync); film.addEventListener('pause', sync); sync();
   }
 
