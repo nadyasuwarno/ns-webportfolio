@@ -14,7 +14,6 @@ const FIRSTS_CONFIG = {
   const deck = document.getElementById('deck');
   if (!deck) return;
   const cards = [...deck.querySelectorAll('.washi')];
-  const btn = document.querySelector('.deck-next');
   const iEl = document.querySelector('.deck-i'), nEl = document.querySelector('.deck-n');
   const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
   let order = cards.map((_, i) => i), busy = false, shown = 0;
@@ -42,7 +41,6 @@ const FIRSTS_CONFIG = {
   };
   place();
   deck.addEventListener('click', next);
-  if (btn) btn.addEventListener('click', next);
   deck.tabIndex = 0;
   deck.setAttribute('role', 'button');
   deck.setAttribute('aria-label', 'Flip to the next first');
