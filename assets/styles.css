@@ -982,11 +982,12 @@ main.rail > p { max-width: var(--read); margin: 0 auto 18px; font-family: var(--
 
 
 /* Case studies showcase: three rectangles; the hovered one grows to lead and plays */
-.home-page .showcase { display: flex; flex-direction: row; gap: 24px; align-items: flex-start; }
+.home-page .showcase { display: flex; flex-direction: row; gap: 24px; align-items: flex-start; container-type: inline-size; }
 .showcase .project { flex: 1 1 0; min-width: 0; transition: flex-grow .75s cubic-bezier(.22, .8, .24, 1), opacity .7s var(--ease), transform .9s var(--ease); }
-.showcase.has-lead .project.is-lead { flex-grow: 2.55; }
+/* Lead takes 58% of the row; its height is set so that width is exactly 16:9, the videos' own shape */
+.showcase.has-lead .project.is-lead { flex-grow: 2.7619; }
 .home-page .showcase .cover {
-  aspect-ratio: auto; height: clamp(240px, 24vw, 400px); border-radius: 0; background: #DDE5EE;
+  aspect-ratio: auto; height: calc((100cqw - 48px) * .32625); border-radius: 0; background: #DDE5EE;
   -webkit-mask-image: none; mask-image: none; cursor: pointer;
 }
 .home-page .showcase .cover .real { opacity: 1; transform: none; object-fit: cover; background: none; transition: transform 1.2s cubic-bezier(.22, .8, .24, 1); }
@@ -1036,7 +1037,7 @@ main.rail > p { max-width: var(--read); margin: 0 auto 18px; font-family: var(--
 @media (max-width: 900px) {
   .home-page .showcase { flex-direction: column; gap: 40px; }
   .showcase .project { flex: none; width: 100%; }
-  .home-page .showcase .cover { height: auto; aspect-ratio: 4 / 3; }
+  .home-page .showcase .cover { height: auto; aspect-ratio: 16 / 9; }
   .showcase .c-info { height: auto; }
 }
 @media (prefers-reduced-motion: reduce) {
