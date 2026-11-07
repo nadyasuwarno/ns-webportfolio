@@ -40,7 +40,7 @@
   precision highp float; in vec2 uv; out vec4 o;
   uniform sampler2D s; uniform vec2 px;
   void main(){
-    float e=3.;
+    float e=5.;
     float l=texture(s,uv-vec2(px.x*e,0.)).r, r=texture(s,uv+vec2(px.x*e,0.)).r;
     float d=texture(s,uv-vec2(0.,px.y*e)).r, u=texture(s,uv+vec2(0.,px.y*e)).r;
     vec2 g=vec2(r-l,u-d)*25.;
@@ -159,7 +159,7 @@
     const p = toUv(e);
     if (!cur) { cur = p; return; }
     const sp = Math.hypot((p[0] - cur[0]) * aspect, p[1] - cur[1]);
-    queue.push({ a: cur, b: p, force: Math.min(.00022 + sp * .009, .0006), rad: .034 });
+    queue.push({ a: cur, b: p, force: Math.min(.00022 + sp * .009, .0006), rad: .046 });
     cur = p; wake();
   });
   link.addEventListener('pointerleave', () => { cur = null; });
@@ -170,7 +170,7 @@
     if (leaving) return;
     leaving = true;
     const p = e.detail ? toUv(e) : [.5, .5];
-    queue.push({ a: p, b: p, force: .0048, rad: .050 });
+    queue.push({ a: p, b: p, force: .0048, rad: .064 });
     wake();
     setTimeout(() => { location.href = link.href; }, 900);
   });
