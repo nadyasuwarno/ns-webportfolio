@@ -9,19 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Caveat:wght@500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/styles.css" />
+  <script src="assets/vt.js"></script>
   <script src="assets/nav.js" defer></script>
-  <script>
-    /* Arriving from the landing: reveal Home from the centre, with no shared elements drifting */
-    addEventListener('pagereveal', e => {
-      if (!e.viewTransition) return;
-      let from = '';
-      try { from = new URL((window.navigation && navigation.activation && navigation.activation.from && navigation.activation.from.url) || document.referrer).pathname; } catch (_) {}
-      if (!/(\/|\/index\.html)$/.test(from)) return;
-      document.documentElement.classList.add('vt-ripple');
-      e.viewTransition.types.add('ripple');
-      e.viewTransition.finished.finally(() => document.documentElement.classList.remove('vt-ripple'));
-    });
-  </script>
 </head>
 <body>
   <!-- ============== HEADER (copy into every page) ============== -->
@@ -37,7 +26,7 @@
         </ul>
       </div>
       <a href="about.html">About</a>
-      <a href="assets/resume.pdf" class="ext">Resume ↗</a>
+      <a href="assets/resume.pdf" class="ext" target="_blank" rel="noopener">Resume ↗</a>
     </nav>
   </header>
 
@@ -122,32 +111,32 @@
         <div id="creative-tech" class="panel" role="tabpanel" aria-labelledby="tab-creative-tech">
           <div class="ex-grid">
             <article class="ex">
-              <div class="ex-img"><span class="ex-tags"><span>Interactive Installation</span><span>TouchDesigner</span></span></div>
+              <a class="ex-img" href="https://www.instagram.com/reel/Dfb-WgQBtWM/" target="_blank" rel="noopener" data-cursor="ig" aria-label="Cycle of a Flower on Instagram, @nescreative (opens in a new tab)"><span class="ex-tags"><span>Interactive Installation</span><span>TouchDesigner</span></span></a>
               <div class="ex-head"><h3>Cycle of a Flower</h3><span>2026</span></div>
               <p>Trigger tones and light by touching elements grouped by their physical properties.</p>
             </article>
             <article class="ex">
-              <div class="ex-img"><span class="ex-tags"><span>Unity</span><span>Motion Capture</span></span></div>
+              <a class="ex-img" href="https://www.instagram.com/nescreative/" target="_blank" rel="noopener" data-cursor="ig" aria-label="Symphony of Elements on Instagram, @nescreative (opens in a new tab)"><span class="ex-tags"><span>Unity</span><span>Motion Capture</span></span></a>
               <div class="ex-head"><h3>Symphony of Elements</h3><span>2026</span></div>
               <p>Trigger tones and light by touching elements grouped by their physical properties.</p>
             </article>
             <article class="ex">
-              <div class="ex-img"><span class="ex-tags"><span>Unity</span><span>Hand Tracking</span></span></div>
+              <a class="ex-img" href="https://www.instagram.com/reel/Dfb-_jXhQZI/" target="_blank" rel="noopener" data-cursor="ig" aria-label="Biophilia on Instagram, @nescreative (opens in a new tab)"><span class="ex-tags"><span>Unity</span><span>Hand Tracking</span></span></a>
               <div class="ex-head"><h3>Biophilia</h3><span>2026</span></div>
               <p>Using movement and gestures as the condition that activates plant growth within the space.</p>
             </article>
             <article class="ex">
-              <div class="ex-img"><span class="ex-tags"><span>Field Intervention</span><span>Model Making</span></span></div>
+              <a class="ex-img" href="https://www.instagram.com/nescreative/" target="_blank" rel="noopener" data-cursor="ig" aria-label="Flux on Instagram, @nescreative (opens in a new tab)"><img src="assets/images/explorations/flux.jpg" alt="Flux: children swinging on poles beside white sail-like structures in a plaza" loading="lazy" /><span class="ex-tags"><span>Field Intervention</span><span>Model Making</span></span></a>
               <div class="ex-head"><h3>Flux</h3><span>2025</span></div>
               <p>A field intervention: what one small plaza could become if the people who used it every day had a say.</p>
             </article>
             <article class="ex">
-              <div class="ex-img"><span class="ex-tags"><span>Short Film</span></span></div>
-              <div class="ex-head"><h3>Me-mori</h3><span>2025</span></div>
+              <a class="ex-img" href="https://www.instagram.com/reel/DfSH0lZBiBv/" target="_blank" rel="noopener" data-cursor="ig" aria-label="Memory Link on Instagram, @nescreative (opens in a new tab)"><span class="ex-tags"><span>Short Film</span></span></a>
+              <div class="ex-head"><h3>Memory Link</h3><span>2025</span></div>
               <p>A speculative act of how our memories get stored, retrieved and quietly rewritten.</p>
             </article>
             <article class="ex">
-              <div class="ex-img"><span class="ex-tags"><span>Short Film</span></span></div>
+              <a class="ex-img" href="https://www.instagram.com/nescreative/" target="_blank" rel="noopener" data-cursor="ig" aria-label="Unspoken Draft on Instagram, @nescreative (opens in a new tab)"><span class="ex-tags"><span>Short Film</span></span></a>
               <div class="ex-head"><h3>Unspoken Draft</h3><span>2024</span></div>
               <p>A draft dialogue on the self, our mental journey, forgotten dreams and memories led by choice.</p>
             </article>
@@ -171,8 +160,8 @@
   <footer class="site-footer">
     <nav class="footer-nav">
       <a href="mailto:michellenadya168@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/nadya-suwarno" class="ext">LinkedIn ↗</a>
-      <a href="assets/resume.pdf" class="ext">Resume ↗</a>
+      <a href="https://www.linkedin.com/in/nadya-suwarno" class="ext" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="assets/resume.pdf" class="ext" target="_blank" rel="noopener">Resume ↗</a>
     </nav>
   </footer>
 </body>
