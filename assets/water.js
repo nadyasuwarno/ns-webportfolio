@@ -1,4 +1,4 @@
-/* The landing water: one smooth blue gradient, still until touched.
+/* The landing water: one pale blue gradient, still until touched.
    Ripples move slowly and softly. Pressing it lets a drop fall, then opens the link. */
 (() => {
   const link = document.getElementById('water');
@@ -47,9 +47,9 @@
     float light=dot(g,normalize(vec2(-.6,.8)));
     light=light/(1.+1.6*abs(light));
     float t=smoothstep(-.1,1.1,uv.y*.82+uv.x*.18);
-    vec3 col=mix(vec3(.290,.365,.530),vec3(.565,.640,.765),t);
+    vec3 col=mix(vec3(.690,.780,.875),vec3(.930,.950,.975),t);
     col+=(fract(52.9829189*fract(dot(gl_FragCoord.xy,vec2(.06711056,.00583715))))-.5)/255.;
-    col+=light>0.?light*vec3(.30,.32,.34):light*vec3(.17,.18,.20);
+    col+=light>0.?light*vec3(.16,.14,.10):light*vec3(.26,.22,.17);
     o=vec4(col,1.);
   }`;
 
