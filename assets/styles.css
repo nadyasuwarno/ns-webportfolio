@@ -943,6 +943,9 @@ main.rail > p { max-width: var(--read); margin: 0 auto 18px; font-family: var(--
 ::view-transition-new(root) { animation: page-in 820ms var(--ease) 140ms both; }
 ::view-transition-group(*) { animation-duration: 900ms; animation-timing-function: var(--ease); }
 ::view-transition-old(site-name), ::view-transition-new(site-name) { animation-duration: 900ms; }
+/* Anything that exists on only one side dissolves with the page instead of popping */
+::view-transition-old(*):only-child { animation: page-out 620ms var(--ease) both; }
+::view-transition-new(*):only-child { animation: page-in 820ms var(--ease) 140ms both; }
 
 
 @supports not (view-transition-name: none) {

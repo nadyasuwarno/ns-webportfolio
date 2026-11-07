@@ -30,7 +30,7 @@ document.querySelectorAll('.thumb-vid, .hero-vid').forEach(video => {
 (() => {
   const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!calm) {
-    let items = [...document.querySelectorAll('.works .project, .case-section, .bib-section, .timeline-row, .case-hero, .case-metagrid')]
+    let items = [...document.querySelectorAll('.case-section, .timeline-row')]
       .filter(el => el.getBoundingClientRect().top > innerHeight * .9);
     items.forEach(el => el.classList.add('will-reveal'));
     const show = () => {
@@ -86,7 +86,7 @@ document.querySelectorAll('.thumb-vid, .hero-vid').forEach(video => {
     const outer = tab.closest('[role="tabpanel"]');
     if (outer) select(document.querySelector(`[role="tab"][aria-controls="${outer.id}"]`));
     select(tab);
-    requestAnimationFrame(() => document.getElementById('work')?.scrollIntoView());
+    document.getElementById(id)?.scrollIntoView({ block: 'start' });
   };
   open();
   addEventListener('hashchange', open);
