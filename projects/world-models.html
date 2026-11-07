@@ -16,7 +16,7 @@
     <a class="wordmark" href="../index.html">Nadya Suwarno</a>
     <nav class="nav">
       <div class="nav-group">
-        <a href="../projects.html" aria-current="page">Projects</a>
+        <a href="../home.html#work" aria-current="page">Projects</a>
         <ul class="nav-submenu">
           <li><a href="bibble.html">01 — Bibble</a></li>
           <li><a href="world-models.html">02 — World Models</a></li>
@@ -28,84 +28,103 @@
     </nav>
   </header>
 
-  <main class="rail">
-    <div class="btn-row" style="margin:0 0 24px;">
-      <a class="btn" href="../projects.html#case-studies">← Case studies</a>
-    </div>
-    <div class="case-eyebrow">
-      <span>No. 02 · World Models · Museum of the Moving Image · 2026</span>
-      <span style="color:var(--accent);">Shipped</span>
-    </div>
-    <h1 class="case-title">World Models</h1>
-    <p class="case-sub">Every visitor gets a role in how AI builds a world.</p>
+  <main class="case2" id="top">
+    <a class="c2-back" href="../home.html#case-studies">← Case studies</a>
+    <section class="c2-hero" aria-labelledby="case-title">
+      <figure class="c2-film vt-wm">
+        <img src="../assets/images/covers/wm-focus.jpg" alt="World Models mark" />
+      </figure>
 
-    <div class="case-hero has-media">
-      <img class="hero-img" src="../assets/images/world-models/momi.jpg" alt="Visitors at the World Models station" />
-    </div>
-
-    <div class="case-metagrid">
-      <div><p class="label">Role</p><p>Systems research, UX design</p></div>
-      <div><p class="label">Team</p><p>1 designer, 2 PMs, 3 developers</p></div>
-      <div><p class="label">Timeline</p><p>Mar–Jul 2026 · 5 months</p></div>
-      <div><p class="label">Tools</p><p>Figma, Figma Make, Obsidian, Research Rabbit, Zotero</p></div>
-      <div><p class="label">Status</p><p>Shipped · live at MoMI's Emerging Tech Lab</p></div>
-    </div>
-
-    <section class="case-section">
-      <p class="section-label">Overview</p>
-      <p>A hands-on learning station at the Museum of the Moving Image's Emerging Technology Lab. It shows anyone, including people who've never touched AI, how a single sentence becomes a walkable 3D world. Shipped in 2026.</p>
-    </section>
-
-    <section class="case-section">
-      <p class="section-label">Context</p>
-      <p>From March to July 2026, I joined the lab, whose philosophy is "back to fundamentals." My visitors were the public: families, students, curious walk-ins. The technology was anything but fundamental: seeds, noise functions, language models writing code, 3D meshes.</p>
-    </section>
-
-    <section class="case-section">
-      <p class="section-label">The problem</p>
-      <h2>People don't fear AI because it's hard. They fear it because they can't see inside it.</h2>
-      <p>A wall of definitions would only confirm that.</p>
-      <div class="callout">How might we open the black box without turning a museum visit into a lecture?</div>
-    </section>
-
-    <section class="case-section">
-      <p class="section-label">What I learned</p>
-      <h2>I built a three-question lens, then ran every system through it.</h2>
-      <p>What does it do? Why was it built? How was it built? I graded each paper's claims as strong, moderate or weak, and mapped Meta's WorldGen pipeline stage by stage. Three things changed my approach:</p>
-      <p><strong>01.</strong> Visitors have already played this. Flappy Bird, Minecraft and Pokémon all generate their worlds with code.</p>
-      <p><strong>02.</strong> A few simple ideas carry the whole system: a seed is the world's DNA, noise makes it feel natural, and if/then rules are its laws of physics.</p>
-      <p><strong>03.</strong> The AI pipeline has four clear jobs: plan, check, separate, refine. And jobs can be played.</p>
-    </section>
-
-    <section class="case-section">
-      <p class="section-label">What I made</p>
-      <h2>Every visitor gets a role.</h2>
-      <p>The station starts with games they already know, then turns each stage of the pipeline into game stages:</p>
-      <p><strong>Designer</strong> — drag words from a messy diary into the plan, and a wireframe world appears.</p>
-      <p><strong>Safety inspector</strong> — paint the floor you can walk on. Walls push back.</p>
-      <p><strong>Organizer</strong> — split a fused village into 10 separate objects.</p>
-      <p><strong>Artist</strong> — brush blurry shapes into detail, then step inside your world in VR.</p>
-      <div class="callout">We decided to proceed with Lingbot, an open-source world model, over Google's better-known Genie 3 for its openness, even though it meant running a 160GB model.</div>
-    </section>
-
-    <section class="case-section">
-      <p class="section-label">Try it · The seed slider</p>
-      <h2>Procedural generation, felt in five seconds.</h2>
-      <div class="case-hero" style="aspect-ratio: 16/5;">
-        <span>[ INTERACTIVE SEED SLIDER DEMO ]</span>
+      <div class="c2-card">
+        <p class="c2-meta"><span>Shipped 2026 · Live at MoMI's Emerging Tech Lab</span></p>
+        <h1 id="case-title" class="c2-title">World Models</h1>
+        <p class="c2-org">Museum of the Moving Image</p>
+        <p class="c2-line">Every visitor gets a role in how AI builds a world.</p>
+        <ul class="c2-tags" aria-label="Tags"><li>Interaction Design</li><li>Research</li><li>Education</li><li>World Models</li></ul>
+        <dl class="c2-facts">
+          <div><dt>Role</dt><dd>Systems research, UX design</dd></div>
+          <div><dt>Team</dt><dd>1 designer, 2 PMs, 3 developers</dd></div>
+          <div><dt>Timeline</dt><dd>Mar–Jul 2026 · 5 months</dd></div>
+          <div><dt>Tools</dt><dd>Figma, Figma Make, Obsidian, Research Rabbit, Zotero</dd></div>
+        </dl>
+        <a class="c2-skip" href="#made">Skip to solution <span aria-hidden="true">↓</span></a>
+        <a class="c2-watch" href="#try"><span aria-hidden="true">▶</span> Try the seed slider</a>
       </div>
     </section>
 
-    <section class="case-section">
-      <p class="section-label">What changed</p>
-      <p>[ One visitor moment you still remember, plus any number: visitors, playtime, sessions. ]</p>
-      <p>This is where I learned the idea behind my whole practice: demystification is the second step of enablement, after curiosity.</p>
-      <div class="callout">"People don't need to understand everything. They need a way in."</div>
-    </section>
+    <div class="c2-body">
+      <nav class="c2-rail" aria-label="Skip to section">
+        <a class="c2-top" href="#top">↑ Top</a>
+        <ol>
+          <li><a href="#overview"><span class="n">01</span>Overview</a></li>
+          <li><a href="#context"><span class="n">02</span>Context</a></li>
+          <li><a href="#problem"><span class="n">03</span>The problem</a></li>
+          <li><a href="#learned"><span class="n">04</span>What I learned</a></li>
+          <li><a href="#made"><span class="n">05</span>What I made</a></li>
+          <li><a href="#try"><span class="n">06</span>Try it · The seed slider</a></li>
+          <li><a href="#changed"><span class="n">07</span>What changed</a></li>
+        </ol>
+        <div class="c2-rail-foot">
+          <a href="mosaic.html">Next → Mosaic</a>
+        </div>
+      </nav>
 
-    <div class="next-project">
-      <p class="label">Next project</p>
-      <a href="mosaic.html">Mosaic — one identity for a whole graduating class.</a>
+      <div class="c2-content">
+        <section class="c2-section" id="overview">
+          <h2 class="c2-head"><span class="n">01</span>Overview</h2>
+          <p>A hands-on learning station at the Museum of the Moving Image's Emerging Technology Lab. It shows anyone, including people who've never touched AI, how a single sentence becomes a walkable 3D world. Shipped in 2026.</p>
+        </section>
+
+        <section class="c2-section" id="context">
+          <h2 class="c2-head"><span class="n">02</span>Context</h2>
+          <p>From March to July 2026, I joined the lab, whose philosophy is "back to fundamentals." My visitors were the public: families, students, curious walk-ins. The technology was anything but fundamental: seeds, noise functions, language models writing code, 3D meshes.</p>
+        </section>
+
+        <section class="c2-section" id="problem">
+          <h2 class="c2-head"><span class="n">03</span>The problem</h2>
+          <p class="c2-lead">People don't fear AI because it's hard. They fear it because they can't see inside it.</p>
+          <p>A wall of definitions would only confirm that.</p>
+          <p class="c2-frame">How might we open the black box without turning a museum visit into a lecture?</p>
+        </section>
+
+        <section class="c2-section" id="learned">
+          <h2 class="c2-head"><span class="n">04</span>What I learned</h2>
+          <p class="c2-lead">I built a three-question lens, then ran every system through it.</p>
+          <p>What does it do? Why was it built? How was it built? I graded each paper's claims as strong, moderate or weak, and mapped Meta's WorldGen pipeline stage by stage. Three things changed my approach:</p>
+          <p><strong>01.</strong> Visitors have already played this. Flappy Bird, Minecraft and Pokémon all generate their worlds with code.</p>
+          <p><strong>02.</strong> A few simple ideas carry the whole system: a seed is the world's DNA, noise makes it feel natural, and if/then rules are its laws of physics.</p>
+          <p><strong>03.</strong> The AI pipeline has four clear jobs: plan, check, separate, refine. And jobs can be played.</p>
+        </section>
+
+        <section class="c2-section" id="made">
+          <h2 class="c2-head"><span class="n">05</span>What I made</h2>
+          <p class="c2-lead">Every visitor gets a role.</p>
+          <p>The station starts with games they already know, then turns each stage of the pipeline into game stages:</p>
+          <p><strong>Designer</strong> — drag words from a messy diary into the plan, and a wireframe world appears.</p>
+          <p><strong>Safety inspector</strong> — paint the floor you can walk on. Walls push back.</p>
+          <p><strong>Organizer</strong> — split a fused village into 10 separate objects.</p>
+          <p><strong>Artist</strong> — brush blurry shapes into detail, then step inside your world in VR.</p>
+          <p class="c2-frame">We decided to proceed with Lingbot, an open-source world model, over Google's better-known Genie 3 for its openness, even though it meant running a 160GB model.</p>
+        </section>
+
+        <section class="c2-section" id="try">
+          <h2 class="c2-head"><span class="n">06</span>Try it · The seed slider</h2>
+          <p class="c2-lead">Procedural generation, felt in five seconds.</p>
+          <figure class="c2-ph" style="aspect-ratio: 16 / 5;"><span>[ INTERACTIVE SEED SLIDER DEMO ]</span></figure>
+        </section>
+
+        <section class="c2-section" id="changed">
+          <h2 class="c2-head"><span class="n">07</span>What changed</h2>
+          <p>[ One visitor moment you still remember, plus any number: visitors, playtime, sessions. ]</p>
+          <p>This is where I learned the idea behind my whole practice: demystification is the second step of enablement, after curiosity.</p>
+          <blockquote class="c2-quote"><p>"People don't need to understand everything. They need a way in."</p></blockquote>
+        </section>
+
+        <div class="next-project c2-next">
+          <p class="label">Next project</p>
+          <a href="mosaic.html">Mosaic — one identity for a whole graduating class.</a>
+        </div>
+      </div>
     </div>
   </main>
 

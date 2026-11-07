@@ -10,150 +10,13 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Caveat:wght@500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/styles.css" />
   <script src="../assets/nav.js" defer></script>
-  <style>
-    /* Bibble page only — scoped so the rest of the site is untouched */
-    .bibble {
-      --bib-sky: #D5EBFC;    /* matches the Bibble image backgrounds */
-      --bib-blue: #90CCEF;   /* callout edge */
-      --bib-navy: #17375E;   /* Bibble ink */
-      --bib-link: #2E6DB4;   /* subtitle + links */
-      font-family: var(--serif);
-      color: var(--ink);
-    }
-    .bibble .case-title { font-weight: 700; margin-bottom: 6px; }
-    .bibble .bib-sub {
-      font-family: var(--serif);
-      font-size: 15px;
-      color: var(--bib-link);
-      margin: 0 0 24px;
-    }
-    .bibble .bib-hero { margin: 0 0 24px; }
-    .bibble figure { margin: 28px 0; }
-    .bibble figure img,
-    .bibble figure video { width: 100%; height: auto; display: block; }
-    .bibble .case-metagrid p { font-family: var(--serif); }
-    .bibble .case-metagrid .label { font-size: 13px; }
-    .bibble .case-metagrid div p:not(.label) { font-size: 13px; color: var(--bib-link); }
-
-    .bibble .bib-section { margin: 48px 0; scroll-margin-top: 32px; }
-    .bibble .bib-label {
-      font-family: var(--serif);
-      font-weight: 700;
-      font-size: 11px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--ink);
-      margin: 0 0 10px;
-    }
-    .bibble .bib-section p {
-      font-family: var(--serif);
-      font-size: 15px;
-      line-height: 1.6;
-      margin: 0 0 16px;
-      max-width: 68ch;
-    }
-    .bibble .bib-section a {
-      color: inherit;
-      text-decoration: underline;
-      text-decoration-color: var(--bib-link);
-      text-underline-offset: 3px;
-    }
-
-    /* Callout with a blue edge: Problem, Solution */
-    .bibble .bib-callout {
-      background: var(--bib-sky);
-      border-left: 4px solid var(--bib-blue);
-      padding: 18px 22px;
-      margin: 28px 0;
-    }
-    .bibble .bib-callout .bib-label { margin-bottom: 6px; }
-    .bibble .bib-callout p { margin: 0; color: var(--bib-navy); }
-    .bibble .bib-callout strong { font-weight: 700; }
-
-    /* Centered banner: Design Challenge, key line */
-    .bibble .bib-banner {
-      background: var(--bib-sky);
-      color: var(--bib-navy);
-      font-weight: 600;
-      font-size: 15px;
-      text-align: center;
-      padding: 14px 22px;
-      margin: 28px 0;
-    }
-
-    /* Video player in the Solution section */
-    .bibble .bib-video video { background: var(--bib-sky); }
-    .bibble .bib-video figcaption {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--ink-soft);
-      margin-top: 10px;
-    }
-
-    /* On-this-page index: sits on the rail's dashed line */
-    .bibble .case-index { display: none; }
-    @media (min-width: 1100px) {
-      .bibble .case-index {
-        display: block;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        width: 48px;
-      }
-      .bibble .case-index ol {
-        position: sticky;
-        top: 40px;
-        list-style: none;
-        margin: 40px 0 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 22px;
-      }
-      .bibble .case-index a {
-        position: relative;
-        display: block;
-        width: max-content;
-        text-align: right;
-        padding-right: 14px;
-        margin-right: -4px;
-        font-family: var(--serif);
-        font-size: 9px;
-        font-weight: 500;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: var(--rule);
-        text-decoration: none;
-        white-space: nowrap;
-        transform: translateX(0);
-      }
-      .bibble .case-index a::after {
-        content: "";
-        position: absolute;
-        right: -1px;
-        top: 50%;
-        width: 8px;
-        height: 8px;
-        transform: translateY(-50%);
-        background: var(--bg);
-        border: 1px solid var(--rule);
-      }
-      .bibble .case-index a.is-active { color: var(--ink); }
-      .bibble .case-index a.is-active::after { background: var(--ink); border-color: var(--ink); }
-      .bibble .case-index a:hover { color: var(--ink); }
-    }
-  </style>
 </head>
 <body>
   <header class="site-header">
     <a class="wordmark" href="../index.html">Nadya Suwarno</a>
     <nav class="nav">
       <div class="nav-group">
-        <a href="../projects.html" aria-current="page">Projects</a>
+        <a href="../home.html#work" aria-current="page">Projects</a>
         <ul class="nav-submenu">
           <li><a href="bibble.html">01 — Bibble</a></li>
           <li><a href="world-models.html">02 — World Models</a></li>
@@ -165,109 +28,120 @@
     </nav>
   </header>
 
-  <main class="rail bibble">
-    <nav class="case-index" aria-label="On this page">
-      <ol>
-        <li><a href="#overview">Overview</a></li>
-        <li><a href="#problem">Problem</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#solution">Solution</a></li>
-      </ol>
-    </nav>
+  <main class="case2 bibble" id="top">
+    <a class="c2-back" href="../home.html#case-studies">← Case studies</a>
+    <section class="c2-hero" aria-labelledby="case-title">
+      <figure class="c2-film vt-bibble">
+        <video id="hero-film" src="../assets/images/bibble/Bibble-motion.mp4" poster="../assets/images/bibble/bibble-static2.png" autoplay muted loop playsinline aria-label="Bibble campaign and app screens, looping"></video>
+        <button type="button" class="c2-film-state" aria-controls="hero-film" aria-pressed="false">Pause video</button>
+      </figure>
 
-    <div class="btn-row" style="margin:0 0 28px;">
-      <a class="btn" href="../projects.html#case-studies">← Case studies</a>
-    </div>
-
-    <h1 class="case-title">Bibble</h1>
-    <p class="bib-sub">Transforming Book Donation into a System of Circulation</p>
-
-    <figure class="bib-hero">
-      <img src="../assets/images/bibble/bibble-static2.png" width="1920" height="1080" alt="Bibble! Send a story somewhere new — the Bibble wordmark between scalloped cloud edges." />
-    </figure>
-
-    <div class="case-metagrid">
-      <div><p class="label">Role</p><p>Product Designer</p></div>
-      <div><p class="label">Team</p><p>Solo</p></div>
-      <div><p class="label">Timeline</p><p>Spring 2026</p></div>
-      <div><p class="label">Tools</p><p>Figma, Adobe, Premiere Pro</p></div>
-      <div><p class="label">Status</p><p>Next round · Creative Conscience</p></div>
-    </div>
-
-    <!-- OVERVIEW -->
-    <section class="bib-section" id="overview">
-      <p class="bib-label">Overview</p>
-      <p>Bibble is a book redistribution experience designed to make giving feel immediate, meaningful, and rewarding by transforming passive donation into active participation. It's a concept for Creative Conscience's brief on SDG 4, Quality Education, and it advanced to the next round of judging for 2027!</p>
-    </section>
-
-    <!-- PROBLEM -->
-    <section class="bib-section" id="problem">
-      <div class="bib-callout">
-        <p class="bib-label">Problem</p>
-        <p><strong>The world is producing readers, but access to educational resources remains uneven.</strong></p>
+      <div class="c2-card">
+        <p class="c2-meta"><span>Concept 2026 · Next round, Creative Conscience</span></p>
+        <h1 id="case-title" class="c2-title">Bibble</h1>
+        <p class="c2-org">Creative Conscience</p>
+        <p class="c2-line">Transforming Book Donation into a System of Circulation</p>
+        <ul class="c2-tags" aria-label="Tags"><li>Product Design</li><li>Education</li><li>Social Research</li></ul>
+        <dl class="c2-facts">
+          <div><dt>Role</dt><dd>Product Designer</dd></div>
+          <div><dt>Team</dt><dd>Solo</dd></div>
+          <div><dt>Timeline</dt><dd>Spring 2026</dd></div>
+          <div><dt>Tools</dt><dd>Figma, Adobe, Premiere Pro</dd></div>
+        </dl>
+        <a class="c2-skip" href="#solution">Skip to solution <span aria-hidden="true">↓</span></a>
+        <a class="c2-watch" href="#walkthrough"><span aria-hidden="true">▶</span> Watch the walkthrough · 1:02</a>
       </div>
-
-      <figure>
-        <img src="../assets/images/bibble/Bibble-problemoldnew.png" width="1920" height="1080" loading="lazy" alt="Old problem: improve literacy rate — global literacy is at 93%. New problem: improve reading proficiency — 4 in 10 children globally have not achieved the minimum." />
-      </figure>
-
-      <p>As literacy rates improve globally, the challenge shifts from teaching people how to read toward ensuring equitable access to reading materials. Access to books improves reading proficiency by encouraging regular reading, expanding vocabulary, strengthening comprehension, and developing critical thinking skills, particularly during a child's formative years.</p>
-      <p><strong>The problem is not scarcity, it's stagnation.</strong> Books exist in abundance, but access to them does not circulate equally.</p>
-
-      <div class="bib-banner">Design Challenge: How might we redesign the act of giving?</div>
     </section>
 
-    <!-- RESEARCH -->
-    <section class="bib-section" id="research">
-      <p class="bib-label">Research</p>
-      <p>To understand what motivates people to participate and give, I studied <a href="https://www.gofundme.com" target="_blank" rel="noopener">GoFundMe</a>, Pugedon, <a href="https://www.duolingo.com" target="_blank" rel="noopener">Duolingo</a>, and SocialSwipe, exploring how accessibility, interaction, and rewarding experiences can make giving more engaging and meaningful.</p>
+    <div class="c2-body">
+      <nav class="c2-rail" aria-label="Skip to section">
+        <a class="c2-top" href="#top">↑ Top</a>
+        <ol>
+          <li><a href="#overview"><span class="n">01</span>Overview</a></li>
+          <li><a href="#problem"><span class="n">02</span>Problem</a></li>
+          <li><a href="#research"><span class="n">03</span>Research</a></li>
+          <li><a href="#solution"><span class="n">04</span>Solution</a></li>
+        </ol>
+        <div class="c2-rail-foot">
+          <a href="world-models.html">Next → World Models</a>
+        </div>
+      </nav>
 
-      <figure>
-        <img src="../assets/images/bibble/Bibble-casestudy.png" width="1920" height="1080" loading="lazy" alt="Key takeaways from GoFundMe, Social Swipe, Duolingo and Portals: people engage more when impact is visible; playful interaction increases emotional retention; reducing friction increases participation rates." />
-      </figure>
+      <div class="c2-content">
+        <!-- OVERVIEW -->
+        <section class="c2-section" id="overview">
+          <h2 class="c2-head"><span class="n">01</span>Overview</h2>
+          <p class="c2-lead">Bibble is a book redistribution experience designed to make giving feel immediate, meaningful, and rewarding by transforming passive donation into active participation.</p>
+          <p>It's a concept for Creative Conscience's brief on SDG 4, Quality Education, and it advanced to the next round of judging for 2027!</p>
+        </section>
 
-      <p>Giving should feel less like a responsibility and more like an opportunity to participate. By making impact visible, interactions playful, and participation effortless, giving can become a more meaningful and rewarding experience that encourages people to return.</p>
+        <!-- PROBLEM -->
+        <section class="c2-section" id="problem">
+          <h2 class="c2-head"><span class="n">02</span>Problem</h2>
+          <p class="c2-lead"><strong>The world is producing readers, but access to educational resources remains uneven.</strong></p>
 
-      <figure>
-        <img src="../assets/images/bibble/Bibble-painpoints.png" width="1920" height="1080" loading="lazy" alt="Pain points of traditional donation systems: donation feels passive, users cannot see impact, it requires effort, and there is a lack of emotional reward." />
-      </figure>
-    </section>
+          <figure>
+            <img src="../assets/images/bibble/Bibble-problemoldnew.png" width="1920" height="1080" loading="lazy" alt="Old problem: improve literacy rate — global literacy is at 93%. New problem: improve reading proficiency — 4 in 10 children globally have not achieved the minimum." />
+          </figure>
 
-    <!-- SOLUTION -->
-    <section class="bib-section" id="solution">
-      <div class="bib-callout">
-        <p class="bib-label">Solution</p>
-        <p>Get people to give, act, and come back.</p>
+          <p>As literacy rates improve globally, the challenge shifts from teaching people how to read toward ensuring equitable access to reading materials. Access to books improves reading proficiency by encouraging regular reading, expanding vocabulary, strengthening comprehension, and developing critical thinking skills, particularly during a child's formative years.</p>
+          <blockquote class="c2-quote"><p><strong>The problem is not scarcity, it's stagnation.</strong> Books exist in abundance, but access to them does not circulate equally.</p></blockquote>
+
+          <p class="c2-frame"><span>Design Challenge</span>How might we redesign the act of giving?</p>
+        </section>
+
+        <!-- RESEARCH -->
+        <section class="c2-section" id="research">
+          <h2 class="c2-head"><span class="n">03</span>Research</h2>
+          <p>To understand what motivates people to participate and give, I studied <a href="https://www.gofundme.com" target="_blank" rel="noopener">GoFundMe</a>, Pugedon, <a href="https://www.duolingo.com" target="_blank" rel="noopener">Duolingo</a>, and SocialSwipe, exploring how accessibility, interaction, and rewarding experiences can make giving more engaging and meaningful.</p>
+
+          <figure>
+            <img src="../assets/images/bibble/Bibble-casestudy.png" width="1920" height="1080" loading="lazy" alt="Key takeaways from GoFundMe, Social Swipe, Duolingo and Portals: people engage more when impact is visible; playful interaction increases emotional retention; reducing friction increases participation rates." />
+          </figure>
+
+          <p class="c2-lead">Giving should feel less like a responsibility and more like an opportunity to participate.</p>
+          <p>By making impact visible, interactions playful, and participation effortless, giving can become a more meaningful and rewarding experience that encourages people to return.</p>
+
+          <figure>
+            <img src="../assets/images/bibble/Bibble-painpoints.png" width="1920" height="1080" loading="lazy" alt="Pain points of traditional donation systems: donation feels passive, users cannot see impact, it requires effort, and there is a lack of emotional reward." />
+          </figure>
+        </section>
+
+        <!-- SOLUTION -->
+        <section class="c2-section" id="solution">
+          <h2 class="c2-head"><span class="n">04</span>Solution</h2>
+          <p class="c2-lead"><strong>Get people to give, act, and come back.</strong></p>
+
+          <figure class="c2-walk" id="walkthrough">
+            <video controls playsinline preload="metadata" poster="../assets/images/bibble/Bibble-fullvideo-poster.jpg" width="1920" height="1064">
+              <source src="../assets/images/bibble/Bibble-fullvideo-web.mp4" type="video/mp4" />
+            </video>
+            <figcaption>Prototype walkthrough · 1 min</figcaption>
+          </figure>
+
+          <p>Meet Bibble, a curious little bookworm who keeps stories moving.</p>
+          <p>You feed Bibble your books, choose where they go, and Bibble responds with a small moment of joy. Books are then routed weekly by where they're needed most, and you can track your book's journey to its new home.</p>
+
+          <p class="c2-frame">Donors keep a sense of choice, while real need decides the route.</p>
+
+          <figure>
+            <img src="../assets/images/bibble/Bibble-experienceflow.png" width="1920" height="1080" loading="lazy" alt="Experience flow: 1. Feed Bibble — users place books into Bibble. 2. Interaction — playful visual and emotional feedback. 3. Selection — users choose where books will be redistributed. 4. Distribution — books are sorted and routed weekly using geographic need data. 5. Impact tracking — users see where their books traveled." />
+          </figure>
+
+          <figure>
+            <img src="../assets/images/bibble/Bibble-prototypedev.png" width="1920" height="1080" loading="lazy" alt="Prototype development: character sketches, a grid of form explorations, and a rendered Bibble donation kiosk reading Welcome to Bibble!" />
+          </figure>
+
+          <figure>
+            <img src="../assets/images/bibble/Bibble-campaign.png" width="1920" height="1080" loading="lazy" alt="Campaign posters: Send a story somewhere new; See where your story goes, showing the Bibble app; and the Bibble character's eyes." />
+          </figure>
+        </section>
+
+        <div class="next-project c2-next">
+          <p class="label">Next project</p>
+          <a href="world-models.html">World Models — Gamification of how AI builds 3D worlds</a>
+        </div>
       </div>
-
-      <figure class="bib-video">
-        <video controls playsinline preload="metadata" poster="../assets/images/bibble/Bibble-fullvideo-poster.jpg" width="1920" height="1064">
-          <source src="../assets/images/bibble/Bibble-fullvideo-web.mp4" type="video/mp4" />
-        </video>
-        <figcaption>Prototype walkthrough · 1 min</figcaption>
-      </figure>
-
-      <p>Meet Bibble, a curious little bookworm who keeps stories moving.</p>
-      <p>You feed Bibble your books, choose where they go, and Bibble responds with a small moment of joy. Books are then routed weekly by where they're needed most, and you can track your book's journey to its new home.</p>
-
-      <div class="bib-banner">Donors keep a sense of choice, while real need decides the route.</div>
-
-      <figure>
-        <img src="../assets/images/bibble/Bibble-experienceflow.png" width="1920" height="1080" loading="lazy" alt="Experience flow: 1. Feed Bibble — users place books into Bibble. 2. Interaction — playful visual and emotional feedback. 3. Selection — users choose where books will be redistributed. 4. Distribution — books are sorted and routed weekly using geographic need data. 5. Impact tracking — users see where their books traveled." />
-      </figure>
-
-      <figure>
-        <img src="../assets/images/bibble/Bibble-prototypedev.png" width="1920" height="1080" loading="lazy" alt="Prototype development: character sketches, a grid of form explorations, and a rendered Bibble donation kiosk reading Welcome to Bibble!" />
-      </figure>
-
-      <figure>
-        <img src="../assets/images/bibble/Bibble-campaign.png" width="1920" height="1080" loading="lazy" alt="Campaign posters: Send a story somewhere new; See where your story goes, showing the Bibble app; and the Bibble character's eyes." />
-      </figure>
-    </section>
-
-    <div class="next-project">
-      <p class="label">Next project</p>
-      <a href="world-models.html">World Models — Gamification of how AI builds 3D worlds</a>
     </div>
   </main>
 
@@ -279,25 +153,5 @@
     </nav>
   </footer>
 
-  <script>
-    /* Highlight the current section in the on-this-page index */
-    (function () {
-      var links = document.querySelectorAll('.case-index a');
-      if (!links.length || !('IntersectionObserver' in window)) return;
-      var byId = {};
-      links.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
-      var setActive = function (id) {
-        links.forEach(function (a) { a.classList.toggle('is-active', a === byId[id]); });
-      };
-      setActive('overview');
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) { if (e.isIntersecting) setActive(e.target.id); });
-      }, { rootMargin: '-35% 0px -60% 0px' });
-      Object.keys(byId).forEach(function (id) {
-        var el = document.getElementById(id);
-        if (el) io.observe(el);
-      });
-    })();
-  </script>
 </body>
 </html>

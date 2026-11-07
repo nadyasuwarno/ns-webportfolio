@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nadya Suwarno — Product Designer</title>
+  <meta name="description" content="Nadya Suwarno — product designer. Parsons '27. New York. Open to Summer 2027 internships." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Caveat:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script src="assets/nav.js" defer></script>
+</head>
+<body>
+  <!-- ============== HEADER (copy into every page) ============== -->
+  <header class="site-header">
+    <a class="wordmark" href="index.html">Nadya Suwarno</a>
+    <nav class="nav">
+      <div class="nav-group">
+        <a href="#work">Projects</a>
+        <ul class="nav-submenu">
+          <li><a href="projects/bibble.html">01 — Bibble</a></li>
+          <li><a href="projects/world-models.html">02 — World Models</a></li>
+          <li><a href="projects/mosaic.html">03 — Mosaic</a></li>
+        </ul>
+      </div>
+      <a href="about.html">About</a>
+      <a href="assets/resume.pdf" class="ext">Resume ↗</a>
+    </nav>
+  </header>
+
+  <main class="home-page">
+    <section class="intro">
+      <div class="intro-text">
+        <h1 class="hello">hey, I'm Nadya!</h1>
+        <p class="display"><strong>Product Designer</strong> set on making unfamiliar systems feel familiar.</p>
+        <div class="status-grid">
+          <div>
+            <p class="label">Currently</p>
+            <p>Senior, Design &amp; Technology @Parsons. Open to Summer 2027 product design internships in New York.</p>
+          </div>
+          <div>
+            <p class="label">Previously</p>
+            <p>Demystified AI @Museum of Moving Image, branded @Parsons Mosaic, built community @Permias, marketed films @Base Entertainment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="work-index" aria-label="Work">
+      <div class="tabs" role="tablist" aria-label="Work">
+        <button type="button" role="tab" id="tab-case-studies" aria-controls="case-studies" aria-selected="true">Case Studies</button>
+        <button type="button" role="tab" id="tab-explorations" aria-controls="explorations" aria-selected="false" tabindex="-1">Explorations</button>
+      </div>
+
+      <div id="case-studies" class="panel" role="tabpanel" aria-labelledby="tab-case-studies">
+        <div class="works showcase">
+          <article class="project">
+            <a class="cover vt-bibble" href="projects/bibble.html" data-cursor="view">
+              <img class="real" src="assets/images/covers/bibble-focus.jpg" alt="Bibble app screens" />
+              <video class="cover-vid" src="assets/images/bibble/Bibble-motion.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+            </a>
+            <div class="c-info">
+              <p class="c-meta"><span>Concept 2026</span></p>
+              <h3 class="c-title"><strong>Bibble</strong><span class="c-org"><span class="c-bar" aria-hidden="true">|</span>Creative Conscience</span></h3>
+              <div class="c-more">
+                <p class="c-line">Transforming book donation into a system of circulation.</p>
+                <ul class="c-tagrow" aria-label="Tags"><li>Product Design</li><li>Education</li><li>Social Research</li></ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <a class="cover vt-wm" href="projects/world-models.html" data-cursor="view">
+              <img class="real" src="assets/images/covers/wm-focus.jpg" alt="World Models mark" />
+            </a>
+            <div class="c-info">
+              <p class="c-meta"><span>Shipped 2026</span></p>
+              <h3 class="c-title"><strong>World Models</strong><span class="c-org"><span class="c-bar" aria-hidden="true">|</span>MoMI</span></h3>
+              <div class="c-more">
+                <p class="c-line">Gamified experience on how a single sentence becomes a walkable 3D world.</p>
+                <ul class="c-tagrow" aria-label="Tags"><li>Interaction Design</li><li>Research</li><li>Education</li><li>World Models</li></ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="project is-soon">
+            <a class="cover vt-mosaic" role="link" aria-disabled="true" data-cursor="soon">
+              <img class="real" src="assets/images/covers/mosaic-focus.jpg" alt="Mosaic identity" />
+              <video class="cover-vid" src="assets/images/mosaic/mosaic-motion3.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+              <span class="c-flag">Coming soon</span>
+            </a>
+            <div class="c-info">
+              <p class="c-meta"><span>Shipped 2025</span></p>
+              <h3 class="c-title"><strong>Mosaic</strong><span class="c-org"><span class="c-bar" aria-hidden="true">|</span>Parsons School of Design</span></h3>
+              <div class="c-more">
+                <p class="c-line">Visual identity for the graduating class of DT BFA &amp; MFA 2025 Thesis Show.</p>
+                <ul class="c-tagrow" aria-label="Tags"><li>Branding</li><li>Design Systems</li><li>Exhibition</li></ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div id="explorations" class="panel" role="tabpanel" aria-labelledby="tab-explorations">
+        <div class="subtabs" role="tablist" aria-label="Explorations">
+          <button type="button" role="tab" id="tab-creative-tech" aria-controls="creative-tech" aria-selected="true">Creative Tech</button>
+          <button type="button" role="tab" id="tab-writings" aria-controls="writings" aria-selected="false" tabindex="-1">Writings</button>
+        </div>
+        <div id="creative-tech" class="panel" role="tabpanel" aria-labelledby="tab-creative-tech">
+          <div class="ex-grid">
+            <article class="ex">
+              <div class="ex-img"><span class="ex-tags"><span>Interactive Installation</span><span>TouchDesigner</span></span></div>
+              <div class="ex-head"><h3>Cycle of a Flower</h3><span>2026</span></div>
+              <p>Trigger tones and light by touching elements grouped by their physical properties.</p>
+            </article>
+            <article class="ex">
+              <div class="ex-img"><span class="ex-tags"><span>Unity</span><span>Motion Capture</span></span></div>
+              <div class="ex-head"><h3>Symphony of Elements</h3><span>2026</span></div>
+              <p>Trigger tones and light by touching elements grouped by their physical properties.</p>
+            </article>
+            <article class="ex">
+              <div class="ex-img"><span class="ex-tags"><span>Unity</span><span>Hand Tracking</span></span></div>
+              <div class="ex-head"><h3>Biophilia</h3><span>2026</span></div>
+              <p>Using movement and gestures as the condition that activates plant growth within the space.</p>
+            </article>
+            <article class="ex">
+              <div class="ex-img"><span class="ex-tags"><span>Field Intervention</span><span>Model Making</span></span></div>
+              <div class="ex-head"><h3>Flux</h3><span>2025</span></div>
+              <p>A field intervention: what one small plaza could become if the people who used it every day had a say.</p>
+            </article>
+            <article class="ex">
+              <div class="ex-img"><span class="ex-tags"><span>Short Film</span></span></div>
+              <div class="ex-head"><h3>Me-mori</h3><span>2025</span></div>
+              <p>A speculative act of how our memories get stored, retrieved and quietly rewritten.</p>
+            </article>
+            <article class="ex">
+              <div class="ex-img"><span class="ex-tags"><span>Short Film</span></span></div>
+              <div class="ex-head"><h3>Unspoken Draft</h3><span>2024</span></div>
+              <p>A draft dialogue on the self, our mental journey, forgotten dreams and memories led by choice.</p>
+            </article>
+          </div>
+        </div>
+        <div id="writings" class="panel" role="tabpanel" aria-labelledby="tab-writings">
+          <div class="ex-grid">
+            <article class="ex">
+              <div class="ex-img"><span class="ex-tags"><span>Essay</span><span>Systems</span></span></div>
+              <div class="ex-head"><h3>AntHive</h3></div>
+              <p>The subway, read as an ant colony.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============== FOOTER (copy into every page) ============== -->
+  <footer class="site-footer">
+    <nav class="footer-nav">
+      <a href="mailto:michellenadya168@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/nadya-suwarno" class="ext">LinkedIn ↗</a>
+      <a href="assets/resume.pdf" class="ext">Resume ↗</a>
+    </nav>
+  </footer>
+</body>
+</html>
