@@ -172,7 +172,7 @@
     const p = e.detail ? toUv(e) : [.5, .5];
     queue.push({ a: p, b: p, force: .0048, rad: .064 });
     wake();
-    setTimeout(() => { location.href = link.href; }, 900);
+    setTimeout(() => { location.href = link.href; }, 650);
   });
   addEventListener('pageshow', e => { if (e.persisted) leaving = false; });
 
