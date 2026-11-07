@@ -1209,6 +1209,10 @@ main.rail > p { max-width: var(--read); margin: 0 auto 18px; font-family: var(--
 .ab-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .ab-what p { margin: 0; font-family: var(--body); font-size: 15px; line-height: 1.55; color: var(--ink-soft); }
 .ab-what p.ab-org { margin-bottom: 6px; font-family: var(--serif); font-size: 17px; font-weight: 500; color: var(--ink); }
+.ab-what .ab-org a { color: var(--ink); text-decoration: none; background: linear-gradient(var(--accent), var(--accent)) 0 100% / 0 1px no-repeat; transition: background-size .45s var(--ease); }
+.ab-what .ab-org a:hover, .ab-what .ab-org a:focus-visible { background-size: 100% 1px; }
+.ab-ext { display: inline-block; margin-left: 6px; font-size: 13px; color: var(--accent); transition: transform .35s var(--ease); }
+.ab-what .ab-org a:hover .ab-ext { transform: translate(2px, -2px); }
 .ab-city { justify-self: end; padding-top: 3px; font-family: var(--serif); font-size: 11px; font-weight: 500; letter-spacing: .2em; color: var(--accent); }
 
 .ab-ask { max-width: 1100px; margin: 0 auto 140px; text-align: center; }
