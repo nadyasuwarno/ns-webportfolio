@@ -17,7 +17,7 @@
     <a class="wordmark" href="index.html">Nadya Suwarno</a>
     <nav class="nav">
       <div class="nav-group">
-        <a href="projects.html">Projects</a>
+        <a href="#work">Projects</a>
         <ul class="nav-submenu">
           <li><a href="projects/bibble.html">01 — Bibble</a></li>
           <li><a href="projects/world-models.html">02 — World Models</a></li>
@@ -47,36 +47,95 @@
       </div>
     </section>
 
-    <section id="projects" class="works">
-      <article class="project">
-        <a class="cover vt-bibble" href="projects/bibble.html">
-          <img src="assets/images/covers/bibble-frost.jpg" alt="" />
-          <img class="real" src="assets/images/covers/bibble-focus.jpg" alt="Bibble app screens" />
-          <span class="c-num">(001)</span><span class="c-status">Concept 2026</span>
-          <span class="c-sign"><strong>Bibble</strong><span>Transforming book donation into a system of circulation.</span></span>
-        </a>
-        <p class="c-tags">Creative Conscience &nbsp;·&nbsp; Product Design &nbsp;·&nbsp; Education</p>
-      </article>
+    <section id="work" class="work-index" aria-label="Work">
+      <div class="tabs" role="tablist" aria-label="Work">
+        <button type="button" role="tab" id="tab-case-studies" aria-controls="case-studies" aria-selected="true">Case Studies</button>
+        <button type="button" role="tab" id="tab-explorations" aria-controls="explorations" aria-selected="false" tabindex="-1">Explorations</button>
+      </div>
 
-      <article class="project">
-        <a class="cover vt-wm" href="projects/world-models.html">
-          <img src="assets/images/covers/wm-frost.jpg" alt="" />
-          <img class="real" src="assets/images/covers/wm-focus.jpg" alt="World Models mark" />
-          <span class="c-num">(002)</span><span class="c-status">MoMI 2026</span>
-          <span class="c-sign"><strong>World Models</strong><span>How a single sentence becomes a walkable 3D world.</span></span>
-        </a>
-        <p class="c-tags">Museum of the Moving Image &nbsp;·&nbsp; Interaction Design &nbsp;·&nbsp; Research</p>
-      </article>
+      <div id="case-studies" class="panel" role="tabpanel" aria-labelledby="tab-case-studies">
+        <div class="works">
+          <article class="project">
+            <a class="cover vt-bibble" href="projects/bibble.html">
+              <img src="assets/images/covers/bibble-frost.jpg" alt="" />
+              <img class="real" src="assets/images/covers/bibble-focus.jpg" alt="Bibble app screens" />
+              <span class="c-num">(001)</span><span class="c-status">Concept 2026</span>
+              <span class="c-sign"><strong>Bibble</strong><span>Transforming book donation into a system of circulation.</span></span>
+            </a>
+            <p class="c-tags">Creative Conscience &nbsp;·&nbsp; Product Design &nbsp;·&nbsp; Education</p>
+          </article>
 
-      <article class="project">
-        <a class="cover vt-mosaic" href="projects/mosaic.html">
-          <img src="assets/images/covers/mosaic-frost.jpg" alt="" />
-          <img class="real" src="assets/images/covers/mosaic-focus.jpg" alt="Mosaic identity" />
-          <span class="c-num">(003)</span><span class="c-status">Shipped 2025</span>
-          <span class="c-sign"><strong>Mosaic</strong><span>One identity for a whole graduating class.</span></span>
-        </a>
-        <p class="c-tags">Parsons School of Design &nbsp;·&nbsp; Branding &nbsp;·&nbsp; Design Systems</p>
-      </article>
+          <article class="project">
+            <a class="cover vt-wm" href="projects/world-models.html">
+              <img src="assets/images/covers/wm-frost.jpg" alt="" />
+              <img class="real" src="assets/images/covers/wm-focus.jpg" alt="World Models mark" />
+              <span class="c-num">(002)</span><span class="c-status">MoMI 2026</span>
+              <span class="c-sign"><strong>World Models</strong><span>How a single sentence becomes a walkable 3D world.</span></span>
+            </a>
+            <p class="c-tags">Museum of the Moving Image &nbsp;·&nbsp; Interaction Design &nbsp;·&nbsp; Research</p>
+          </article>
+
+          <article class="project">
+            <a class="cover vt-mosaic" href="projects/mosaic.html">
+              <img src="assets/images/covers/mosaic-frost.jpg" alt="" />
+              <img class="real" src="assets/images/covers/mosaic-focus.jpg" alt="Mosaic identity" />
+              <span class="c-num">(003)</span><span class="c-status">Shipped 2025</span>
+              <span class="c-sign"><strong>Mosaic</strong><span>One identity for a whole graduating class.</span></span>
+            </a>
+            <p class="c-tags">Parsons School of Design &nbsp;·&nbsp; Branding &nbsp;·&nbsp; Design Systems</p>
+          </article>
+        </div>
+      </div>
+
+      <div id="explorations" class="panel" role="tabpanel" aria-labelledby="tab-explorations">
+        <div class="subtabs" role="tablist" aria-label="Explorations">
+          <button type="button" role="tab" id="tab-creative-tech" aria-controls="creative-tech" aria-selected="true">Creative Tech</button>
+          <button type="button" role="tab" id="tab-writings" aria-controls="writings" aria-selected="false" tabindex="-1">Writings</button>
+        </div>
+        <div id="creative-tech" class="panel" role="tabpanel" aria-labelledby="tab-creative-tech">
+          <div class="ex-grid">
+            <article class="ex">
+              <div class="ex-img"><span class="ex-tags"><span>Interactive Installation</span><span>TouchDesigner</span></span></div>
+              <div class="ex-head"><h3>Cycle of a Flower</h3><span>2026</span></div>
+              <p>Trigger tones and light by touching elements grouped by their physical properties.</p>
+            </article>
+            <article class="ex">
+              <div class="ex-img"><span class="ex-tags"><span>Unity</span><span>Motion Capture</span></span></div>
+              <div class="ex-head"><h3>Symphony of Elements</h3><span>2026</span></div>
+              <p>Trigger tones and light by touching elements grouped by their physical properties.</p>
+            </article>
+            <article class="ex">
+              <div class="ex-img"><span class="ex-tags"><span>Unity</span><span>Hand Tracking</span></span></div>
+              <div class="ex-head"><h3>Biophilia</h3><span>2026</span></div>
+              <p>Using movement and gestures as the condition that activates plant growth within the space.</p>
+            </article>
+            <article class="ex">
+              <div class="ex-img"><span class="ex-tags"><span>Field Intervention</span><span>Model Making</span></span></div>
+              <div class="ex-head"><h3>Flux</h3><span>2025</span></div>
+              <p>A field intervention: what one small plaza could become if the people who used it every day had a say.</p>
+            </article>
+            <article class="ex">
+              <div class="ex-img"><span class="ex-tags"><span>Short Film</span></span></div>
+              <div class="ex-head"><h3>Me-mori</h3><span>2025</span></div>
+              <p>A speculative act of how our memories get stored, retrieved and quietly rewritten.</p>
+            </article>
+            <article class="ex">
+              <div class="ex-img"><span class="ex-tags"><span>Short Film</span></span></div>
+              <div class="ex-head"><h3>Unspoken Draft</h3><span>2024</span></div>
+              <p>A draft dialogue on the self, our mental journey, forgotten dreams and memories led by choice.</p>
+            </article>
+          </div>
+        </div>
+        <div id="writings" class="panel" role="tabpanel" aria-labelledby="tab-writings">
+          <div class="ex-grid">
+            <article class="ex">
+              <div class="ex-img"><span class="ex-tags"><span>Essay</span><span>Systems</span></span></div>
+              <div class="ex-head"><h3>AntHive</h3></div>
+              <p>The subway, read as an ant colony.</p>
+            </article>
+          </div>
+        </div>
+      </div>
     </section>
 
   </main>

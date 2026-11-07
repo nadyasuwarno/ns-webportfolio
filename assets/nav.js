@@ -1,3 +1,5 @@
+document.documentElement.classList.add('js');
+
 document.querySelectorAll('.nav-group').forEach(group => {
   let closeTimer;
   const open = () => {
@@ -48,5 +50,45 @@ document.querySelectorAll('.thumb-vid, .hero-vid').forEach(video => {
     const near = new IntersectionObserver(entries => entries.forEach(e => e.target.classList.toggle('in', e.isIntersecting)), { rootMargin: '-38% 0px -38% 0px' });
     document.querySelectorAll('.cover').forEach(c => near.observe(c));
   }
+})();
+
+/* Case Studies / Explorations tabs, with Creative Tech / Writings inside */
+(() => {
+  const lists = [...document.querySelectorAll('[role="tablist"]')];
+  if (!lists.length) return;
+  const panelOf = b => document.getElementById(b.getAttribute('aria-controls'));
+  const select = (b, focus) => {
+    const btns = [...b.closest('[role="tablist"]').querySelectorAll('[role="tab"]')];
+    btns.forEach(x => {
+      const on = x === b;
+      x.setAttribute('aria-selected', on);
+      x.tabIndex = on ? 0 : -1;
+      panelOf(x).hidden = !on;
+    });
+    if (focus) b.focus();
+  };
+  lists.forEach(list => {
+    const btns = [...list.querySelectorAll('[role="tab"]')];
+    btns.forEach((b, i) => {
+      b.addEventListener('click', () => { select(b); history.replaceState(null, '', '#' + b.getAttribute('aria-controls')); });
+      b.addEventListener('keydown', e => {
+        if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+        e.preventDefault();
+        select(btns[(i + (e.key === 'ArrowRight' ? 1 : btns.length - 1)) % btns.length], true);
+      });
+    });
+    select(btns.find(b => b.getAttribute('aria-selected') === 'true') || btns[0]);
+  });
+  const open = () => {
+    const id = location.hash.slice(1);
+    const tab = id && document.querySelector(`[role="tab"][aria-controls="${CSS.escape(id)}"]`);
+    if (!tab) return;
+    const outer = tab.closest('[role="tabpanel"]');
+    if (outer) select(document.querySelector(`[role="tab"][aria-controls="${outer.id}"]`));
+    select(tab);
+    requestAnimationFrame(() => document.getElementById('work')?.scrollIntoView());
+  };
+  open();
+  addEventListener('hashchange', open);
 })();
 
