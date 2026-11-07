@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="assets/styles.css" />
   <script src="assets/vt.js"></script>
   <script src="assets/nav.js" defer></script>
+  <script src="assets/firsts.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -29,58 +30,111 @@
     </nav>
   </header>
 
-  <main class="rail">
-    <h1 class="case-title statement">
-      Different rooms, same job: make the unfamiliar feel like somewhere you belong.
-    </h1>
-    <p>Hey, I'm Nadya. I was born and raised in Jakarta, and I've spent the years since finding my footing in rooms that felt bigger than me, then helping other people find theirs.</p>
-    <p>Before Parsons, I'd already worn a lot of hats: growing an online community for a dance agency in Seoul, marketing films in Jakarta, running events for Indonesian students in New York.</p>
-    <p>Now I do it through product design. I believe anything can be learned if it's designed well. Curiosity gets people in the door. Demystification shows them how it works. Enablement lets them walk on their own.</p>
+  <svg class="sr-defs" width="0" height="0" aria-hidden="true" focusable="false">
+    <filter id="deckle"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="3" seed="7" /><feDisplacementMap in="SourceGraphic" scale="8" /></filter>
+  </svg>
 
-    <div class="timeline">
-      <div class="timeline-row">
-        <div class="when">2026</div>
-        <div>
-          <h4>Museum of the Moving Image · Emerging Technology Lab</h4>
-          <p>Taught museum visitors how AI builds a world by letting them play every role in the pipeline.</p>
-        </div>
+  <main class="about2">
+    <section class="ab-open">
+      <p class="ab-eyebrow">About</p>
+      <h1 class="ab-title">Design is half of my life.</h1>
+      <p class="ab-sub">The other half, I spend being a beginner at something new.</p>
+      <p class="ab-intro">Hey, I'm Nadya, a product designer from Jakarta, now in New York. Every first time starts unfamiliar and ends a little more like home.</p>
+    </section>
+
+    <section class="ab-firsts" aria-label="A few of my firsts">
+      <ul class="washi-row">
+          <li class="washi" style="--tilt: -2.5deg;">
+            <div class="washi-photo" role="img" aria-label="Photo to come: first time making a performance with dancers"><span>[ photo ]</span></div>
+            <p class="washi-cap">first time making a performance with dancers</p>
+            <p class="washi-meta">London · 2026</p>
+          </li>
+          <li class="washi" style="--tilt: 1.8deg;">
+            <div class="washi-photo" role="img" aria-label="Photo to come: first time teaching strangers how AI builds a world"><span>[ photo ]</span></div>
+            <p class="washi-cap">first time teaching strangers how AI builds a world</p>
+            <p class="washi-meta">New York · 2026</p>
+          </li>
+          <li class="washi" style="--tilt: -1.2deg;">
+            <div class="washi-photo" role="img" aria-label="Photo to come: first premiere I helped run"><span>[ photo ]</span></div>
+            <p class="washi-cap">first premiere I helped run</p>
+            <p class="washi-meta">Jakarta · 2025</p>
+          </li>
+          <li class="washi" style="--tilt: 2.4deg;">
+            <div class="washi-photo" role="img" aria-label="Photo to come: first time designing a whole show’s identity"><span>[ photo ]</span></div>
+            <p class="washi-cap">first time designing a whole show’s identity</p>
+            <p class="washi-meta">Parsons · 2025</p>
+          </li>
+          <li class="washi" style="--tilt: -1.8deg;">
+            <div class="washi-photo" role="img" aria-label="Photo to come: first community I built from zero"><span>[ photo ]</span></div>
+            <p class="washi-cap">first community I built from zero</p>
+            <p class="washi-meta">Seoul, remotely · 2019</p>
+          </li>
+          <li class="washi" style="--tilt: 1.2deg;">
+            <div class="washi-photo" role="img" aria-label="Photo to come: first time raising $7K for an event"><span>[ photo ]</span></div>
+            <p class="washi-cap">first time raising $7K for an event</p>
+            <p class="washi-meta">New York · 2025</p>
+          </li>
+      </ul>
+    </section>
+
+    <section class="ab-bridge">
+      <p class="ab-big">That moment, unsure and then at home, is what I design for.</p>
+      <p class="ab-path"><span>Curiosity</span> gets people in the door. <span>Demystification</span> shows them how it works. <span>Enablement</span> lets them walk on their own.</p>
+
+      <div class="ab-cv">
+        <p class="ab-eyebrow">The short version</p>
+        <ul class="ab-short">
+            <li><span class="ab-when">2026</span><span class="ab-org">Museum of the Moving Image</span><span class="ab-role">Emerging Technology Lab</span></li>
+            <li><span class="ab-when">Spring 2026</span><span class="ab-org">Study abroad</span><span class="ab-role">London</span></li>
+            <li><span class="ab-when">2025–26</span><span class="ab-org">Permias</span><span class="ab-role">Vice Director of Events</span></li>
+            <li><span class="ab-when">2025</span><span class="ab-org">Base Entertainment</span><span class="ab-role">Jakarta</span></li>
+            <li><span class="ab-when">2024–25</span><span class="ab-org">Parsons Design &amp; Technology</span><span class="ab-role">Mosaic thesis show</span></li>
+            <li><span class="ab-when">2019–23</span><span class="ab-org">Korean Dance Agency</span><span class="ab-role">Seoul (remote)</span></li>
+        </ul>
+        <details class="ab-long">
+          <summary>The longer version</summary>
+          <ul>
+              <li><span class="ab-when">2026</span><div><p class="ab-org">Museum of the Moving Image · Emerging Technology Lab</p><p>Taught museum visitors how AI builds a world by letting them play every role in the pipeline.</p></div></li>
+              <li><span class="ab-when">Spring 2026</span><div><p class="ab-org">Study abroad · London</p><p>Made interactive performances with dancers.</p></div></li>
+              <li><span class="ab-when">2025–26</span><div><p class="ab-org">Permias · Vice Director of Events</p><p>Grew our flagship events 33%, raised $7K+, and started Arus, a friendlier way in for undergrads.</p></div></li>
+              <li><span class="ab-when">2025</span><div><p class="ab-org">Base Entertainment · Jakarta</p><p>Redesigned film posters and helped run premieres for 1,000+ guests.</p></div></li>
+              <li><span class="ab-when">2024–25</span><div><p class="ab-org">Parsons Design &amp; Technology · Mosaic thesis show</p><p>Designed the identity for Mosaic, the 2025 thesis show.</p></div></li>
+              <li><span class="ab-when">2019–23</span><div><p class="ab-org">Korean Dance Agency · Seoul (remote)</p><p>Built an Instagram community from zero to 300+ members across borders.</p></div></li>
+          </ul>
+        </details>
       </div>
-      <div class="timeline-row">
-        <div class="when">Spring 2026</div>
-        <div>
-          <h4>Study abroad · London</h4>
-          <p>Made interactive performances with dancers.</p>
-        </div>
+    </section>
+
+    <section class="ab-ask" id="your-first" aria-labelledby="ask-title">
+      <p class="ab-eyebrow">Your turn</p>
+      <h2 id="ask-title" class="ab-q">When was the last time you did something for the first time?</h2>
+      <form class="ab-form" data-store="firsts" novalidate>
+        <label class="sr-only" for="first-text">Your first time</label>
+        <input id="first-text" name="text" type="text" maxlength="120" autocomplete="off" placeholder="I tried surfing, last August…" required />
+        <input class="ab-trap" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <button type="submit">Share <span aria-hidden="true">→</span></button>
+      </form>
+      <p class="ab-note" role="status">Anonymous. It shows up below straight away.</p>
+      <ul class="ab-wall" data-wall="firsts" aria-live="polite" aria-label="Firsts from people who stopped by"></ul>
+    </section>
+
+    <section class="ab-next" id="next-first" aria-labelledby="next-title">
+      <div>
+        <p class="ab-eyebrow">What should I try next?</p>
+        <h2 id="next-title" class="ab-q">Give me a first time to go and have.</h2>
+        <form class="ab-form" data-store="next" novalidate>
+          <label class="sr-only" for="next-text">A first time for Nadya to try</label>
+          <input id="next-text" name="text" type="text" maxlength="120" autocomplete="off" placeholder="Pottery, a silent retreat, a new language…" required />
+          <input class="ab-trap" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit">Suggest <span aria-hidden="true">→</span></button>
+        </form>
+        <p class="ab-note" role="status">I mark them planned or done as I go.</p>
       </div>
-      <div class="timeline-row">
-        <div class="when">2025–26</div>
-        <div>
-          <h4>Permias · Vice Director of Events</h4>
-          <p>Grew our flagship events 33%, raised $7K+, and started Arus, a friendlier way in for undergrads.</p>
-        </div>
+      <div>
+        <p class="ab-eyebrow">My next firsts</p>
+        <ol class="ab-list" data-wall="next" aria-live="polite"></ol>
       </div>
-      <div class="timeline-row">
-        <div class="when">2025</div>
-        <div>
-          <h4>Base Entertainment · Jakarta</h4>
-          <p>Redesigned film posters and helped run premieres for 1,000+ guests.</p>
-        </div>
-      </div>
-      <div class="timeline-row">
-        <div class="when">2024–25</div>
-        <div>
-          <h4>Parsons Design &amp; Technology</h4>
-          <p>Designed the identity for Mosaic, the 2025 thesis show.</p>
-        </div>
-      </div>
-      <div class="timeline-row">
-        <div class="when">2019–23</div>
-        <div>
-          <h4>Korean Dance Agency · Seoul (remote)</h4>
-          <p>Built an Instagram community from zero to 300+ members across borders.</p>
-        </div>
-      </div>
-    </div>
+    </section>
   </main>
 
   <footer class="site-footer">
