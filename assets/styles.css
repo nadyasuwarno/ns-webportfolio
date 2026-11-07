@@ -944,22 +944,6 @@ main.rail > p { max-width: var(--read); margin: 0 auto 18px; font-family: var(--
 ::view-transition-group(*) { animation-duration: 900ms; animation-timing-function: var(--ease); }
 ::view-transition-old(site-name), ::view-transition-new(site-name) { animation-duration: 900ms; }
 
-/* Landing to Home: no drifting text. Home rises from the centre like a ripple spreading out. */
-html.vt-ripple * { view-transition-name: none !important; }
-@keyframes ripple-out { to { opacity: 0; filter: blur(28px); transform: scale(1.04); } }
-@keyframes ripple-in {
-  from { -webkit-mask-size: 0 0; mask-size: 0 0; filter: blur(24px); transform: scale(.98); }
-  55% { filter: blur(9px); }
-  85% { filter: blur(2px); }
-  to { -webkit-mask-size: 340vmax 340vmax; mask-size: 340vmax 340vmax; filter: blur(0); transform: none; }
-}
-html:active-view-transition-type(ripple)::view-transition-old(root) { animation: ripple-out 1350ms cubic-bezier(.45, .05, .3, 1) both; }
-html:active-view-transition-type(ripple)::view-transition-new(root) {
-  -webkit-mask-image: radial-gradient(circle, #000 0 26%, rgba(0, 0, 0, .8) 36%, rgba(0, 0, 0, .45) 50%, rgba(0, 0, 0, .15) 62%, transparent 71%);
-  mask-image: radial-gradient(circle, #000 0 26%, rgba(0, 0, 0, .8) 36%, rgba(0, 0, 0, .45) 50%, rgba(0, 0, 0, .15) 62%, transparent 71%);
-  -webkit-mask-position: center; mask-position: center; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
-  animation: ripple-in 1500ms cubic-bezier(.45, .05, .25, 1) both;
-}
 
 @supports not (view-transition-name: none) {
   body:not(.landing) > * { animation: page-in .8s var(--ease) both; }
