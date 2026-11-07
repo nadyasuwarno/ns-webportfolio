@@ -37,13 +37,12 @@
   <main class="about2">
     <section class="ab-open">
       <p class="ab-eyebrow">About</p>
-      <h1 class="ab-title">Design is half of my life.</h1>
-      <p class="ab-sub">The other half, I spend being a beginner at something new.</p>
-      <p class="ab-intro">Hey, I'm Nadya, a product designer from Jakarta, now in New York. Every first time starts unfamiliar and ends a little more like home.</p>
+      <h1 class="ab-title">Design is half of my life. <span>The other half, I spend being a beginner at something new.</span></h1>
+      <p class="ab-intro">Hey, I'm Nadya. I was born and raised in Jakarta, and I'm now studying in New York. Every first time starts unfamiliar and ends a little more like home.</p>
     </section>
 
     <section class="ab-firsts" aria-label="A few of my firsts">
-      <ul class="washi-row">
+      <ul class="washi-row" id="deck">
           <li class="washi" style="--tilt: -2.5deg;">
             <div class="washi-photo" role="img" aria-label="Photo to come: first time making a performance with dancers"><span>[ photo ]</span></div>
             <p class="washi-cap">first time making a performance with dancers</p>
@@ -75,6 +74,10 @@
             <p class="washi-meta">New York · 2025</p>
           </li>
       </ul>
+      <div class="deck-bar">
+        <button type="button" class="deck-next" aria-controls="deck">Next first <span aria-hidden="true">↻</span></button>
+        <p class="deck-count" aria-live="polite"><span class="deck-i">1</span> / <span class="deck-n">6</span></p>
+      </div>
     </section>
 
     <section class="ab-bridge">

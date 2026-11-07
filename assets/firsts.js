@@ -9,6 +9,46 @@ const FIRSTS_CONFIG = {
   key: ''       // the "anon public" key from Project Settings → API
 };
 
+/* The deck of firsts: click a card (or the button, or press → on it) to send the top one to the back */
+(() => {
+  const deck = document.getElementById('deck');
+  if (!deck) return;
+  const cards = [...deck.querySelectorAll('.washi')];
+  const btn = document.querySelector('.deck-next');
+  const iEl = document.querySelector('.deck-i'), nEl = document.querySelector('.deck-n');
+  const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let order = cards.map((_, i) => i), busy = false, shown = 0;
+  if (nEl) nEl.textContent = cards.length;
+  const place = () => order.forEach((c, pos) => {
+    cards[c].dataset.pos = pos;
+    cards[c].setAttribute('aria-hidden', pos === 0 ? 'false' : 'true');
+  });
+  const next = () => {
+    if (busy) return;
+    busy = true;
+    const top = cards[order[0]];
+    top.classList.add('is-leaving');
+    setTimeout(() => {
+      order.push(order.shift());
+      top.classList.remove('is-leaving');
+      top.style.transition = 'none';
+      place();
+      void top.offsetWidth;
+      top.style.transition = '';
+      shown = (shown + 1) % cards.length;
+      if (iEl) iEl.textContent = shown + 1;
+      busy = false;
+    }, calm ? 0 : 520);
+  };
+  place();
+  deck.addEventListener('click', next);
+  if (btn) btn.addEventListener('click', next);
+  deck.tabIndex = 0;
+  deck.setAttribute('role', 'button');
+  deck.setAttribute('aria-label', 'Flip to the next first');
+  deck.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowRight') { e.preventDefault(); next(); } });
+})();
+
 (() => {
   const forms = document.querySelectorAll('.ab-form[data-store]');
   if (!forms.length) return;
