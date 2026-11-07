@@ -1,5 +1,5 @@
-/* The landing water: one pale blue gradient, still until touched.
-   Ripples move slowly and softly. Pressing it lets a drop fall, then opens the link. */
+/* The water piece: one pale blue gradient, still until touched.
+   Ripples move slowly and softly, and a press lets a drop fall. */
 (() => {
   const link = document.getElementById('water');
   const canvas = link && link.querySelector('canvas');
@@ -164,17 +164,11 @@
   });
   link.addEventListener('pointerleave', () => { cur = null; });
 
-  let leaving = false;
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    if (leaving) return;
-    leaving = true;
-    const p = e.detail ? toUv(e) : [.5, .5];
+  link.addEventListener('pointerdown', e => {
+    const p = toUv(e);
     queue.push({ a: p, b: p, force: .0048, rad: .064 });
     wake();
-    setTimeout(() => { location.href = link.href; }, 900);
   });
-  addEventListener('pageshow', e => { if (e.persisted) leaving = false; });
 
   let rt = 0;
   addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(resize, 140); });
