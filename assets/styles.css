@@ -997,16 +997,16 @@ main.rail > p { max-width: var(--read); margin: 0 auto 18px; font-family: var(--
 .showcase .cover:focus-visible { box-shadow: none; outline: 2px solid var(--ink); outline-offset: 4px; }
 .showcase .is-soon .cover { cursor: default; }
 .showcase .c-flag {
-  position: absolute; left: 14px; top: 14px; padding: 7px 12px; border-radius: 999px;
-  background: rgba(246, 248, 251, .5); -webkit-backdrop-filter: blur(14px) saturate(1.4); backdrop-filter: blur(14px) saturate(1.4);
-  border: 1px solid rgba(255, 255, 255, .8); font-family: var(--serif); font-size: 10px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: var(--ink);
+  position: absolute; left: 16px; bottom: 16px; padding: 6px 10px;
+  background: rgba(241, 244, 247, .78); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  font-family: var(--serif); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink);
 }
 @media (hover: hover) and (pointer: fine) {
   .showcase .c-flag { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); border: 0; white-space: nowrap; }
 }
 
-.showcase .c-info { padding-top: 14px; height: 172px; overflow: hidden; }
-@media (max-width: 1180px) { .showcase .c-info { height: 222px; } }
+.showcase .c-info { padding-top: 14px; height: 196px; overflow: hidden; }
+@media (max-width: 1180px) { .showcase .c-info { height: 246px; } }
 .showcase .c-meta { display: flex; justify-content: space-between; gap: 12px; margin: 0 0 12px; font-family: var(--mono); font-size: 11px; color: var(--ink-soft); }
 .showcase .c-title { margin: 0; font-family: var(--serif); font-size: 20px; font-weight: 500; line-height: 1.3; color: var(--ink); }
 .showcase .c-org { font-weight: 300; color: var(--accent); transition: opacity .45s var(--ease); }
@@ -1014,7 +1014,8 @@ main.rail > p { max-width: var(--read); margin: 0 auto 18px; font-family: var(--
 .showcase .c-more { transition: opacity .45s var(--ease); }
 .showcase .c-line { margin: 8px 0 14px; max-width: 46ch; font-family: var(--body); font-size: 14px; line-height: 1.5; color: var(--ink-soft); }
 .showcase .c-tagrow { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
-.showcase .c-tagrow li { padding: 4px 10px; border: 1px solid #D2DBE4; border-radius: 999px; font-family: var(--body); font-size: 11px; line-height: 1.4; color: var(--ink-soft); white-space: nowrap; }
+.showcase .c-tagrow { gap: 8px; }
+.showcase .c-tagrow li { padding: 6px 10px; background: rgba(210, 219, 228, .55); font-family: var(--serif); font-size: 10px; line-height: 1.3; letter-spacing: .14em; text-transform: uppercase; color: var(--ink); white-space: nowrap; }
 .showcase.has-lead .project:not(.is-lead) .c-org,
 .showcase.has-lead .project:not(.is-lead) .c-more { opacity: 0; }
 .showcase.has-lead .project:not(.is-lead) .c-title strong { color: var(--accent); }
