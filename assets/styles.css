@@ -738,7 +738,7 @@ h2.section-head { margin-top: 72px; }
   height: calc(100svh - 80px);
   overflow: hidden;
   cursor: pointer;
-  background: #576B95;
+  background: linear-gradient(10deg, #4A5D87, #90A3C3);
   -webkit-mask-image: linear-gradient(to right, transparent, #000 7px, #000 calc(100% - 7px), transparent), linear-gradient(to bottom, transparent, #000 7px, #000 calc(100% - 7px), transparent);
   -webkit-mask-composite: source-in;
   mask-image: linear-gradient(to right, transparent, #000 7px, #000 calc(100% - 7px), transparent), linear-gradient(to bottom, transparent, #000 7px, #000 calc(100% - 7px), transparent);
