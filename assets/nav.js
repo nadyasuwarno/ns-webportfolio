@@ -1,5 +1,17 @@
 document.documentElement.classList.add('js');
 
+/* Every link that leaves the site (and the resume PDF) opens in a new tab, including ones added later */
+document.addEventListener('click', e => {
+  const a = e.target.closest && e.target.closest('a[href]');
+  if (!a || a.target) return;
+  const url = new URL(a.href, location.href);
+  if (!/^https?:$/.test(url.protocol)) return;
+  if (url.origin !== location.origin || /\.pdf$/i.test(url.pathname)) {
+    a.target = '_blank';
+    a.rel = 'noopener';
+  }
+}, true);
+
 document.querySelectorAll('.nav-group').forEach(group => {
   let closeTimer;
   const open = () => {
