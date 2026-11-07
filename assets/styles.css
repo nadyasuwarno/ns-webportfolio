@@ -1061,7 +1061,6 @@ main.rail > p { max-width: var(--read); margin: 0 auto 18px; font-family: var(--
 .c2-back { display: inline-block; margin: 0 0 28px; font-family: var(--serif); font-size: 10px; font-weight: 500; letter-spacing: .24em; text-transform: uppercase; color: var(--accent); text-decoration: none; }
 .c2-back:hover { color: var(--ink); text-decoration: none; }
 .c2-meta { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 0; font-family: var(--serif); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-soft); }
-.c2-meta span:first-child { font-family: var(--mono); letter-spacing: 0; text-transform: none; font-size: 12px; }
 .c2-title { margin: 18px 0 0; font-family: var(--serif); font-size: clamp(40px, 4vw, 60px); font-weight: 500; line-height: 1.02; letter-spacing: -.01em; color: var(--ink); }
 .c2-org { margin: 8px 0 0; font-family: var(--serif); font-size: clamp(20px, 1.8vw, 26px); font-weight: 300; color: var(--accent); }
 .c2-line { margin: 6px 0 0; max-width: 34ch; font-family: var(--body); font-size: 16px; line-height: 1.5; color: var(--ink-soft); }
