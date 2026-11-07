@@ -92,3 +92,63 @@ document.querySelectorAll('.thumb-vid, .hero-vid').forEach(video => {
   addEventListener('hashchange', open);
 })();
 
+
+/* Case studies: the hovered card grows to lead and plays; a glass pill follows the cursor */
+(() => {
+  const row = document.querySelector('.showcase');
+  if (!row || !matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const wide = matchMedia('(min-width: 901px)');
+  const cards = [...row.querySelectorAll('.project')];
+
+  const lead = card => {
+    cards.forEach(c => {
+      const on = c === card;
+      c.classList.toggle('is-lead', on);
+      const v = c.querySelector('.cover-vid');
+      if (!v) return;
+      if (on && !calm) {
+        v.play().then(() => c.classList.add('is-playing')).catch(() => {});
+      } else {
+        c.classList.remove('is-playing');
+        setTimeout(() => { if (!c.classList.contains('is-lead')) { v.pause(); v.currentTime = 0; } }, 500);
+      }
+    });
+    row.classList.toggle('has-lead', !!card && wide.matches);
+  };
+  cards.forEach(c => c.addEventListener('pointerenter', () => lead(c)));
+  row.addEventListener('pointerleave', () => lead(null));
+  wide.addEventListener('change', () => row.classList.toggle('has-lead', wide.matches && cards.some(c => c.classList.contains('is-lead'))));
+
+  // The pill
+  const icons = {
+    view: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 8s2.4-4.5 6.5-4.5S14.5 8 14.5 8 12.1 12.5 8 12.5 1.5 8 1.5 8z"/><circle cx="8" cy="8" r="2"/></svg>',
+    soon: '<svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="7" width="9" height="6.5" rx="1.6"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/></svg>'
+  };
+  const words = { view: 'View case study', soon: 'Coming soon' };
+  const pill = document.createElement('div');
+  pill.className = 'cursor-pill';
+  pill.setAttribute('aria-hidden', 'true');
+  document.body.append(pill);
+  let kind = '', tx = 0, ty = 0, x = 0, y = 0, raf = 0, shown = false;
+  const tick = () => {
+    x += (tx - x) * (calm ? 1 : .2); y += (ty - y) * (calm ? 1 : .2);
+    pill.style.transform = `translate(${x + 16}px, ${y + 14}px)`;
+    raf = (Math.abs(tx - x) + Math.abs(ty - y) > .3) ? requestAnimationFrame(tick) : 0;
+  };
+  row.querySelectorAll('.cover[data-cursor]').forEach(cover => {
+    cover.addEventListener('pointerenter', e => {
+      const k = cover.dataset.cursor;
+      if (k !== kind) { kind = k; pill.innerHTML = icons[k] + '<span>' + words[k] + '</span>'; }
+      tx = e.clientX; ty = e.clientY;
+      if (!shown) { x = tx; y = ty; tick(); }
+      shown = true; pill.classList.add('is-on');
+    });
+    cover.addEventListener('pointermove', e => {
+      tx = e.clientX; ty = e.clientY;
+      if (!shown) { shown = true; pill.classList.add('is-on'); }
+      if (!raf) raf = requestAnimationFrame(tick);
+    });
+    cover.addEventListener('pointerleave', () => { shown = false; pill.classList.remove('is-on'); });
+  });
+})();
