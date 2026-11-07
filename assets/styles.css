@@ -1085,7 +1085,7 @@ main.rail > p { max-width: var(--read); margin: 0 auto 18px; font-family: var(--
 .c2-skip:focus-visible, .c2-watch:focus-visible, .c2-back:focus-visible, .c2-rail a:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
 
 /* Body: rail on the left, reading column on the right */
-.c2-body { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 64px; align-items: start; }
+.c2-body { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 120px; align-items: start; }
 .c2-rail { position: sticky; top: 112px; }
 .c2-rail-h { margin: 0 0 20px; font-family: var(--serif); font-size: 9px; font-weight: 500; letter-spacing: .24em; text-transform: uppercase; color: var(--ink-soft); }
 .c2-rail ol { position: relative; display: flex; flex-direction: column; gap: 18px; margin: 0; padding: 0; list-style: none; }
@@ -1109,8 +1109,8 @@ main.rail > p { max-width: var(--read); margin: 0 auto 18px; font-family: var(--
 .c2-head { display: flex; align-items: center; gap: 16px; margin: 0 0 32px; font-family: var(--serif); font-size: 11px; font-weight: 500; letter-spacing: .28em; text-transform: uppercase; color: var(--ink); }
 .c2-head .n { font-family: var(--mono); font-size: 12px; letter-spacing: 0; color: var(--ink-soft); }
 .c2-head::after { content: ""; flex: 1; height: 1px; background: var(--panel); }
-.c2-section p { max-width: 68ch; margin: 0 0 18px; font-family: var(--body); font-size: 16px; line-height: 1.7; color: var(--ink); }
-.c2-section p.c2-lead { max-width: 30em; margin-bottom: 22px; font-family: var(--serif); font-size: clamp(22px, 2.2vw, 30px); line-height: 1.32; font-weight: 300; }
+.c2-section p { max-width: none; margin: 0 0 18px; font-family: var(--body); font-size: 16px; line-height: 1.7; color: var(--ink); }
+.c2-section p.c2-lead { max-width: none; margin-bottom: 22px; font-family: var(--serif); font-size: clamp(22px, 2.2vw, 30px); line-height: 1.32; font-weight: 300; }
 .c2-section p.c2-lead strong { font-weight: 400; }
 .c2-section a { color: inherit; text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; }
 .c2-section figure { margin: 40px 0; }
