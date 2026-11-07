@@ -1101,6 +1101,8 @@ main.rail > p { max-width: var(--read); margin: 0 auto 18px; font-family: var(--
 .c2-rail-foot { display: flex; flex-direction: column; gap: 12px; margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--panel); }
 .c2-rail-foot a { font-family: var(--serif); font-size: 9px; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: var(--ink-soft); text-decoration: none; }
 .c2-rail-foot a::before { display: none; }
+.c2-rail .c2-top { margin: 0 0 24px; font-family: var(--serif); font-size: 9px; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: var(--ink-soft); }
+.c2-rail .c2-top::before { display: none; }
 
 .c2-content { min-width: 0; }
 .c2-section { margin: 0 0 120px; scroll-margin-top: 28px; }
@@ -1128,7 +1130,7 @@ main.rail > p { max-width: var(--read); margin: 0 auto 18px; font-family: var(--
   .c2-card { max-width: 640px; }
   .c2-body { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .c2-rail { top: 64px; z-index: 5; margin: 0 -32px 48px; padding: 12px 32px; background: rgba(241, 244, 247, .82); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border-bottom: 1px solid var(--panel); }
-  .c2-rail-h, .c2-rail-foot { display: none; }
+  .c2-rail-h, .c2-rail-foot, .c2-rail .c2-top { display: none; }
   .c2-rail ol { flex-direction: row; gap: 22px; overflow-x: auto; scrollbar-width: none; }
   .c2-rail ol::before, .c2-rail ol::after { display: none; }
   .c2-rail a { white-space: nowrap; font-size: 13px; gap: 8px; }

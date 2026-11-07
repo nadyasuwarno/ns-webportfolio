@@ -205,8 +205,11 @@ document.querySelectorAll('.thumb-vid, .hero-vid').forEach(video => {
   update();
 
   const smooth = !matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const go = el => { el.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto' }); history.replaceState(null, '', '#' + el.id); };
-  document.querySelectorAll('.c2-rail ol a, .c2-skip, .c2-watch').forEach(a => a.addEventListener('click', e => {
+  const go = el => {
+    if (el.id === 'top') { scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' }); history.replaceState(null, '', location.pathname); return; }
+    el.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto' }); history.replaceState(null, '', '#' + el.id);
+  };
+  document.querySelectorAll('.c2-rail ol a, .c2-top, .c2-skip, .c2-watch').forEach(a => a.addEventListener('click', e => {
     const el = document.querySelector(a.getAttribute('href'));
     if (!el) return;
     e.preventDefault(); go(el);
