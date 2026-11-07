@@ -1199,24 +1199,17 @@ main.rail > p { max-width: var(--read); margin: 0 auto 18px; font-family: var(--
 .washi-cap { margin: 16px 2px 0; font-family: var(--serif); font-size: 15px; line-height: 1.35; color: var(--ink); }
 .washi-meta { margin: 6px 2px 0; font-family: var(--serif); font-size: 9px; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: var(--ink-soft); }
 
-.ab-bridge { max-width: 1100px; margin: 0 auto 140px; }
-.ab-big { margin: 0; font-family: var(--serif); font-size: clamp(28px, 3.2vw, 44px); font-weight: 300; line-height: 1.22; }
-.ab-path { max-width: 62ch; margin: 22px 0 64px; font-family: var(--body); font-size: 17px; line-height: 1.6; color: var(--ink-soft); }
-.ab-path span { font-family: var(--serif); font-size: 12px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--ink); }
-.ab-short, .ab-long ul { margin: 0; padding: 0; list-style: none; }
-.ab-short li { display: grid; grid-template-columns: 130px minmax(0, 1.2fr) minmax(0, 1fr); gap: 24px; padding: 14px 0; border-top: 1px solid var(--panel); font-size: 15px; }
-.ab-when { font-family: var(--mono); font-size: 12px; color: var(--ink-soft); padding-top: 2px; }
-.ab-org { font-family: var(--serif); font-weight: 500; color: var(--ink); }
-.ab-role { font-family: var(--body); color: var(--accent); }
-.ab-long { margin-top: 18px; }
-.ab-long summary { cursor: pointer; list-style: none; font-family: var(--serif); font-size: 10px; font-weight: 500; letter-spacing: .24em; text-transform: uppercase; color: var(--accent); }
-.ab-long summary::-webkit-details-marker { display: none; }
-.ab-long summary::before { content: "+  "; }
-.ab-long[open] summary::before { content: "–  "; }
-.ab-long li { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 24px; padding: 16px 0; border-top: 1px solid var(--panel); }
-.ab-long li p { margin: 0 0 4px; font-family: var(--body); font-size: 15px; line-height: 1.55; color: var(--ink-soft); }
-.ab-long li p.ab-org { color: var(--ink); font-family: var(--serif); }
-.ab-long ul { margin-top: 16px; }
+.ab-been { max-width: 1100px; margin: 0 auto 140px; }
+.ab-been-h { margin: 0 0 28px; font-family: var(--serif); font-size: clamp(22px, 2.4vw, 34px); font-weight: 300; color: var(--ink); }
+.ab-places { margin: 0; padding: 0; list-style: none; }
+.ab-places li { display: grid; grid-template-columns: 110px 88px minmax(0, 1fr) 60px; gap: 28px; align-items: start; padding: 22px 0; border-top: 1px solid var(--panel); }
+.ab-places li:last-child { border-bottom: 1px solid var(--panel); }
+.ab-when { font-family: var(--mono); font-size: 12px; color: var(--ink-soft); padding-top: 3px; }
+.ab-thumb { width: 88px; aspect-ratio: 1 / 1; overflow: hidden; background: linear-gradient(160deg, #DCE3EB, #C6D1DE); }
+.ab-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ab-what p { margin: 0; font-family: var(--body); font-size: 15px; line-height: 1.55; color: var(--ink-soft); }
+.ab-what p.ab-org { margin-bottom: 6px; font-family: var(--serif); font-size: 17px; font-weight: 500; color: var(--ink); }
+.ab-city { justify-self: end; padding-top: 3px; font-family: var(--serif); font-size: 11px; font-weight: 500; letter-spacing: .2em; color: var(--accent); }
 
 .ab-ask { max-width: 1100px; margin: 0 auto 140px; text-align: center; }
 .ab-q { margin: 0 auto; max-width: 22ch; font-family: var(--serif); font-size: clamp(28px, 3.2vw, 44px); font-weight: 300; line-height: 1.22; color: var(--ink); }
@@ -1255,9 +1248,9 @@ main.rail > p { max-width: var(--read); margin: 0 auto 18px; font-family: var(--
 
 @media (max-width: 900px) {
   .ab-next { grid-template-columns: 1fr; gap: 48px; }
-  .ab-short li { grid-template-columns: 90px minmax(0, 1fr); }
-  .ab-short .ab-role { grid-column: 2; margin-top: -18px; }
-  .ab-long li { grid-template-columns: 90px minmax(0, 1fr); }
+  .ab-places li { grid-template-columns: 64px minmax(0, 1fr) 40px; gap: 18px; }
+  .ab-places .ab-when { grid-column: 1 / -1; }
+  .ab-thumb { width: 64px; }
 }
 @media (max-width: 560px) {
   .about2 { width: calc(100vw - 40px); padding-top: 40px; }
