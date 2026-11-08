@@ -254,3 +254,28 @@ document.querySelectorAll('.thumb-vid, .hero-vid').forEach(video => {
     cards.forEach(c => io.observe(c));
   }
 })();
+
+/* Writings: Read more unfolds the essay in place; Show less folds it back */
+(() => {
+  document.querySelectorAll('.post-toggle').forEach(btn => {
+    const body = document.getElementById(btn.getAttribute('aria-controls'));
+    if (!body) return;
+    const SHUT = 190;                       // about four lines of the opening
+    const set = open => {
+      btn.setAttribute('aria-expanded', String(open));
+      btn.innerHTML = open ? 'Show less <span aria-hidden="true">↑︎</span>' : 'Read more <span aria-hidden="true">↓︎</span>';
+      body.classList.toggle('is-collapsed', !open);
+      body.style.maxHeight = (open ? body.scrollHeight : SHUT) + 'px';
+    };
+    set(false);
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') !== 'true';
+      set(open);
+      if (!open) {
+        const top = body.closest('.post').getBoundingClientRect().top;
+        if (top < 0) body.closest('.post').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+    addEventListener('resize', () => { if (btn.getAttribute('aria-expanded') === 'true') body.style.maxHeight = body.scrollHeight + 'px'; });
+  });
+})();

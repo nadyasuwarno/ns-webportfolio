@@ -1270,3 +1270,20 @@ main.rail > p { max-width: var(--read); margin: 0 auto 18px; font-family: var(--
 .ex-img.has-video:hover::after, .ex-img.is-playing::after { opacity: 0; }
 .ex-img.has-video:hover img, .ex-img.is-playing img { filter: none; transform: scale(1); }
 .ex-img.has-video:hover .ex-tags { transform: translateY(-4px); }
+
+/* Writings: an essay as a single post that unfolds in place */
+.post { max-width: 760px; margin: 8px auto 0; padding-bottom: 28px; border-bottom: 1px solid var(--panel); }
+.post-by { display: flex; align-items: center; gap: 12px; margin: 0 0 22px; font-family: var(--body); font-size: 15px; }
+.post-by img { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--panel); object-fit: cover; }
+.post-name { font-weight: 500; color: var(--ink); }
+.post-meta { color: var(--ink-soft); }
+.post-meta::before { content: "·"; margin-right: 10px; }
+.post-title { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(28px, 2.6vw, 36px); font-weight: 400; line-height: 1.2; color: var(--ink); }
+.post-sub { margin: 10px 0 22px; font-family: var(--body); font-size: 18px; line-height: 1.45; color: var(--accent); }
+.post-body { position: relative; overflow: hidden; transition: max-height .7s cubic-bezier(.22, .8, .24, 1); }
+.post-body p { margin: 0 0 18px; font-family: Georgia, "Times New Roman", serif; font-size: 18px; line-height: 1.75; color: var(--ink); }
+.post-body.is-collapsed { -webkit-mask-image: linear-gradient(#000 55%, transparent); mask-image: linear-gradient(#000 55%, transparent); }
+.post-toggle { margin-top: 6px; padding: 8px 0; border: 0; background: none; cursor: pointer; font-family: var(--serif); font-size: 11px; font-weight: 500; letter-spacing: .24em; text-transform: uppercase; color: var(--ink); }
+.post-toggle:hover { color: var(--accent); }
+.post-toggle:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { .post-body { transition: none; } }
