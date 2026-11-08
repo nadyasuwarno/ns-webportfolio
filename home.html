@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="assets/styles.css" />
   <script src="assets/vt.js"></script>
   <script src="assets/nav.js" defer></script>
+  <script src="assets/supabase.js" defer></script>
+  <script src="assets/posts.js" defer></script>
 </head>
 <body>
   <!-- ============== HEADER (copy into every page) ============== -->
@@ -160,6 +162,21 @@
               <p>To put it short, An infrastructure in motion. To create different possibilities by provision of different choices. Spaces should be pushed to be of support towards both internal and external qualities of our nature. The ability to make a choice should not be a luxury but rather an action taken into complete awareness of. Cells. Imagine everything there is as yours and yours only. On which grounds will your foot land your body then?</p>
             </div>
             <button type="button" class="post-toggle" aria-expanded="false" aria-controls="anthive-body">Read more <span aria-hidden="true">↓</span></button>
+            <div class="post-actions" data-post="anthive">
+              <button type="button" class="post-like" aria-pressed="false"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 16.5s-6.2-3.8-6.2-8.2A3.4 3.4 0 0 1 10 6.2a3.4 3.4 0 0 1 6.2 2.1c0 4.4-6.2 8.2-6.2 8.2z"/></svg><span class="post-count" data-count="likes">0</span><span class="sr-only"> likes</span></button>
+              <button type="button" class="post-comment-btn" aria-expanded="false" aria-controls="anthive-comments"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 4.5h12a1 1 0 0 1 1 1v7.5a1 1 0 0 1-1 1H9l-3.5 2.7V14H4a1 1 0 0 1-1-1V5.5a1 1 0 0 1 1-1z"/></svg><span class="post-count" data-count="comments">0</span><span class="sr-only"> comments</span></button>
+            </div>
+            <section class="post-comments" id="anthive-comments" hidden aria-label="Comments">
+              <form class="post-form" novalidate>
+                <label class="sr-only" for="anthive-name">Your name (optional)</label>
+                <input id="anthive-name" name="name" type="text" maxlength="40" autocomplete="name" placeholder="Name (optional)" />
+                <label class="sr-only" for="anthive-text">Your comment</label>
+                <textarea id="anthive-text" name="text" rows="2" maxlength="500" placeholder="Add a comment…" required></textarea>
+                <input class="ab-trap" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
+                <div class="post-form-row"><p class="post-note" role="status"></p><button type="submit">Post</button></div>
+              </form>
+              <ol class="post-list" aria-live="polite"></ol>
+            </section>
           </article>
         </div>
         </div>

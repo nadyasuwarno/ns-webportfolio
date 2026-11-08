@@ -1,14 +1,7 @@
 /* About page: visitors share their firsts.
    Posts appear straight away. Nadya removes anything unwanted from the Supabase dashboard.
-
-   To switch on the shared wall, paste the project's URL and anon public key below.
-   (The anon key is meant to be public; the database only lets visitors add and read.)
-   Until then the page runs in preview mode and keeps posts in this browser only. */
-const FIRSTS_CONFIG = {
-  url: '',      // e.g. 'https://abcd1234.supabase.co'
-  key: ''       // the "anon public" key from Project Settings → API
-};
-
+   The project URL and key live in assets/supabase.js; until they are filled in this runs in preview mode. */
+const FIRSTS_CONFIG = window.NS_SUPABASE || { url: '', key: '' };
 /* The deck of firsts: click a card (or the button, or press → on it) to send the top one to the back */
 (() => {
   const deck = document.getElementById('deck');
