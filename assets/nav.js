@@ -142,10 +142,11 @@ document.querySelectorAll('.thumb-vid, .hero-vid').forEach(video => {
     view: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 8s2.4-4.5 6.5-4.5S14.5 8 14.5 8 12.1 12.5 8 12.5 1.5 8 1.5 8z"/><circle cx="8" cy="8" r="2"/></svg>',
     soon: '<svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="7" width="9" height="6.5" rx="1.6"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/></svg>',
     ig: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg>',
+    play: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.5v9l7.5-4.5z"/></svg>',
     site: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg>',
     next: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8a5 5 0 1 1-1.5-3.6M13 2.5v3h-3"/></svg>'
   };
-  const words = { view: 'View case study', soon: 'Coming soon', ig: 'View on nescreative', next: 'Next first', site: 'Go to site' };
+  const words = { view: 'View case study', soon: 'Coming soon', ig: 'View on nescreative', next: 'Next first', site: 'Go to site', play: 'Play here' };
   const pill = document.createElement('div');
   pill.className = 'cursor-pill';
   pill.setAttribute('aria-hidden', 'true');
@@ -239,4 +240,37 @@ document.querySelectorAll('.thumb-vid, .hero-vid').forEach(video => {
     const k = Number(e.key);
     if (k >= 1 && k <= secs.length && secs[k - 1]) go(secs[k - 1]);
   });
+})();
+
+/* Explorations: hover plays a silent preview; click opens it in the frosted player on the page */
+(() => {
+  const cards = document.querySelectorAll('.ex-img.has-video');
+  if (!cards.length) return;
+  const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (matchMedia('(hover: hover)').matches && !calm) {
+    cards.forEach(c => {
+      const v = c.querySelector('.ex-vid');
+      c.addEventListener('pointerenter', () => { v.play().then(() => c.classList.add('is-playing')).catch(() => {}); });
+      c.addEventListener('pointerleave', () => { c.classList.remove('is-playing'); setTimeout(() => { if (!c.matches(':hover')) { v.pause(); v.currentTime = 0; } }, 500); });
+    });
+  }
+  const dlg = document.querySelector('.ex-player');
+  if (!dlg || !dlg.showModal) return;
+  const vid = dlg.querySelector('.ex-player-vid');
+  const title = dlg.querySelector('.ex-player-title');
+  const ig = dlg.querySelector('.ex-player-ig');
+  let opener = null;
+  cards.forEach(c => c.addEventListener('click', () => {
+    opener = c;
+    vid.src = c.dataset.video;
+    title.textContent = c.dataset.title;
+    ig.href = c.dataset.ig;
+    dlg.showModal();
+    vid.muted = false;
+    vid.play().catch(() => { vid.muted = true; vid.play().catch(() => {}); });
+  }));
+  const close = () => dlg.close();
+  dlg.querySelector('.ex-player-close').addEventListener('click', close);
+  dlg.addEventListener('click', e => { if (e.target === dlg) close(); });   // a click on the backdrop
+  dlg.addEventListener('close', () => { vid.pause(); vid.removeAttribute('src'); vid.load(); if (opener) opener.focus(); });
 })();
