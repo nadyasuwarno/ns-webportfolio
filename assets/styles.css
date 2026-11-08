@@ -1263,29 +1263,10 @@ main.rail > p { max-width: var(--read); margin: 0 auto 18px; font-family: var(--
   .intro .status-grid { grid-column: 2; grid-row: 1 / span 2; align-self: end; margin: 0 0 6px; max-width: none; grid-template-columns: 1fr 1fr; gap: 40px; }
 }
 
-/* Explorations: hover plays a silent preview; click opens it in a frosted player on the page */
-button.ex-img { width: 100%; padding: 0; border: 0; cursor: pointer; font: inherit; color: inherit; text-align: left; }
-button.ex-img::after { content: ""; position: absolute; inset: 0; background: rgba(247, 249, 251, .18); transition: opacity .6s var(--ease); pointer-events: none; }
+/* Explorations: the video loops in its card while you hover */
+.ex-img.has-video::after { content: ""; position: absolute; inset: 0; background: rgba(247, 249, 251, .18); transition: opacity .6s var(--ease); pointer-events: none; }
 .ex-img .ex-vid { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .5s var(--ease); }
 .ex-img.is-playing .ex-vid { opacity: 1; }
-button.ex-img:hover::after, button.ex-img:focus-visible::after { opacity: 0; }
-button.ex-img:hover img, button.ex-img:focus-visible img { filter: none; transform: scale(1); }
-button.ex-img:hover .ex-tags, button.ex-img:focus-visible .ex-tags { transform: translateY(-4px); }
-button.ex-img:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
-
-.ex-player { position: fixed; inset: 0; margin: auto; height: fit-content; width: min(1100px, 92vw, calc((88vh - 60px) * 16 / 9)); max-width: none; max-height: 92vh; padding: 0; border: 0; background: transparent; color: var(--ink); overflow: visible; }
-.ex-player::backdrop { background: rgba(232, 238, 243, .55); -webkit-backdrop-filter: blur(18px) saturate(1.3); backdrop-filter: blur(18px) saturate(1.3); }
-.ex-player[open] { animation: player-in .5s cubic-bezier(.22, .8, .24, 1) both; }
-.ex-player[open]::backdrop { animation: backdrop-in .5s ease both; }
-@keyframes player-in { from { opacity: 0; transform: translateY(14px) scale(.98); filter: blur(6px); } }
-@keyframes backdrop-in { from { opacity: 0; } }
-.ex-player-box { background: rgba(247, 249, 251, .72); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, .95); box-shadow: 0 24px 60px rgba(40, 50, 80, .18); }
-.ex-player-vid { display: block; width: 100%; max-height: 78vh; background: #0E1018; }
-.ex-player-bar { display: flex; align-items: center; gap: 24px; padding: 14px 18px; }
-.ex-player-title { flex: 1; margin: 0; font-family: var(--serif); font-size: 17px; color: var(--ink); }
-.ex-player-ig, .ex-player-close { font-family: var(--serif); font-size: 10px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); text-decoration: none; }
-.ex-player-close { padding: 8px 0; border: 0; background: none; cursor: pointer; color: var(--ink); }
-.ex-player-ig:hover, .ex-player-close:hover { color: var(--ink); text-decoration: none; }
-.ex-player-ig:focus-visible, .ex-player-close:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
-@media (max-width: 560px) { .ex-player-bar { flex-wrap: wrap; gap: 10px 20px; } .ex-player-title { flex-basis: 100%; } }
-@media (prefers-reduced-motion: reduce) { .ex-player[open], .ex-player[open]::backdrop { animation: none; } }
+.ex-img.has-video:hover::after, .ex-img.is-playing::after { opacity: 0; }
+.ex-img.has-video:hover img, .ex-img.is-playing img { filter: none; transform: scale(1); }
+.ex-img.has-video:hover .ex-tags { transform: translateY(-4px); }
