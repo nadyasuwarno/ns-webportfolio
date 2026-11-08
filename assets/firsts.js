@@ -93,7 +93,7 @@ const FIRSTS_CONFIG = {
     if (s < 86400 * 14) return Math.floor(s / 86400) + ' days ago';
     return new Date(iso).toLocaleDateString(undefined, { month: 'short', year: 'numeric' });
   };
-  const STATUS = { suggested: 'Suggested', planned: 'Planned', done: 'Done ✓' };
+  const STATUS = { suggested: 'Suggested', planned: 'Planned', done: 'Done ✓︎' };
 
   // Built with textContent only, so nothing a visitor types can run as code.
   const item = (store, r, fresh) => {
