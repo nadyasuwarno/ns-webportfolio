@@ -1,4 +1,4 @@
-/* About page: visitors share their firsts and suggest Nadya's next one.
+/* About page: visitors share their firsts.
    Posts appear straight away. Nadya removes anything unwanted from the Supabase dashboard.
 
    To switch on the shared wall, paste the project's URL and anon public key below.
@@ -163,5 +163,4 @@ const FIRSTS_CONFIG = {
   });
 
   render('firsts');
-  render('next');
 })();
