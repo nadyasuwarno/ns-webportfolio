@@ -142,9 +142,10 @@ document.querySelectorAll('.thumb-vid, .hero-vid').forEach(video => {
     view: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 8s2.4-4.5 6.5-4.5S14.5 8 14.5 8 12.1 12.5 8 12.5 1.5 8 1.5 8z"/><circle cx="8" cy="8" r="2"/></svg>',
     soon: '<svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="7" width="9" height="6.5" rx="1.6"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/></svg>',
     ig: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg>',
+    site: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg>',
     next: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8a5 5 0 1 1-1.5-3.6M13 2.5v3h-3"/></svg>'
   };
-  const words = { view: 'View case study', soon: 'Coming soon', ig: 'View on nescreative', next: 'Next first' };
+  const words = { view: 'View case study', soon: 'Coming soon', ig: 'View on nescreative', next: 'Next first', site: 'Go to site' };
   const pill = document.createElement('div');
   pill.className = 'cursor-pill';
   pill.setAttribute('aria-hidden', 'true');
