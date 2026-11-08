@@ -1262,3 +1262,11 @@ main.rail > p { max-width: var(--read); margin: 0 auto 18px; font-family: var(--
   .intro .hello, .intro .display { grid-column: 1; }
   .intro .status-grid { grid-column: 2; grid-row: 1 / span 2; align-self: end; margin: 0 0 6px; max-width: none; grid-template-columns: 1fr 1fr; gap: 40px; }
 }
+
+/* Explorations: the video loops in its card while you hover */
+.ex-img.has-video::after { content: ""; position: absolute; inset: 0; background: rgba(247, 249, 251, .18); transition: opacity .6s var(--ease); pointer-events: none; }
+.ex-img .ex-vid { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .5s var(--ease); }
+.ex-img.is-playing .ex-vid { opacity: 1; }
+.ex-img.has-video:hover::after, .ex-img.is-playing::after { opacity: 0; }
+.ex-img.has-video:hover img, .ex-img.is-playing img { filter: none; transform: scale(1); }
+.ex-img.has-video:hover .ex-tags { transform: translateY(-4px); }

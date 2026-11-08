@@ -4,3 +4,6 @@ node_modules/
 .idea/
 .claude/
 *.log
+
+# original exploration videos dropped at the root; only the compressed copies in assets/ are published
+/*.mp4

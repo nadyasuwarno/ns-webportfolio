@@ -240,3 +240,17 @@ document.querySelectorAll('.thumb-vid, .hero-vid').forEach(video => {
     if (k >= 1 && k <= secs.length && secs[k - 1]) go(secs[k - 1]);
   });
 })();
+
+/* Explorations: the video loops while the pointer is over its card; on touch screens it loops while in view */
+(() => {
+  const cards = document.querySelectorAll('.ex-img.has-video');
+  if (!cards.length || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const start = c => { const v = c.querySelector('.ex-vid'); v.play().then(() => c.classList.add('is-playing')).catch(() => {}); };
+  const stop = c => { const v = c.querySelector('.ex-vid'); c.classList.remove('is-playing'); setTimeout(() => { if (!c.classList.contains('is-playing')) { v.pause(); v.currentTime = 0; } }, 500); };
+  if (matchMedia('(hover: hover)').matches) {
+    cards.forEach(c => { c.addEventListener('pointerenter', () => start(c)); c.addEventListener('pointerleave', () => stop(c)); });
+  } else if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => (e.isIntersecting ? start : stop)(e.target)), { threshold: 0.6 });
+    cards.forEach(c => io.observe(c));
+  }
+})();
