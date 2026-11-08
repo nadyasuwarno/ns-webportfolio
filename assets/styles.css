@@ -1287,3 +1287,8 @@ main.rail > p { max-width: var(--read); margin: 0 auto 18px; font-family: var(--
 .post-toggle:hover { color: var(--accent); }
 .post-toggle:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
 @media (prefers-reduced-motion: reduce) { .post-body { transition: none; } }
+.ex-img.has-image::after { content: ""; position: absolute; inset: 0; background: rgba(247, 249, 251, .18); transition: opacity .6s var(--ease); pointer-events: none; }
+.ex-img.has-image:hover::after { opacity: 0; }
+.ex-img.has-image:hover img { filter: none; transform: scale(1); }
+.ex-img.has-image:hover .ex-tags { transform: translateY(-4px); }
+a.ex-img.has-video { cursor: pointer; }
