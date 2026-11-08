@@ -1272,7 +1272,13 @@ main.rail > p { max-width: var(--read); margin: 0 auto 18px; font-family: var(--
 .ex-img.has-video:hover .ex-tags { transform: translateY(-4px); }
 
 /* Writings: an essay as a single post that unfolds in place */
-.post { max-width: 760px; margin: 8px 0 0; padding-bottom: 28px; border-bottom: 1px solid var(--panel); }
+.post { position: relative; max-width: none; margin: 8px 0 0; padding-bottom: 28px; border-bottom: 1px solid var(--panel); }
+.post > .post-title, .post > .post-sub, .post > .post-body, .post > .post-comments { max-width: 1240px; }
+@media (min-width: 900px) {
+  /* Read more sits at the top right, level with the title */
+  .post-toggle { position: absolute; top: 74px; right: 0; margin-top: 0; }
+  .post > .post-title, .post > .post-sub, .post > .post-body { margin-right: 200px; }
+}
 .post-by { display: flex; align-items: center; gap: 12px; margin: 0 0 22px; font-family: var(--body); font-size: 15px; }
 .post-by img { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--panel); object-fit: cover; }
 .post-name { font-weight: 500; color: var(--ink); }
