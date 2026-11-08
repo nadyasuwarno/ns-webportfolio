@@ -874,7 +874,7 @@ a.ex-img:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
 .ex-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin: 16px 0 8px; }
 .ex-head h3 { margin: 0; font-family: var(--serif); font-size: 18px; font-weight: 400; color: var(--accent); }
 .ex-head span { font-family: var(--serif); font-size: 11px; letter-spacing: .14em; color: var(--ink-soft); }
-.ex p { margin: 0; max-width: 40ch; font-family: var(--body); font-size: 14px; line-height: 1.55; color: var(--ink-soft); }
+.ex p { margin: 0; max-width: none; font-family: var(--body); font-size: 14px; line-height: 1.55; color: var(--ink-soft); }
 
 /* A project: the landing's soft piece, holding the work out of focus */
 .works { display: flex; flex-direction: column; gap: 58px; }
