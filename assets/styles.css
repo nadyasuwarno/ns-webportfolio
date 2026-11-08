@@ -1327,3 +1327,10 @@ a.ex-img.has-video { cursor: pointer; }
 .post-c-head time { font-family: var(--body); font-size: 13px; color: var(--ink-soft); }
 .post-c-text { margin: 0; font-family: var(--body); font-size: 15px; line-height: 1.6; color: var(--ink); white-space: pre-line; overflow-wrap: anywhere; }
 .post-empty { font-family: var(--body); font-size: 15px; color: var(--ink-soft); }
+
+/* About deck: photos rest in black and white; the card you hover comes into colour */
+.washi-photo img { filter: grayscale(1) contrast(1.04); transition: filter .7s var(--ease); }
+.washi-row:hover .washi[data-pos="0"] .washi-photo img,
+.washi-row:focus-visible .washi[data-pos="0"] .washi-photo img { filter: none; }
+@media (hover: none) { .washi[data-pos="0"] .washi-photo img { filter: none; } }   /* phones have no hover: the top card shows its colour */
+@media (prefers-reduced-motion: reduce) { .washi-photo img { transition: none; } }
